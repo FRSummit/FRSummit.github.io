@@ -1,602 +1,1145 @@
-<!--<!DOCTYPE html>
-<html>
-<head>
-<title>Github page</title>
-<script src="https://cdn.optimizely.com/js/12391281696.js"></script>
-</head>
-<body>
-
-<h1>FRS</h1>
-<p>WEB 1</p>
-
-</body>
-</html>-->
-
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-
-    <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>F R Summit's Profile</title>
-    <script src="https://cdn.optimizely.com/js/12391281696.js"></script>
+<html lang="en">
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-    <link href="Styles/MyStyle.css" rel="stylesheet" />
-
+    <title>Fayazur Rahman Summit | Senior Software Engineer</title>
+    <meta name="description" content="Portfolio of Fayazur Rahman Summit, Senior Software Engineer and Team Lead specializing in frontend engineering, digital twins, data visualization, real-time systems, and enterprise SaaS." />
+    <meta name="author" content="Fayazur Rahman Summit" />
+    <meta property="og:title" content="Fayazur Rahman Summit | Senior Software Engineer" />
+    <meta property="og:description" content="Senior Software Engineer and Team Lead building enterprise SaaS, digital twin platforms, real-time systems, and advanced data visualization products." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="Images/profile.jpg" />
+    <link rel="preload" as="image" href="Images/profile.jpg" />
     <style>
-        body {
-    font: 400 15px Lato, sans-serif;
-    line-height: 1.8;
-    color: #818181;
-}
-
-h2 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #303030;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-
-h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    color: #303030;
-    font-weight: 400;
-    margin-bottom: 30px;
-}
-
-.jumbotron {
-    background-color: #f4511e;
-    color: #fff;
-    padding: 100px 25px;
-    font-family: Montserrat, sans-serif;
-}
-
-.container-fluid {
-    padding: 60px 50px;
-}
-
-.bg-grey {
-    background-color: #f6f6f6;
-}
-
-.logo-small {
-    color: #f4511e;
-    font-size: 50px;
-}
-
-.logo {
-    color: #f4511e;
-    font-size: 200px;
-}
-
-.thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-}
-
-    .thumbnail img {
-        width: 100%;
-        height: 100%;
-        margin-bottom: 10px;
-    }
-
-.carousel-control.right, .carousel-control.left {
-    background-image: none;
-    color: #f4511e;
-}
-
-.carousel-indicators li {
-    border-color: #f4511e;
-}
-
-    .carousel-indicators li.active {
-        background-color: #f4511e;
-    }
-
-.item h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    font-weight: 400;
-    font-style: italic;
-    margin: 70px 0;
-}
-
-.item span {
-    font-style: normal;
-}
-
-.panel {
-    border: 1px solid #f4511e;
-    border-radius: 0 !important;
-    transition: box-shadow 0.5s;
-}
-
-    .panel:hover {
-        box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-    }
-
-.panel-footer .btn:hover {
-    border: 1px solid #f4511e;
-    background-color: #fff !important;
-    color: #f4511e;
-}
-
-.panel-heading {
-    color: #fff !important;
-    background-color: #f4511e !important;
-    padding: 25px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.panel-footer {
-    background-color: white !important;
-}
-
-    .panel-footer h3 {
-        font-size: 32px;
-    }
-
-    .panel-footer h4 {
-        color: #aaa;
-        font-size: 14px;
-    }
-
-    .panel-footer .btn {
-        margin: 15px 0;
-        background-color: #f4511e;
-        color: #fff;
-    }
-
-.navbar {
-    margin-bottom: 0;
-    background-color: #f4511e;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 0;
-    font-family: Montserrat, sans-serif;
-}
-
-    .navbar li a, .navbar .navbar-brand {
-        color: #fff !important;
-    }
-
-.navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #f4511e !important;
-    background-color: #fff !important;
-}
-
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-}
-
-footer .glyphicon {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #f4511e;
-}
-
-.slideanim {
-    visibility: hidden;
-}
-
-.slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    visibility: visible;
-}
-
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transform: translateY(70%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-
-@-webkit-keyframes slide {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(70%);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .col-sm-4 {
-        text-align: center;
-        margin: 25px 0;
-    }
-
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-}
-
-    </style>
-
-
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!--<a class="navbar-brand" href="#myPage">Logo</a>-->
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#services">SERVICES</a></li>
-                    <li><a href="#portfolio">PORTFOLIO</a></li>
-                    <!--<li><a href="#pricing">PRICING</a></li>-->
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="MyResume.html">RESUME</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <div class="jumbotron text-center">
-        <h1>FAYAZUR RAHMAN SUMMIT</h1>
-        <p>SR. SOFTWARE ENGINEER</p>
-        <!--<form>
-          <div class="input-group">
-            <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-danger">Subscribe</button>
-            </div>
-          </div>
-        </form>-->
-        <button class="btn btn-default btn-lg">Contact Me</button>
-        <button class="btn btn-default btn-lg">My Projects</button>
-    </div>
-
-    <!-- Container (About Section) -->
-    <div id="about" class="container-fluid">
-        <div class="row">
-            <div class="col-sm-8">
-                <h2>About Me</h2><br>
-                <h4>Welcome, my name is Fayazur Rahman Summit. I am mainly a web & software developer from Dhaka, Bangladesh. I love to write code to build great products and help businesses succeed with their goals. I appreciate good design and I am seeing it's importance more then ever in todays apps, web sites and products.</h4><br>
-                <h4>For developing JAVA Application I like to use JSF, Primefaces, Spring MVC, Hibernate etc. For PHP website I used to with laravel framework. For fronted development I used to with HTML/XHTML or template along with JAVASCRIPT. I also used to with Adobe products.</h4>
-                <h4>I am a hard-worker, so I like to get in early and stay until I have all of my goals for the day accomplished. I always make sure to do the high priority projects first. I’m a big believer in delegation, so I don’t have a problem working with a boss who just gives me the main objectives and lets me work out the best way to reach those objectives. I also think that with delegation comes collaboration because sometimes it takes a team to get a project completed successfully. I also know the importance of communicating with my boss and team members because then nothing will get done twice and everything will get done.</h4>
-            </div>
-            <div class="col-sm-4">
-                <!--<span class="glyphicon glyphicon-signal logo"></span>-->
-                <img src="Images/me.jpg" width="300px" style="margin-top:150px" />
-            </div>
-        </div>
-    </div>
-
-    <!--<div class="container-fluid bg-grey">
-      <div class="row">
-        <div class="col-sm-4">
-          <span class="glyphicon glyphicon-globe logo slideanim"></span>
-        </div>
-        <div class="col-sm-8">
-          <h2>Our Values</h2><br>
-          <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-          <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
-    </div>-->
-    <!-- Container (Services Section) -->
-    <div id="services" class="container-fluid text-center">
-        <h2>SERVICES</h2>
-        <h4>Here is the main service which I provide.</h4>
-        <br>
-        <div class="row slideanim">
-            <div class="col-sm-4">
-                <i class="fa fa-html5 fa-5x" aria-hidden="true"></i>
-                <h4>Web Design And Development</h4>
-                <p>I use JAVA PHP or Content Management System for web development</p>
-            </div>
-            <div class="col-sm-4">
-                <i class="fa fa-code fa-5x" aria-hidden="true"></i>
-                <h4>Software Design And Development</h4>
-                <p>I use JAVA and JAVAFX along with framework for software development</p>
-            </div>
-            <div class="col-sm-4">
-                <i class="fa fa-pencil-square-o  fa-5x" aria-hidden="true"></i>
-                <h4>Graphics Design And Animation</h4>
-                <p>For graphics design and animation I used to with Blender</p>
-            </div>
-        </div>
-        <br><br>
-        <div class="row slideanim">
-            <div class="col-sm-4">
-                <i class="fa fa-database fa-5x" aria-hidden="true"></i>
-                <h4>Database Management</h4>
-                <p>I used to with MySQL database with maintaining data integrity, monitoring perfomance and enforcing data security</p>
-            </div>
-            <!--<div class="col-sm-4">
-              <i class="fab fa-app-store-ios fa-5x" aria-hidden="true"></i>
-              <h4>Adobe Product</h4>
-              <p>I also use to adobe products, basically adobe photoshop, illustrator</p>
-            </div>
-            <div class="col-sm-4">
-              <i class="fa fa-pencil-square-o  fa-5x" aria-hidden="true"></i>
-              <h4 style="color:#303030;">HARD WORK</h4>
-              <p>Lorem ipsum dolor sit amet..</p>
-            </div>-->
-        </div>
-    </div>
-
-    <!-- Container (Portfolio Section) -->
-    <div id="portfolio" class="container-fluid text-center bg-grey">
-        <h2>Portfolio</h2><br>
-        <h4>Here is the list of project work which is done for learnig topics or made for client.</h4>
-        <div class="row text-center slideanim">
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <img src="Images/login.jpg" width="50" />
-                    <p><strong>Human Resource Management</strong></p>
-                    <p>Open Source Human Resource Management Tool - Spring Boot - custom configurable, contains policies differ from organization and paperless system</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <img src="newyork.jpg" alt="New York" width="400" height="300">
-                    <p><strong> Airport Reservation</strong></p>
-                    <p>Ticket booking, cancellation, customer service etc</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-                    <p><strong>Inventory Management System</strong></p>
-                    <p>Product monitoring, Supplier-Customer service</p>
-                </div>
-            </div>
-        </div><br>
-
-        <h2>WORK & EDUCATION</h2>
-        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-                <li data-target="#myCarousel" data-slide-to="4"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <h3>SCHOOL & COLLEGE DEGREE</h3>
-                    <h4>I completed my school from Government Laboratory High School, Mymensingh, <br />and also completed college degree from Anandamohan College, <br />Mymensingh. In both my background was science.</h4>
-                </div>
-                <div class="item">
-                    <h3>JOIN UNIVERSITY</h3>
-                    <h4>After successfully completed my college I started graduation in BSc. in Computer <br />Science and Engineering at Southeast University, Dhaka. From here I start <br />learning programming and developing and started learning new thing <br />and new programming language.</h4>
-                </div>
-                <div class="item">
-                    <h3>START WEB DESIGN</h3>
-                    <h4>After completing basic of computer science I start programming language and start <br />learning different data structures and algorithms. Then I started web <br />designing as well as software developing.</h4>
-                </div>
-                <div class="item">
-                    <h3>START WEB/SOFTWARE DEVELOPMENTS</h3>
-                    <h4>After learning some great thing I started developing new project. I started making <br />software for Library Management System, Book Store Management etc. In <br />this meantime I also started web developing and learn to<br /> use some content management system.</h4>
-                </div>
-                <div class="item">
-                    <h3>COMPLETE GRADUATIONS</h3>
-                    <h4>After completing some very exciting topics its end to my versity life. I learn very <br />useful topics which was very useful for my future. Thanks for <br />my faculties for their help.</h4>
-                </div>
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-    <!-- Container (Pricing Section) -->
-    <!--
-    <div id="pricing" class="container-fluid">
-      <div class="text-center">
-        <h2>Pricing</h2>
-        <h4>Choose a payment plan that works for you</h4>
-      </div>
-      <div class="row slideanim">
-        <div class="col-sm-4 col-xs-12">
-          <div class="panel panel-default text-center">
-            <div class="panel-heading">
-              <h1>Basic</h1>
-            </div>
-            <div class="panel-body">
-              <p><strong>20</strong> Lorem</p>
-              <p><strong>15</strong> Ipsum</p>
-              <p><strong>5</strong> Dolor</p>
-              <p><strong>2</strong> Sit</p>
-              <p><strong>Endless</strong> Amet</p>
-            </div>
-            <div class="panel-footer">
-              <h3>$19</h3>
-              <h4>per month</h4>
-              <button class="btn btn-lg">Sign Up</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-          <div class="panel panel-default text-center">
-            <div class="panel-heading">
-              <h1>Pro</h1>
-            </div>
-            <div class="panel-body">
-              <p><strong>50</strong> Lorem</p>
-              <p><strong>25</strong> Ipsum</p>
-              <p><strong>10</strong> Dolor</p>
-              <p><strong>5</strong> Sit</p>
-              <p><strong>Endless</strong> Amet</p>
-            </div>
-            <div class="panel-footer">
-              <h3>$29</h3>
-              <h4>per month</h4>
-              <button class="btn btn-lg">Sign Up</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-          <div class="panel panel-default text-center">
-            <div class="panel-heading">
-              <h1>Premium</h1>
-            </div>
-            <div class="panel-body">
-              <p><strong>100</strong> Lorem</p>
-              <p><strong>50</strong> Ipsum</p>
-              <p><strong>25</strong> Dolor</p>
-              <p><strong>10</strong> Sit</p>
-              <p><strong>Endless</strong> Amet</p>
-            </div>
-            <div class="panel-footer">
-              <h3>$49</h3>
-              <h4>per month</h4>
-              <button class="btn btn-lg">Sign Up</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-        -->
-    <!-- Container (Contact Section) -->
-    <div id="contact" class="container-fluid bg-grey">
-        <h2 class="text-center">CONTACT ME</h2>
-        <h4 class="text-center">Got a project you would like me to work on? Or how about just a friendly chat? <br />Give me an email and we can grab a lovely brew.</h4>
-        <div class="row">
-            <div class="col-sm-5">
-                <!--<p>Contact us and we'll get back to you within 24 hours.</p>-->
-                <p><span class="glyphicon glyphicon-phone"></span> Phone: 01687858300</p>
-                <p><span class="glyphicon glyphicon-envelope"></span> Email : www.frsummit1@gmail.com</p>
-                <p><span class="glyphicon glyphicon-map-marker"></span> Location: Block A, Road 1, House 62/C, Bashundhara, Dhaka 1229</p>
-            </div>
-            <div class="col-sm-7 slideanim">
-                <div class="row">
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                    </div>
-                </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-                <div class="row">
-                    <div class="col-sm-12 form-group">
-                        <button class="btn btn-default pull-right" type="submit">Send</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add Google Maps
-    <div id="googleMap" style="height:400px;width:100%;"></div>
-    <script>
-    function myMap() {
-    var myCenter = new google.maps.LatLng(41.878114, -87.629798);
-    var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    var marker = new google.maps.Marker({position:myCenter});
-    marker.setMap(map);
-    }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-    <!--
-    To use this code on your website, get a free API key from Google.
-    Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
-    -->
-
-
-    <footer class="container-fluid text-center">
-        <a href="#myPage" title="To Top">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-        </a>
-
-    </footer>
-
-    <script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
+        :root {
+            --ink: #17201d;
+            --muted: #5d6a64;
+            --paper: #ffffff;
+            --wash: #f4f7f6;
+            --soft: #e7eeea;
+            --line: #d6e0da;
+            --accent: #007f73;
+            --accent-dark: #045c55;
+            --gold: #bf7a00;
+            --coral: #b84a35;
+            --shadow: 0 18px 50px rgba(23, 32, 29, 0.12);
         }
-    });
-  });
-})
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--wash);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid rgba(0, 127, 115, 0.35);
+            outline-offset: 3px;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid rgba(214, 224, 218, 0.85);
+            background: rgba(244, 247, 246, 0.92);
+            backdrop-filter: blur(16px);
+        }
+
+        .nav {
+            width: min(1120px, calc(100% - 32px));
+            min-height: 72px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            background: var(--ink);
+            color: var(--paper);
+            font-size: 0.95rem;
+            letter-spacing: 0;
+        }
+
+        .brand span:last-child {
+            color: var(--muted);
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 650;
+            margin-top: -3px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            border-radius: 8px;
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-weight: 700;
+            padding: 9px 12px;
+        }
+
+        .nav-links a:hover {
+            background: var(--soft);
+            color: var(--ink);
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .nav > *,
+        .hero-grid > *,
+        .section-head > *,
+        .summary-grid > *,
+        .projects-grid > *,
+        .skills-grid > *,
+        .credentials-grid > *,
+        .stats > * {
+            min-width: 0;
+        }
+
+        .hero {
+            padding: 74px 0 54px;
+            border-bottom: 1px solid var(--line);
+            background: var(--paper);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+            gap: 48px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            margin: 0 0 16px;
+            color: var(--accent-dark);
+            font-size: 0.9rem;
+            font-weight: 800;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0;
+        }
+
+        h1 {
+            margin-bottom: 18px;
+            font-size: 4rem;
+            line-height: 1;
+            letter-spacing: 0;
+            overflow-wrap: break-word;
+        }
+
+        .hero-subtitle {
+            max-width: 760px;
+            margin-bottom: 22px;
+            color: var(--muted);
+            font-size: 1.2rem;
+            line-height: 1.65;
+            overflow-wrap: break-word;
+        }
+
+        .contact-row,
+        .hero-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .contact-row {
+            margin: 24px 0 26px;
+        }
+
+        .contact-pill,
+        .button {
+            min-height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-weight: 800;
+        }
+
+        .contact-pill {
+            border: 1px solid var(--line);
+            background: var(--wash);
+            color: var(--muted);
+            font-size: 0.92rem;
+            padding: 8px 12px;
+            overflow-wrap: anywhere;
+            text-align: center;
+        }
+
+        .button {
+            border: 1px solid transparent;
+            padding: 11px 16px;
+            text-align: center;
+            transition: transform 160ms ease, background 160ms ease, color 160ms ease, border-color 160ms ease;
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+        }
+
+        .button-primary {
+            background: var(--accent);
+            color: var(--paper);
+        }
+
+        .button-primary:hover {
+            background: var(--accent-dark);
+        }
+
+        .button-secondary {
+            border-color: var(--line);
+            background: var(--paper);
+            color: var(--ink);
+        }
+
+        .button-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent-dark);
+        }
+
+        .hero-card {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .portrait-wrap {
+            aspect-ratio: 4 / 5;
+            background: var(--soft);
+        }
+
+        .portrait-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-card-body {
+            padding: 22px;
+        }
+
+        .availability {
+            margin-bottom: 12px;
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-weight: 750;
+        }
+
+        .hero-card h2 {
+            margin-bottom: 8px;
+            font-size: 1.25rem;
+            line-height: 1.25;
+        }
+
+        .hero-card p {
+            margin-bottom: 0;
+            color: var(--muted);
+        }
+
+        .stats {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 8px;
+        }
+
+        .stat {
+            min-height: 118px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--wash);
+            padding: 18px;
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--accent-dark);
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+
+        .stat span {
+            display: block;
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        section {
+            padding: 72px 0;
+        }
+
+        section + section {
+            border-top: 1px solid var(--line);
+        }
+
+        .section-head {
+            display: grid;
+            grid-template-columns: minmax(220px, 0.36fr) minmax(0, 0.64fr);
+            gap: 36px;
+            align-items: start;
+            margin-bottom: 32px;
+        }
+
+        .section-label {
+            color: var(--accent-dark);
+            font-size: 0.84rem;
+            font-weight: 850;
+            text-transform: uppercase;
+        }
+
+        .section-head h2 {
+            margin-bottom: 0;
+            font-size: 2rem;
+            line-height: 1.15;
+            overflow-wrap: break-word;
+        }
+
+        .section-head p {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 1.04rem;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
+            gap: 24px;
+            align-items: start;
+        }
+
+        .panel,
+        .project-card,
+        .skill-group,
+        .timeline-item,
+        .compact-card {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+        }
+
+        .panel,
+        .timeline-item {
+            padding: 28px;
+        }
+
+        .panel p:last-child,
+        .timeline-item p:last-child,
+        .project-card p:last-child,
+        .compact-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .focus-list {
+            display: grid;
+            gap: 12px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .focus-list li {
+            border-left: 4px solid var(--accent);
+            padding-left: 14px;
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        .timeline {
+            display: grid;
+            gap: 18px;
+        }
+
+        .timeline-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-top h3 {
+            margin-bottom: 3px;
+            font-size: 1.28rem;
+            line-height: 1.25;
+        }
+
+        .company {
+            color: var(--accent-dark);
+            font-weight: 850;
+        }
+
+        .date {
+            flex: 0 0 auto;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            color: var(--muted);
+            font-size: 0.88rem;
+            font-weight: 800;
+            padding: 6px 10px;
+            white-space: nowrap;
+        }
+
+        .timeline-item > p {
+            color: var(--muted);
+        }
+
+        .detail-list {
+            display: grid;
+            gap: 10px;
+            margin: 18px 0 0;
+            padding-left: 18px;
+        }
+
+        .detail-list li {
+            padding-left: 4px;
+        }
+
+        .detail-list strong {
+            color: var(--ink);
+        }
+
+        .impact-note {
+            margin-top: 18px;
+            border-left: 4px solid var(--gold);
+            color: var(--muted);
+            font-weight: 700;
+            padding-left: 14px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .project-card {
+            display: flex;
+            min-height: 100%;
+            flex-direction: column;
+            padding: 24px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.18rem;
+        }
+
+        .project-link {
+            color: var(--accent-dark);
+            display: inline-flex;
+            font-size: 0.92rem;
+            font-weight: 850;
+            margin-bottom: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        .project-card p {
+            color: var(--muted);
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+            padding-top: 16px;
+        }
+
+        .tag {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--wash);
+            color: var(--muted);
+            font-size: 0.82rem;
+            font-weight: 800;
+            padding: 5px 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .skill-group {
+            padding: 22px;
+        }
+
+        .skill-group h3 {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .skill-group p {
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 18px;
+        }
+
+        .compact-card {
+            padding: 24px;
+        }
+
+        .compact-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .credential-list {
+            display: grid;
+            gap: 14px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .credential-list span {
+            color: var(--muted);
+            display: block;
+            font-size: 0.92rem;
+            font-weight: 750;
+        }
+
+        .contact-band {
+            background: var(--ink);
+            color: var(--paper);
+        }
+
+        .contact-band .section-label,
+        .contact-band .section-head p {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .contact-band .section-head h2 {
+            color: var(--paper);
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .contact-actions .button-secondary {
+            border-color: rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--paper);
+        }
+
+        .contact-actions .button-secondary:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+            background: var(--ink);
+            color: rgba(255, 255, 255, 0.66);
+            padding: 24px 0;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 900px) {
+            .nav {
+                align-items: flex-start;
+                flex-direction: column;
+                min-height: auto;
+                padding: 16px 0;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+                width: 100%;
+            }
+
+            .hero-grid,
+            .section-head,
+            .summary-grid,
+            .credentials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .stats,
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                font-size: 15px;
+            }
+
+            .container,
+            .nav {
+                width: min(366px, calc(100vw - 24px));
+                max-width: calc(100vw - 24px);
+                margin-left: 12px;
+                margin-right: auto;
+            }
+
+            .nav-links {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .nav-links a {
+                padding: 8px 6px;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 46px 0 42px;
+            }
+
+            h1 {
+                font-size: 2.35rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.04rem;
+            }
+
+            section {
+                padding: 52px 0;
+            }
+
+            .stats,
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-top {
+                display: grid;
+            }
+
+            .date {
+                width: fit-content;
+                white-space: normal;
+            }
+
+            .hero-actions .button,
+            .contact-actions .button {
+                flex: 1 1 150px;
+            }
+
+            .panel,
+            .timeline-item,
+            .project-card,
+            .skill-group,
+            .compact-card {
+                padding: 20px;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Fayazur Rahman Summit",
+        "jobTitle": "Senior Software Engineer - Team Lead",
+        "email": "mailto:frsummit1@gmail.com",
+        "telephone": "+8801717627896",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dhaka",
+            "addressCountry": "Bangladesh"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/frsummit",
+            "https://github.com/frsummit"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "IDARE Limited"
+        }
+    }
     </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary navigation">
+            <a class="brand" href="#top" aria-label="Fayazur Rahman Summit home">
+                <span class="brand-mark">FRS</span>
+                <span>
+                    Fayazur Rahman Summit
+                    <span>Senior Software Engineer</span>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div>
+                    <p class="eyebrow">Sr. Software Engineer &mdash; Team Lead &mdash; IDARE Limited</p>
+                    <h1 id="hero-title">Fayazur Rahman Summit</h1>
+                    <p class="hero-subtitle">
+                        Senior Software Engineer and Full-Stack &amp; Data Visualization Specialist with 8+ years of experience architecting high-performance web, mobile, and desktop applications. I build enterprise SaaS, digital twin platforms, real-time systems, and advanced analytics experiences with React, Vue, Vite, Node.js, AWS, and modern visualization stacks.
+                    </p>
+                    <div class="contact-row" aria-label="Contact details">
+                        <a class="contact-pill" href="tel:+8801717627896">+8801717627896</a>
+                        <a class="contact-pill" href="mailto:frsummit1@gmail.com">frsummit1@gmail.com</a>
+                        <span class="contact-pill">Dhaka, Bangladesh</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="mailto:frsummit1@gmail.com">Email Me</a>
+                        <a class="button button-secondary" href="Fayazur_Rahman_Summit.pdf" download>Download Resume</a>
+                        <a class="button button-secondary" href="https://www.linkedin.com/in/frsummit" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a class="button button-secondary" href="https://github.com/frsummit" target="_blank" rel="noreferrer">GitHub</a>
+                    </div>
+                </div>
+                <aside class="hero-card" aria-label="Profile summary card">
+                    <div class="portrait-wrap">
+                        <img src="Images/profile.jpg" width="667" height="889" alt="Portrait of Fayazur Rahman Summit" />
+                    </div>
+                    <div class="hero-card-body">
+                        <p class="availability">Frontend architecture, data visualization, real-time systems</p>
+                        <h2>Engineering leader for product teams turning complex data into useful software.</h2>
+                        <p>Specialized in digital twins, predictive analytics, WebGL/3D, WebSockets, WebRTC, and enterprise cloud delivery.</p>
+                    </div>
+                </aside>
+                <div class="stats" aria-label="Career highlights">
+                    <div class="stat">
+                        <strong>8+</strong>
+                        <span>years building production web, mobile, and desktop applications</span>
+                    </div>
+                    <div class="stat">
+                        <strong>30%</strong>
+                        <span>team onboarding time reduced through technical documentation</span>
+                    </div>
+                    <div class="stat">
+                        <strong>35%</strong>
+                        <span>failure response time reduction in real-time telemetry systems</span>
+                    </div>
+                    <div class="stat">
+                        <strong>50+</strong>
+                        <span>active grid nodes monitored through live alerting dashboards</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Profile</div>
+                    <div>
+                        <h2 id="about-title">A full-stack engineering lead with a strong visualization core.</h2>
+                        <p>
+                            Proven leader in frontend engineering and team mentorship, aligning technical strategies with business objectives. Specialized in transforming complex data into scalable enterprise SaaS platforms through D3.js, Chart.js, Plotly, Node.js, WebSockets, AWS deployments, and smooth Git/CI-CD workflows.
+                        </p>
+                    </div>
+                </div>
+                <div class="summary-grid">
+                    <div class="panel">
+                        <p>
+                            My recent work focuses on configurable digital twin engines for the energy sector, real-time data systems, immersive visualization, and predictive analytics. I bridge product requirements, architecture, frontend execution, backend collaboration, and release management for teams shipping business-critical software.
+                        </p>
+                    </div>
+                    <div class="panel">
+                        <ul class="focus-list">
+                            <li>Frontend leadership across React.js, Vue.js, Vite, Bootstrap, and jQuery.</li>
+                            <li>Enterprise SaaS architecture with scalable, modular UI systems.</li>
+                            <li>Big Data visualization using D3, Plotly, Chart.js, WebGL, and custom dashboards.</li>
+                            <li>Real-time systems with Node.js, WebSockets, Socket.IO, and WebRTC.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" aria-labelledby="experience-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Experience</div>
+                    <div>
+                        <h2 id="experience-title">Software engineering roles across energy, ERP, outsourcing, and electrical systems.</h2>
+                        <p>From hands-on full-stack development to team leadership, release management, business analysis, and architecture for enterprise-grade platforms.</p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-top">
+                            <div>
+                                <h3>Sr. Software Engineer</h3>
+                                <div class="company">IDARE Limited</div>
+                            </div>
+                            <div class="date">12 December, 2021 - Present</div>
+                        </div>
+                        <p>Leading frontend engineering and system architecture to build a configurable, enterprise-grade Digital Twin Engine for the energy sector, digitally replicating entire asset life-cycles using predictive analytics, real-time data, and immersive visualization.</p>
+                        <ul class="detail-list">
+                            <li><strong>Leadership &amp; Architecture:</strong> Leading the frontend engineering team, managing client requirements, and designing scalable, modular UI architectures.</li>
+                            <li><strong>Advanced Engineering:</strong> Implementing Big Data visualizations with WebGL/3D, real-time communication systems with WebSockets and WebRTC voice/video, and predictive analytics integrations.</li>
+                            <li><strong>DevOps &amp; Optimization:</strong> Architecting data response workflows for high performance and managing cloud deployment on AWS.</li>
+                            <li><strong>Business Alignment &amp; Impact:</strong> Conducted rigorous process reviews that identified critical capability gaps, accelerated sprint cycles by 15%, translated complex wireframes into high-quality code, and authored documentation that reduced onboarding time by 30%.</li>
+                        </ul>
+                        <p class="impact-note">Cost &amp; downtime reduction: spearheaded predictive maintenance solutions that slashed asset downtime by 18% and reduced maintenance costs by 22%.</p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-top">
+                            <div>
+                                <h3>Software Engineer</h3>
+                                <div class="company">Mononsoft Limited</div>
+                            </div>
+                            <div class="date">November 2020 - 9 December, 2021</div>
+                        </div>
+                        <p>Supervised frontend development and lifecycle of an enterprise-grade ERP system, JERP, ensuring seamless end-to-end information flow across Supply Chain, Production, Sales, HR, and Finance for a venture founded by ex-Intel and Oracle entrepreneurs.</p>
+                        <ul class="detail-list">
+                            <li><strong>Team Leadership:</strong> Directed an 8-member frontend development and testing team; structured sprint planning, task distribution, and workflows.</li>
+                            <li><strong>Frontend Engineering:</strong> Developed responsive enterprise applications using React.js, Vue.js, Bootstrap, and jQuery.</li>
+                            <li><strong>API Integration &amp; Collaboration:</strong> Spearheaded API integration using Axios/Postman and collaborated with backend teams to optimize JSON data structures.</li>
+                            <li><strong>Cross-Functional Alignment:</strong> Partnered with Business Analysts to implement system changes and regulated complex workflows like batch inventory, sales orders, and approval flows.</li>
+                            <li><strong>Release Management:</strong> Oversaw Git repositories and branching strategies across development, testing, and production environments to ensure zero-downtime deployments.</li>
+                        </ul>
+                        <p class="impact-note">Successfully delivered a robust, secure internal control and billing system optimizing distribution and performance tracking for large-scale clients like JMI &amp; NIPRO Group.</p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-top">
+                            <div>
+                                <h3>Software Engineer</h3>
+                                <div class="company">Simplexhub Limited</div>
+                            </div>
+                            <div class="date">June 2018 - October 2020</div>
+                        </div>
+                        <p>Led and supervised large-scale development teams for an Australian-based outsourcing company, delivering high-performance web and mobile applications for clients across Australia, Canada, and the USA.</p>
+                        <ul class="detail-list">
+                            <li><strong>Team &amp; Project Management:</strong> Directed large development and testing teams; drove project priorities to ensure on-time delivery while handling cross-border communication with the Australian team.</li>
+                            <li><strong>Full-Stack &amp; Cross-Platform Development:</strong> Engineered responsive web applications using React.js and Vue.js, robust backends using Python Django, Node.js, and Spring Boot, and mobile apps via React Native/Java.</li>
+                            <li><strong>CRO &amp; Personalization:</strong> Developed and executed data-driven A/B testing and personalization campaigns using enterprise platforms like Oracle Maxymiser, Optimizely, and Adobe Target.</li>
+                            <li><strong>Quality Assurance:</strong> Enforced strict Test-Driven Development practices, conducted thorough code reviews, and ensured cross-browser compatibility.</li>
+                            <li><strong>SDLC &amp; Architecture:</strong> Analyzed, planned, and optimized custom user controls and new modules following the full software development lifecycle for enterprise-grade scalability.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-top">
+                            <div>
+                                <h3>Jr. Software Engineer</h3>
+                                <div class="company">HT Power Engineering Limited</div>
+                            </div>
+                            <div class="date">August, 2017 - May 2018</div>
+                        </div>
+                        <p>Developed real-time monitoring and data visualization ecosystems for an enterprise electrical engineering company.</p>
+                        <ul class="detail-list">
+                            <li><strong>Full-Stack Development:</strong> Built responsive web interfaces using Vanilla JS, React.js, and Vue.js, backed by scalable Node.js APIs.</li>
+                            <li><strong>Real-Time Monitoring &amp; Alerts:</strong> Engineered a live telemetry dashboard featuring automated notification systems that monitored 50+ active grid nodes, instantly flagging hardware anomalies and reducing failure response times by 35%.</li>
+                            <li><strong>Data Visualization:</strong> Integrated advanced charting libraries to analyze and graph real-time electrical metrics and power usage statistics.</li>
+                            <li><strong>Mobile App Development:</strong> Developed a companion Android application to deliver remote power monitoring and critical system alerts directly to field technicians.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Projects</div>
+                    <div>
+                        <h2 id="projects-title">Selected platforms across AI, analytics, digital twins, ERP, and community operations.</h2>
+                        <p>Product work spanning no-code AI, dashboard analytics, GIS-based digital twins, exploratory data analysis, ERP modules, and Progressive Web Apps.</p>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>Knowverse AI</h3>
+                        <a class="project-link" href="https://knowverse.idare.ai" target="_blank" rel="noreferrer">https://knowverse.idare.ai</a>
+                        <p>An intuitive, self-driven platform that empowers individuals and organizations to leverage AI for data-driven decision-making without needing a team of data scientists.</p>
+                        <ul class="detail-list">
+                            <li><strong>No-Code AI:</strong> Built an intuitive layout allowing users to build, clean, and deploy machine learning models without code.</li>
+                            <li><strong>Predictive Analytics:</strong> Focused on forecasting trends, diagnosing data patterns, and segmenting complex data streams.</li>
+                            <li><strong>Explainable AI:</strong> Provided interactive tools for users to fine-tune models and understand the underlying logic.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tag">AI</span>
+                            <span class="tag">Predictive Analytics</span>
+                            <span class="tag">No-Code</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>IDARE Dashboard Analytics</h3>
+                        <a class="project-link" href="https://energymeta.idare.ai" target="_blank" rel="noreferrer">https://energymeta.idare.ai</a>
+                        <p>A modern analytics dashboard developed to provide real-time insights and scalability. The platform integrates React with a Vite-powered frontend for lightning-fast performance and supports a modular architecture.</p>
+                        <ul class="detail-list">
+                            <li><strong>Team Leadership:</strong> Led the data visualization team, oversaw sprints, and analyzed business capability gaps.</li>
+                            <li><strong>Big Data Visualization:</strong> Developed visualization systems integrating Plotly.js, WebGL, and custom drag-and-drop dashboards.</li>
+                            <li><strong>Metaverse Integration:</strong> Developed a WebGL Meta Universe communication layout for real-time data transfer.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tag">React</span>
+                            <span class="tag">Vite</span>
+                            <span class="tag">WebGL</span>
+                            <span class="tag">Plotly.js</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Digital Twin Digital Platform</h3>
+                        <a class="project-link" href="https://www.movement.idare.ai" target="_blank" rel="noreferrer">https://www.movement.idare.ai</a>
+                        <p>Helps users create 2D/3D digital replicas of offshore wind, solar, oil, and gas infrastructure assets in GIS spaces to facilitate energy transitioning concepts while mapping critical asset metadata.</p>
+                        <ul class="detail-list">
+                            <li><strong>Statistical Modeling:</strong> Explored data trends, performed statistical modeling, and provided actionable recommendations.</li>
+                            <li><strong>High-Performance UI:</strong> Designed a customizable React/Vite architecture featuring real-time data sync.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tag">Digital Twin</span>
+                            <span class="tag">GIS</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Vite</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>IDARE EDA - Exploratory Data Analysis</h3>
+                        <a class="project-link" href="https://idare.ai" target="_blank" rel="noreferrer">https://idare.ai</a>
+                        <p>An analytical ecosystem planned to examine dataset characteristics, identify missing value structures, explore distribution dependencies, and isolate structural insights across raw multi-source data inputs.</p>
+                        <ul class="detail-list">
+                            <li><strong>Agile &amp; Git Delivery:</strong> Streamlined task assignments, sprint planning, and oversaw strict Git version controls.</li>
+                            <li><strong>Cross-Functional Collaboration:</strong> Collaborated with the API team to build robust, streamlined JSON data schemas.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tag">EDA</span>
+                            <span class="tag">Data Engineering</span>
+                            <span class="tag">Agile</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>JERP (ERP)</h3>
+                        <a class="project-link" href="https://njpl.jerpbd.com" target="_blank" rel="noreferrer">https://njpl.jerpbd.com</a>
+                        <p>An enterprise-level ERP application ensuring seamless information flow across supply chain, production, sales, distribution, HR, accounts, and collections workflows.</p>
+                        <ul class="detail-list">
+                            <li><strong>Full-Stack Engineering:</strong> Developed application modules across React.js, Node.js, and Express.js ecosystems.</li>
+                            <li><strong>Team Management:</strong> Supervised an 8-member frontend team, collaborating with corporate Business Analysts.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tag">ERP</span>
+                            <span class="tag">React.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>IPDC - Islamic Practice and Dawah Circle</h3>
+                        <a class="project-link" href="https://report.ipdc.org.au" target="_blank" rel="noreferrer">https://report.ipdc.org.au</a>
+                        <p>A localized multi-tier system managing tracking, workflow planning, and community action logging across hundreds of central, state, and regional organizational nodes.</p>
+                        <ul class="detail-list">
+                            <li><strong>Three-Tier Architecture:</strong> Built using a decoupled RESTful Web API, React Web UI, and a unified Mobile PWA.</li>
+                            <li><strong>Mobile PWA Development:</strong> Built an adaptive progressive application leveraging Onsen UI 2 and Vue.js.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tag">REST API</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">PWA</span>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="impact-note">More projects: <a href="https://www.linkedin.com/in/frsummit/details/projects" target="_blank" rel="noreferrer">linkedin.com/in/frsummit/details/projects</a></p>
+            </div>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Skills</div>
+                    <div>
+                        <h2 id="skills-title">Technical toolkit for frontend systems, data platforms, cloud delivery, and AI-assisted development.</h2>
+                        <p>Hands-on across product architecture, implementation, collaboration, testing, and deployment.</p>
+                    </div>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3>Languages &amp; Frameworks</h3>
+                        <p>JavaScript, Node.js, Express.js, React, Vite, Python, Django</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>DevOps &amp; Tools</h3>
+                        <p>AWS, Docker, CI/CD, Git, GitHub</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Databases</h3>
+                        <p>PostgreSQL, MySQL, MongoDB</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Data Visualization &amp; Real-Time</h3>
+                        <p>HTML, CSS, D3, Plotly, Chart.js, WebSockets, Socket.IO, WebRTC, WebGL, Postman</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>AI Assistants</h3>
+                        <p>Codex, Copilot, Claude, Gemini</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Specialties</h3>
+                        <p>Custom data visualization, configurable SaaS platforms, digital twin interfaces, predictive analytics, cloud deployment workflows, and team mentorship.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="credentials" aria-labelledby="credentials-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Education</div>
+                    <div>
+                        <h2 id="credentials-title">Education, certifications, languages, and interests.</h2>
+                        <p>A foundation in Computer Science &amp; Engineering with certifications in Optimizely technical and web foundations.</p>
+                    </div>
+                </div>
+
+                <div class="credentials-grid">
+                    <div class="compact-card">
+                        <h3>Education &amp; Certifications</h3>
+                        <ul class="credential-list">
+                            <li>
+                                <strong>BSc in Computer Science &amp; Engineering</strong>
+                                <span>Southeast University, Dhaka, Bangladesh | 2014 - 2017</span>
+                            </li>
+                            <li>
+                                <strong>Optimizely X Web Foundations Certification</strong>
+                                <span>Optimizely | January 2019</span>
+                            </li>
+                            <li>
+                                <strong>Optimizely X Technical Foundations Certification</strong>
+                                <span>Optimizely | January 2019</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="compact-card">
+                        <h3>Languages &amp; Interests</h3>
+                        <ul class="credential-list">
+                            <li>
+                                <strong>Languages</strong>
+                                <span>Bangla (Native), English</span>
+                            </li>
+                            <li>
+                                <strong>Interests</strong>
+                                <span>Bike touring &amp; exploration. Long-distance cyclist; successfully completed routes exploring 70% of Bangladesh.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-band" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Contact</div>
+                    <div>
+                        <h2 id="contact-title">Let&apos;s build reliable products from complex data.</h2>
+                        <p>Reach me in Dhaka, Bangladesh by email, phone, LinkedIn, or GitHub.</p>
+                    </div>
+                </div>
+                <div class="contact-actions">
+                    <a class="button button-primary" href="mailto:frsummit1@gmail.com">frsummit1@gmail.com</a>
+                    <a class="button button-secondary" href="tel:+8801717627896">+8801717627896</a>
+                    <a class="button button-secondary" href="https://www.linkedin.com/in/frsummit" target="_blank" rel="noreferrer">linkedin.com/in/frsummit</a>
+                    <a class="button button-secondary" href="https://github.com/frsummit" target="_blank" rel="noreferrer">github.com/frsummit</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span>&copy; 2026 Fayazur Rahman Summit</span>
+            <span>Senior Software Engineer &mdash; Team Lead &mdash; IDARE Limited</span>
+        </div>
+    </footer>
 </body>
 </html>
