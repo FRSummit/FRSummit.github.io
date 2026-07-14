@@ -9,7 +9,7 @@
         content="Animator Pro by Fayazur Rahman Summit is a browser-based cartoon animation studio for YouTube videos, kids learning content, talking characters, nursery rhymes, animated news scenes, and social media shorts." />
     <meta name="author" content="Fayazur Rahman Summit" />
     <meta name="keywords"
-        content="Animator Pro, Fayazur Rahman Summit, browser-based animation studio, cartoon character controller, YouTube animation tool, kids learning video software, HTML5 Canvas animation, JavaScript animation app, educational animation software, nursery rhyme animation, talking character generator, text to speech animation, MediaRecorder video recorder, Web Audio animation, animated news presenter, social media shorts animation, ABC learning video maker, cartoon scene builder" />
+        content="Animator Pro, Fayazur Rahman Summit, FRMonoToon, FRMonotoon, বাঙ্গিvsতরমুজ, Bangi vs Tormuz, browser-based animation studio, cartoon character controller, YouTube animation tool, kids learning video software, HTML5 Canvas animation, JavaScript animation app, educational animation software, nursery rhyme animation, talking character generator, text to speech animation, MediaRecorder video recorder, Web Audio animation, animated news presenter, social media shorts animation, ABC learning video maker, cartoon scene builder" />
 
     <meta property="og:title" content="Animator Pro - Browser-Based Cartoon Animation Studio" />
     <meta property="og:description"
@@ -60,6 +60,12 @@
         "Toy balloon overlays",
         "Mini-game controllers",
         "JSON export and import"
+      ],
+      "sameAs": [
+        "https://www.youtube.com/@FRMonoToon",
+        "https://www.youtube.com/@বাঙ্গিvsতরমুজ",
+        "https://www.facebook.com/profile.php?id=61582285929030",
+        "https://www.facebook.com/bangiVStormuz/"
       ],
       "keywords": "browser animation studio, cartoon character controller, kids video animation, HTML5 Canvas animation, YouTube animation tool, educational animation software, talking character animation"
     }
@@ -284,6 +290,59 @@
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
+        }
+
+        .channel-panel {
+            margin-top: 22px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.07);
+            padding: 16px;
+        }
+
+        .channel-panel h2,
+        .channel-panel h3 {
+            margin-bottom: 10px;
+            color: var(--ink);
+            font-size: 1rem;
+        }
+
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .channel-link {
+            display: grid;
+            gap: 2px;
+            min-width: 0;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.14);
+            padding: 11px 12px;
+        }
+
+        .channel-link:hover {
+            border-color: rgba(81, 215, 206, 0.5);
+            background: rgba(81, 215, 206, 0.09);
+        }
+
+        .channel-panel + .button-row {
+            margin-top: 14px;
+        }
+
+        .channel-label {
+            color: var(--accent);
+            font-size: 0.78rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .channel-name {
+            overflow-wrap: anywhere;
+            color: var(--ink);
+            font-weight: 850;
         }
 
         .button {
@@ -698,7 +757,8 @@
             .feature-grid,
             .visual-grid,
             .use-grid,
-            .stat-grid {
+            .stat-grid,
+            .channel-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -743,6 +803,31 @@
                         <a class="button button-primary" href="#features">View Features</a>
                         <a class="button button-secondary" href="#workflow">Workflow</a>
                         <a class="button button-secondary" href="#technical-build">Technical Build</a>
+                    </div>
+                    <div class="channel-panel" aria-labelledby="content-channels-title">
+                        <h2 id="content-channels-title">Content channels</h2>
+                        <div class="channel-grid">
+                            <a class="channel-link" href="https://www.youtube.com/@FRMonoToon" target="_blank"
+                                rel="noreferrer">
+                                <span class="channel-label">YouTube</span>
+                                <span class="channel-name">@FRMonoToon</span>
+                            </a>
+                            <a class="channel-link" href="https://www.youtube.com/@বাঙ্গিvsতরমুজ" target="_blank"
+                                rel="noreferrer">
+                                <span class="channel-label">YouTube</span>
+                                <span class="channel-name">@বাঙ্গিvsতরমুজ</span>
+                            </a>
+                            <a class="channel-link" href="https://www.facebook.com/profile.php?id=61582285929030"
+                                target="_blank" rel="noreferrer">
+                                <span class="channel-label">Facebook Page</span>
+                                <span class="channel-name">FRMonotoon</span>
+                            </a>
+                            <a class="channel-link" href="https://www.facebook.com/bangiVStormuz/" target="_blank"
+                                rel="noreferrer">
+                                <span class="channel-label">Facebook Page</span>
+                                <span class="channel-name">বাঙ্গিvsতরমুজ</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -1299,6 +1384,31 @@
                         <h2 id="cta-title">Animator Pro turns a browser into a lightweight cartoon production studio.</h2>
                         <p>It gives creators a fast way to build, animate, narrate, reuse, and record cartoon content
                             for YouTube and beyond, while demonstrating a deep browser engineering skill set.</p>
+                        <div class="channel-panel" aria-labelledby="footer-channels-title">
+                            <h3 id="footer-channels-title">Follow the animation channels</h3>
+                            <div class="channel-grid">
+                                <a class="channel-link" href="https://www.youtube.com/@FRMonoToon" target="_blank"
+                                    rel="noreferrer">
+                                    <span class="channel-label">YouTube</span>
+                                    <span class="channel-name">@FRMonoToon</span>
+                                </a>
+                                <a class="channel-link" href="https://www.youtube.com/@বাঙ্গিvsতরমুজ" target="_blank"
+                                    rel="noreferrer">
+                                    <span class="channel-label">YouTube</span>
+                                    <span class="channel-name">@বাঙ্গিvsতরমুজ</span>
+                                </a>
+                                <a class="channel-link" href="https://www.facebook.com/profile.php?id=61582285929030"
+                                    target="_blank" rel="noreferrer">
+                                    <span class="channel-label">Facebook Page</span>
+                                    <span class="channel-name">FRMonotoon</span>
+                                </a>
+                                <a class="channel-link" href="https://www.facebook.com/bangiVStormuz/" target="_blank"
+                                    rel="noreferrer">
+                                    <span class="channel-label">Facebook Page</span>
+                                    <span class="channel-name">বাঙ্গিvsতরমুজ</span>
+                                </a>
+                            </div>
+                        </div>
                         <div class="button-row">
                             <a class="button button-primary" href="index.html#animator-pro">Back to Portfolio</a>
                             <a class="button button-secondary" href="mailto:frsummit1@gmail.com">Contact Fayazur</a>
