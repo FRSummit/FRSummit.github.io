@@ -527,6 +527,7 @@
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 14px;
+            margin-top: 28px;
         }
 
         .visual-card {
@@ -593,10 +594,45 @@
 
         .workflow-grid {
             display: grid;
-            grid-template-columns: repeat(7, minmax(150px, 1fr));
-            gap: 14px;
-            overflow-x: auto;
-            padding-bottom: 8px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .project-image-section[hidden] {
+            display: none;
+        }
+
+        .project-image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .project-image-card {
+            min-width: 0;
+            overflow: hidden;
+            margin: 0;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.065);
+        }
+
+        .project-image-card img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #f5fbfa;
+            object-fit: cover;
+        }
+
+        .project-image-card figcaption {
+            display: grid;
+            gap: 4px;
+            padding: 14px;
+        }
+
+        .project-image-card span {
+            color: var(--muted);
+            font-size: 0.92rem;
         }
 
         .step-number {
@@ -708,7 +744,8 @@
             }
 
             .feature-grid,
-            .visual-grid {
+            .visual-grid,
+            .project-image-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
@@ -756,6 +793,8 @@
             .audience-grid,
             .feature-grid,
             .visual-grid,
+            .workflow-grid,
+            .project-image-grid,
             .use-grid,
             .stat-grid,
             .channel-grid {
@@ -992,6 +1031,20 @@
                             videos.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="project-images" class="project-image-section" aria-labelledby="project-images-title" hidden>
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Gallery</div>
+                    <div>
+                        <h2 id="project-images-title">Animator Pro gallery.</h2>
+                        <p>Project screenshots, character previews, scene visuals, and production examples.</p>
+                    </div>
+                </div>
+
+                <div id="project-image-grid" class="project-image-grid"></div>
             </div>
         </section>
 
@@ -1425,6 +1478,81 @@
             <span>Animator Pro - Personal Project Case Study</span>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatorProProjectImages = [
+                {
+                    src: 'Images/animator-pro/logo.png',
+                    alt: 'Animator Pro gallery placeholder logo',
+                    title: 'Gallery Placeholder 1',
+                    caption: 'Replace this with a project logo, app screen, or channel visual.'
+                },
+                {
+                    src: 'Images/animator-pro/character-controller.png',
+                    alt: 'Animator Pro gallery placeholder character controller',
+                    title: 'Gallery Placeholder 2',
+                    caption: 'Replace this with a character editor or animation controller screenshot.'
+                },
+                {
+                    src: 'Images/animator-pro/village-landscape.jpg',
+                    alt: 'Animator Pro gallery placeholder scene builder',
+                    title: 'Gallery Placeholder 3',
+                    caption: 'Replace this with a scene builder, background, or story layout image.'
+                },
+                {
+                    src: 'Images/animator-pro/character-style-asset.png',
+                    alt: 'Animator Pro gallery placeholder style asset',
+                    title: 'Gallery Placeholder 4',
+                    caption: 'Replace this with a face, hair, clothing, or asset customization preview.'
+                }
+            ];
+
+            const imageSection = document.getElementById('project-images');
+            const imageGrid = document.getElementById('project-image-grid');
+            if (!imageSection || !imageGrid || animatorProProjectImages.length === 0) return;
+
+            let renderedImages = 0;
+            const fragment = document.createDocumentFragment();
+
+            animatorProProjectImages.forEach((image) => {
+                if (!image.src) return;
+
+                const card = document.createElement('figure');
+                card.className = 'project-image-card';
+
+                const img = document.createElement('img');
+                img.src = image.src;
+                img.alt = image.alt || image.title || 'Animator Pro project image';
+                img.loading = 'lazy';
+
+                const caption = document.createElement('figcaption');
+                if (image.title) {
+                    const title = document.createElement('strong');
+                    title.textContent = image.title;
+                    caption.appendChild(title);
+                }
+                if (image.caption) {
+                    const text = document.createElement('span');
+                    text.textContent = image.caption;
+                    caption.appendChild(text);
+                }
+
+                card.appendChild(img);
+                if (caption.childElementCount > 0) {
+                    card.appendChild(caption);
+                }
+
+                fragment.appendChild(card);
+                renderedImages += 1;
+            });
+
+            if (renderedImages > 0) {
+                imageGrid.appendChild(fragment);
+                imageSection.hidden = false;
+            }
+        });
+    </script>
 </body>
 
 </html>
