@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fayazur Rahman Summit | Senior Software Engineer</title>
-    <meta name="description" content="Portfolio of Fayazur Rahman Summit, Senior Software Engineer and Team Lead specializing in frontend engineering, digital twins, data visualization, real-time systems, and enterprise SaaS." />
+    <meta name="description"
+        content="Portfolio of Fayazur Rahman Summit, Senior Software Engineer and Team Lead specializing in frontend engineering, digital twins, data visualization, real-time systems, and enterprise SaaS." />
     <meta name="author" content="Fayazur Rahman Summit" />
     <meta property="og:title" content="Fayazur Rahman Summit | Senior Software Engineer" />
-    <meta property="og:description" content="Senior Software Engineer and Team Lead building enterprise SaaS, digital twin platforms, real-time systems, and advanced data visualization products." />
+    <meta property="og:description"
+        content="Senior Software Engineer and Team Lead building enterprise SaaS, digital twin platforms, real-time systems, and advanced data visualization products." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="Images/profile.jpg" />
     <link rel="preload" as="image" href="Images/profile.jpg" />
@@ -133,14 +136,14 @@
             margin: 0 auto;
         }
 
-        .nav > *,
-        .hero-grid > *,
-        .section-head > *,
-        .summary-grid > *,
-        .projects-grid > *,
-        .skills-grid > *,
-        .credentials-grid > *,
-        .stats > * {
+        .nav>*,
+        .hero-grid>*,
+        .section-head>*,
+        .summary-grid>*,
+        .projects-grid>*,
+        .skills-grid>*,
+        .credentials-grid>*,
+        .stats>* {
             min-width: 0;
         }
 
@@ -329,7 +332,7 @@
             padding: 72px 0;
         }
 
-        section + section {
+        section+section {
             border-top: 1px solid var(--line);
         }
 
@@ -440,7 +443,7 @@
             white-space: nowrap;
         }
 
-        .timeline-item > p {
+        .timeline-item>p {
             color: var(--muted);
         }
 
@@ -763,6 +766,152 @@
                 padding: 20px;
             }
         }
+
+        /* Project Gallery styles */
+        .project-gallery-wrapper {
+            margin-top: 16px;
+            border-top: 1px dashed var(--line);
+            padding-top: 14px;
+        }
+
+        .gallery-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            color: var(--accent);
+            font-size: 0.88rem;
+            font-weight: 800;
+            cursor: pointer;
+            padding: 4px 0;
+            transition: color 160ms ease;
+        }
+
+        .gallery-toggle-btn:hover {
+            color: var(--accent-dark);
+        }
+
+        .toggle-arrow {
+            transition: transform 200ms ease;
+        }
+
+        .gallery-toggle-btn[aria-expanded="true"] .toggle-arrow {
+            transform: rotate(90deg);
+        }
+
+        .gallery-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-content.expanded {
+            max-height: 1000px;
+            margin-top: 12px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .gallery-item {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 6px;
+            border: 1px solid var(--line);
+            background: var(--wash);
+            cursor: pointer;
+            position: relative;
+            transition: transform 160ms ease, box-shadow 160ms ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(23, 32, 29, 0.08);
+            border-color: var(--accent);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Lightbox overlay */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(23, 32, 29, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 250ms ease;
+        }
+
+        .lightbox-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-img-wrapper {
+            position: relative;
+            max-width: 90%;
+            max-height: 85%;
+            transform: scale(0.95);
+            transition: transform 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .lightbox-overlay.active .lightbox-img-wrapper {
+            transform: scale(1);
+        }
+
+        .lightbox-img {
+            display: block;
+            max-width: 100%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+        }
+
+        .lightbox-close-btn {
+            position: absolute;
+            top: -45px;
+            right: 0;
+            background: none;
+            border: none;
+            color: var(--paper);
+            font-size: 1.8rem;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 160ms ease;
+        }
+
+        .lightbox-close-btn:hover {
+            opacity: 1;
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -788,6 +937,7 @@
     }
     </script>
 </head>
+
 <body>
     <header class="site-header">
         <nav class="nav" aria-label="Primary navigation">
@@ -815,7 +965,10 @@
                     <p class="eyebrow">Sr. Software Engineer &mdash; Team Lead &mdash; IDARE Limited</p>
                     <h1 id="hero-title">Fayazur Rahman Summit</h1>
                     <p class="hero-subtitle">
-                        Senior Software Engineer and Full-Stack &amp; Data Visualization Specialist with 8+ years of experience architecting high-performance web, mobile, and desktop applications. I build enterprise SaaS, digital twin platforms, real-time systems, and advanced analytics experiences with React, Vue, Vite, Node.js, AWS, and modern visualization stacks.
+                        Senior Software Engineer and Full-Stack &amp; Data Visualization Specialist with 8+ years of
+                        experience architecting high-performance web, mobile, and desktop applications. I build
+                        enterprise SaaS, digital twin platforms, real-time systems, and advanced analytics experiences
+                        with React, Vue, Vite, Node.js, AWS, and modern visualization stacks.
                     </p>
                     <div class="contact-row" aria-label="Contact details">
                         <a class="contact-pill" href="tel:+8801717627896">+8801717627896</a>
@@ -825,18 +978,22 @@
                     <div class="hero-actions">
                         <a class="button button-primary" href="mailto:frsummit1@gmail.com">Email Me</a>
                         <a class="button button-secondary" href="Fayazur_Rahman_Summit.pdf" download>Download Resume</a>
-                        <a class="button button-secondary" href="https://www.linkedin.com/in/frsummit" target="_blank" rel="noreferrer">LinkedIn</a>
-                        <a class="button button-secondary" href="https://github.com/frsummit" target="_blank" rel="noreferrer">GitHub</a>
+                        <a class="button button-secondary" href="https://www.linkedin.com/in/frsummit" target="_blank"
+                            rel="noreferrer">LinkedIn</a>
+                        <a class="button button-secondary" href="https://github.com/frsummit" target="_blank"
+                            rel="noreferrer">GitHub</a>
                     </div>
                 </div>
                 <aside class="hero-card" aria-label="Profile summary card">
                     <div class="portrait-wrap">
-                        <img src="Images/profile.jpg" width="667" height="889" alt="Portrait of Fayazur Rahman Summit" />
+                        <img src="Images/profile.jpg" width="667" height="889"
+                            alt="Portrait of Fayazur Rahman Summit" />
                     </div>
                     <div class="hero-card-body">
                         <p class="availability">Frontend architecture, data visualization, real-time systems</p>
                         <h2>Engineering leader for product teams turning complex data into useful software.</h2>
-                        <p>Specialized in digital twins, predictive analytics, WebGL/3D, WebSockets, WebRTC, and enterprise cloud delivery.</p>
+                        <p>Specialized in digital twins, predictive analytics, WebGL/3D, WebSockets, WebRTC, and
+                            enterprise cloud delivery.</p>
                     </div>
                 </aside>
                 <div class="stats" aria-label="Career highlights">
@@ -867,14 +1024,20 @@
                     <div>
                         <h2 id="about-title">A full-stack engineering lead with a strong visualization core.</h2>
                         <p>
-                            Proven leader in frontend engineering and team mentorship, aligning technical strategies with business objectives. Specialized in transforming complex data into scalable enterprise SaaS platforms through D3.js, Chart.js, Plotly, Node.js, WebSockets, AWS deployments, and smooth Git/CI-CD workflows.
+                            Proven leader in frontend engineering and team mentorship, aligning technical strategies
+                            with business objectives. Specialized in transforming complex data into scalable enterprise
+                            SaaS platforms through D3.js, Chart.js, Plotly, Node.js, WebSockets, AWS deployments, and
+                            smooth Git/CI-CD workflows.
                         </p>
                     </div>
                 </div>
                 <div class="summary-grid">
                     <div class="panel">
                         <p>
-                            My recent work focuses on configurable digital twin engines for the energy sector, real-time data systems, immersive visualization, and predictive analytics. I bridge product requirements, architecture, frontend execution, backend collaboration, and release management for teams shipping business-critical software.
+                            My recent work focuses on configurable digital twin engines for the energy sector, real-time
+                            data systems, immersive visualization, and predictive analytics. I bridge product
+                            requirements, architecture, frontend execution, backend collaboration, and release
+                            management for teams shipping business-critical software.
                         </p>
                     </div>
                     <div class="panel">
@@ -894,8 +1057,10 @@
                 <div class="section-head">
                     <div class="section-label">Experience</div>
                     <div>
-                        <h2 id="experience-title">Software engineering roles across energy, ERP, outsourcing, and electrical systems.</h2>
-                        <p>From hands-on full-stack development to team leadership, release management, business analysis, and architecture for enterprise-grade platforms.</p>
+                        <h2 id="experience-title">Software engineering roles across energy, ERP, outsourcing, and
+                            electrical systems.</h2>
+                        <p>From hands-on full-stack development to team leadership, release management, business
+                            analysis, and architecture for enterprise-grade platforms.</p>
                     </div>
                 </div>
 
@@ -908,14 +1073,25 @@
                             </div>
                             <div class="date">12 December, 2021 - Present</div>
                         </div>
-                        <p>Leading frontend engineering and system architecture to build a configurable, enterprise-grade Digital Twin Engine for the energy sector, digitally replicating entire asset life-cycles using predictive analytics, real-time data, and immersive visualization.</p>
+                        <p>Leading frontend engineering and system architecture to build a configurable,
+                            enterprise-grade Digital Twin Engine for the energy sector, digitally replicating entire
+                            asset life-cycles using predictive analytics, real-time data, and immersive visualization.
+                        </p>
                         <ul class="detail-list">
-                            <li><strong>Leadership &amp; Architecture:</strong> Leading the frontend engineering team, managing client requirements, and designing scalable, modular UI architectures.</li>
-                            <li><strong>Advanced Engineering:</strong> Implementing Big Data visualizations with WebGL/3D, real-time communication systems with WebSockets and WebRTC voice/video, and predictive analytics integrations.</li>
-                            <li><strong>DevOps &amp; Optimization:</strong> Architecting data response workflows for high performance and managing cloud deployment on AWS.</li>
-                            <li><strong>Business Alignment &amp; Impact:</strong> Conducted rigorous process reviews that identified critical capability gaps, accelerated sprint cycles by 15%, translated complex wireframes into high-quality code, and authored documentation that reduced onboarding time by 30%.</li>
+                            <li><strong>Leadership &amp; Architecture:</strong> Leading the frontend engineering team,
+                                managing client requirements, and designing scalable, modular UI architectures.</li>
+                            <li><strong>Advanced Engineering:</strong> Implementing Big Data visualizations with
+                                WebGL/3D, real-time communication systems with WebSockets and WebRTC voice/video, and
+                                predictive analytics integrations.</li>
+                            <li><strong>DevOps &amp; Optimization:</strong> Architecting data response workflows for
+                                high performance and managing cloud deployment on AWS.</li>
+                            <li><strong>Business Alignment &amp; Impact:</strong> Conducted rigorous process reviews
+                                that identified critical capability gaps, accelerated sprint cycles by 15%, translated
+                                complex wireframes into high-quality code, and authored documentation that reduced
+                                onboarding time by 30%.</li>
                         </ul>
-                        <p class="impact-note">Cost &amp; downtime reduction: spearheaded predictive maintenance solutions that slashed asset downtime by 18% and reduced maintenance costs by 22%.</p>
+                        <p class="impact-note">Cost &amp; downtime reduction: spearheaded predictive maintenance
+                            solutions that slashed asset downtime by 18% and reduced maintenance costs by 22%.</p>
                     </article>
 
                     <article class="timeline-item">
@@ -926,15 +1102,26 @@
                             </div>
                             <div class="date">November 2020 - 9 December, 2021</div>
                         </div>
-                        <p>Supervised frontend development and lifecycle of an enterprise-grade ERP system, JERP, ensuring seamless end-to-end information flow across Supply Chain, Production, Sales, HR, and Finance for a venture founded by ex-Intel and Oracle entrepreneurs.</p>
+                        <p>Supervised frontend development and lifecycle of an enterprise-grade ERP system, JERP,
+                            ensuring seamless end-to-end information flow across Supply Chain, Production, Sales, HR,
+                            and Finance for a venture founded by ex-Intel and Oracle entrepreneurs.</p>
                         <ul class="detail-list">
-                            <li><strong>Team Leadership:</strong> Directed an 8-member frontend development and testing team; structured sprint planning, task distribution, and workflows.</li>
-                            <li><strong>Frontend Engineering:</strong> Developed responsive enterprise applications using React.js, Vue.js, Bootstrap, and jQuery.</li>
-                            <li><strong>API Integration &amp; Collaboration:</strong> Spearheaded API integration using Axios/Postman and collaborated with backend teams to optimize JSON data structures.</li>
-                            <li><strong>Cross-Functional Alignment:</strong> Partnered with Business Analysts to implement system changes and regulated complex workflows like batch inventory, sales orders, and approval flows.</li>
-                            <li><strong>Release Management:</strong> Oversaw Git repositories and branching strategies across development, testing, and production environments to ensure zero-downtime deployments.</li>
+                            <li><strong>Team Leadership:</strong> Directed an 8-member frontend development and testing
+                                team; structured sprint planning, task distribution, and workflows.</li>
+                            <li><strong>Frontend Engineering:</strong> Developed responsive enterprise applications
+                                using React.js, Vue.js, Bootstrap, and jQuery.</li>
+                            <li><strong>API Integration &amp; Collaboration:</strong> Spearheaded API integration using
+                                Axios/Postman and collaborated with backend teams to optimize JSON data structures.</li>
+                            <li><strong>Cross-Functional Alignment:</strong> Partnered with Business Analysts to
+                                implement system changes and regulated complex workflows like batch inventory, sales
+                                orders, and approval flows.</li>
+                            <li><strong>Release Management:</strong> Oversaw Git repositories and branching strategies
+                                across development, testing, and production environments to ensure zero-downtime
+                                deployments.</li>
                         </ul>
-                        <p class="impact-note">Successfully delivered a robust, secure internal control and billing system optimizing distribution and performance tracking for large-scale clients like JMI &amp; NIPRO Group.</p>
+                        <p class="impact-note">Successfully delivered a robust, secure internal control and billing
+                            system optimizing distribution and performance tracking for large-scale clients like JMI
+                            &amp; NIPRO Group.</p>
                     </article>
 
                     <article class="timeline-item">
@@ -945,13 +1132,24 @@
                             </div>
                             <div class="date">June 2018 - October 2020</div>
                         </div>
-                        <p>Led and supervised large-scale development teams for an Australian-based outsourcing company, delivering high-performance web and mobile applications for clients across Australia, Canada, and the USA.</p>
+                        <p>Led and supervised large-scale development teams for an Australian-based outsourcing company,
+                            delivering high-performance web and mobile applications for clients across Australia,
+                            Canada, and the USA.</p>
                         <ul class="detail-list">
-                            <li><strong>Team &amp; Project Management:</strong> Directed large development and testing teams; drove project priorities to ensure on-time delivery while handling cross-border communication with the Australian team.</li>
-                            <li><strong>Full-Stack &amp; Cross-Platform Development:</strong> Engineered responsive web applications using React.js and Vue.js, robust backends using Python Django, Node.js, and Spring Boot, and mobile apps via React Native/Java.</li>
-                            <li><strong>CRO &amp; Personalization:</strong> Developed and executed data-driven A/B testing and personalization campaigns using enterprise platforms like Oracle Maxymiser, Optimizely, and Adobe Target.</li>
-                            <li><strong>Quality Assurance:</strong> Enforced strict Test-Driven Development practices, conducted thorough code reviews, and ensured cross-browser compatibility.</li>
-                            <li><strong>SDLC &amp; Architecture:</strong> Analyzed, planned, and optimized custom user controls and new modules following the full software development lifecycle for enterprise-grade scalability.</li>
+                            <li><strong>Team &amp; Project Management:</strong> Directed large development and testing
+                                teams; drove project priorities to ensure on-time delivery while handling cross-border
+                                communication with the Australian team.</li>
+                            <li><strong>Full-Stack &amp; Cross-Platform Development:</strong> Engineered responsive web
+                                applications using React.js and Vue.js, robust backends using Python Django, Node.js,
+                                and Spring Boot, and mobile apps via React Native/Java.</li>
+                            <li><strong>CRO &amp; Personalization:</strong> Developed and executed data-driven A/B
+                                testing and personalization campaigns using enterprise platforms like Oracle Maxymiser,
+                                Optimizely, and Adobe Target.</li>
+                            <li><strong>Quality Assurance:</strong> Enforced strict Test-Driven Development practices,
+                                conducted thorough code reviews, and ensured cross-browser compatibility.</li>
+                            <li><strong>SDLC &amp; Architecture:</strong> Analyzed, planned, and optimized custom user
+                                controls and new modules following the full software development lifecycle for
+                                enterprise-grade scalability.</li>
                         </ul>
                     </article>
 
@@ -963,12 +1161,19 @@
                             </div>
                             <div class="date">August, 2017 - May 2018</div>
                         </div>
-                        <p>Developed real-time monitoring and data visualization ecosystems for an enterprise electrical engineering company.</p>
+                        <p>Developed real-time monitoring and data visualization ecosystems for an enterprise electrical
+                            engineering company.</p>
                         <ul class="detail-list">
-                            <li><strong>Full-Stack Development:</strong> Built responsive web interfaces using Vanilla JS, React.js, and Vue.js, backed by scalable Node.js APIs.</li>
-                            <li><strong>Real-Time Monitoring &amp; Alerts:</strong> Engineered a live telemetry dashboard featuring automated notification systems that monitored 50+ active grid nodes, instantly flagging hardware anomalies and reducing failure response times by 35%.</li>
-                            <li><strong>Data Visualization:</strong> Integrated advanced charting libraries to analyze and graph real-time electrical metrics and power usage statistics.</li>
-                            <li><strong>Mobile App Development:</strong> Developed a companion Android application to deliver remote power monitoring and critical system alerts directly to field technicians.</li>
+                            <li><strong>Full-Stack Development:</strong> Built responsive web interfaces using Vanilla
+                                JS, React.js, and Vue.js, backed by scalable Node.js APIs.</li>
+                            <li><strong>Real-Time Monitoring &amp; Alerts:</strong> Engineered a live telemetry
+                                dashboard featuring automated notification systems that monitored 50+ active grid nodes,
+                                instantly flagging hardware anomalies and reducing failure response times by 35%.</li>
+                            <li><strong>Data Visualization:</strong> Integrated advanced charting libraries to analyze
+                                and graph real-time electrical metrics and power usage statistics.</li>
+                            <li><strong>Mobile App Development:</strong> Developed a companion Android application to
+                                deliver remote power monitoring and critical system alerts directly to field
+                                technicians.</li>
                         </ul>
                     </article>
                 </div>
@@ -980,14 +1185,17 @@
                 <div class="section-head">
                     <div class="section-label">Projects</div>
                     <div>
-                        <h2 id="projects-title">Selected platforms across AI, analytics, digital twins, ERP, and community operations.</h2>
-                        <p>Product work spanning no-code AI, dashboard analytics, GIS-based digital twins, exploratory data analysis, ERP modules, and Progressive Web Apps.</p>
+                        <h2 id="projects-title">Selected platforms across AI, analytics, digital twins, ERP, and
+                            community operations.</h2>
+                        <p>Product work spanning no-code AI, dashboard analytics, GIS-based digital twins, exploratory
+                            data analysis, ERP modules, and Progressive Web Apps.</p>
                     </div>
                 </div>
 
                 <div class="projects-controls">
                     <button class="layout-toggle active" id="btn-list-view" aria-label="List View (Single Column)">
-                        <svg class="toggle-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="toggle-icon" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="8" y1="6" x2="21" y2="6"></line>
                             <line x1="8" y1="12" x2="21" y2="12"></line>
                             <line x1="8" y1="18" x2="21" y2="18"></line>
@@ -998,7 +1206,8 @@
                         List View
                     </button>
                     <button class="layout-toggle" id="btn-grid-view" aria-label="Grid View (Two Columns)">
-                        <svg class="toggle-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="toggle-icon" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="3" width="7" height="7"></rect>
                             <rect x="14" y="3" width="7" height="7"></rect>
                             <rect x="14" y="14" width="7" height="7"></rect>
@@ -1011,12 +1220,17 @@
                 <div class="projects-grid">
                     <article class="project-card">
                         <h3>Knowverse AI</h3>
-                        <a class="project-link" href="https://knowverse.idare.ai" target="_blank" rel="noreferrer">https://knowverse.idare.ai</a>
-                        <p>An intuitive, self-driven platform that empowers individuals and organizations to leverage AI for data-driven decision-making without needing a team of data scientists.</p>
+                        <a class="project-link" href="https://knowverse.idare.ai" target="_blank"
+                            rel="noreferrer">https://knowverse.idare.ai</a>
+                        <p>An intuitive, self-driven platform that empowers individuals and organizations to leverage AI
+                            for data-driven decision-making without needing a team of data scientists.</p>
                         <ul class="detail-list">
-                            <li><strong>No-Code AI:</strong> Built an intuitive layout allowing users to build, clean, and deploy machine learning models without code.</li>
-                            <li><strong>Predictive Analytics:</strong> Focused on forecasting trends, diagnosing data patterns, and segmenting complex data streams.</li>
-                            <li><strong>Explainable AI:</strong> Provided interactive tools for users to fine-tune models and understand the underlying logic.</li>
+                            <li><strong>No-Code AI:</strong> Built an intuitive layout allowing users to build, clean,
+                                and deploy machine learning models without code.</li>
+                            <li><strong>Predictive Analytics:</strong> Focused on forecasting trends, diagnosing data
+                                patterns, and segmenting complex data streams.</li>
+                            <li><strong>Explainable AI:</strong> Provided interactive tools for users to fine-tune
+                                models and understand the underlying logic.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">AI</span>
@@ -1027,12 +1241,18 @@
 
                     <article class="project-card">
                         <h3>IDARE Dashboard Analytics</h3>
-                        <a class="project-link" href="https://energymeta.idare.ai" target="_blank" rel="noreferrer">https://energymeta.idare.ai</a>
-                        <p>A modern analytics dashboard developed to provide real-time insights and scalability. The platform integrates React with a Vite-powered frontend for lightning-fast performance and supports a modular architecture.</p>
+                        <a class="project-link" href="https://energymeta.idare.ai" target="_blank"
+                            rel="noreferrer">https://energymeta.idare.ai</a>
+                        <p>A modern analytics dashboard developed to provide real-time insights and scalability. The
+                            platform integrates React with a Vite-powered frontend for lightning-fast performance and
+                            supports a modular architecture.</p>
                         <ul class="detail-list">
-                            <li><strong>Team Leadership:</strong> Led the data visualization team, oversaw sprints, and analyzed business capability gaps.</li>
-                            <li><strong>Big Data Visualization:</strong> Developed visualization systems integrating Plotly.js, WebGL, and custom drag-and-drop dashboards.</li>
-                            <li><strong>Metaverse Integration:</strong> Developed a WebGL Meta Universe communication layout for real-time data transfer.</li>
+                            <li><strong>Team Leadership:</strong> Led the data visualization team, oversaw sprints, and
+                                analyzed business capability gaps.</li>
+                            <li><strong>Big Data Visualization:</strong> Developed visualization systems integrating
+                                Plotly.js, WebGL, and custom drag-and-drop dashboards.</li>
+                            <li><strong>Metaverse Integration:</strong> Developed a WebGL Meta Universe communication
+                                layout for real-time data transfer.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">React</span>
@@ -1044,11 +1264,16 @@
 
                     <article class="project-card">
                         <h3>Digital Twin Digital Platform</h3>
-                        <a class="project-link" href="https://www.movement.idare.ai" target="_blank" rel="noreferrer">https://www.movement.idare.ai</a>
-                        <p>Helps users create 2D/3D digital replicas of offshore wind, solar, oil, and gas infrastructure assets in GIS spaces to facilitate energy transitioning concepts while mapping critical asset metadata.</p>
+                        <a class="project-link" href="https://www.movement.idare.ai" target="_blank"
+                            rel="noreferrer">https://www.movement.idare.ai</a>
+                        <p>Helps users create 2D/3D digital replicas of offshore wind, solar, oil, and gas
+                            infrastructure assets in GIS spaces to facilitate energy transitioning concepts while
+                            mapping critical asset metadata.</p>
                         <ul class="detail-list">
-                            <li><strong>Statistical Modeling:</strong> Explored data trends, performed statistical modeling, and provided actionable recommendations.</li>
-                            <li><strong>High-Performance UI:</strong> Designed a customizable React/Vite architecture featuring real-time data sync.</li>
+                            <li><strong>Statistical Modeling:</strong> Explored data trends, performed statistical
+                                modeling, and provided actionable recommendations.</li>
+                            <li><strong>High-Performance UI:</strong> Designed a customizable React/Vite architecture
+                                featuring real-time data sync.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">Digital Twin</span>
@@ -1060,11 +1285,16 @@
 
                     <article class="project-card">
                         <h3>IDARE EDA - Exploratory Data Analysis</h3>
-                        <a class="project-link" href="https://idare.ai" target="_blank" rel="noreferrer">https://idare.ai</a>
-                        <p>An analytical ecosystem planned to examine dataset characteristics, identify missing value structures, explore distribution dependencies, and isolate structural insights across raw multi-source data inputs.</p>
+                        <a class="project-link" href="https://idare.ai" target="_blank"
+                            rel="noreferrer">https://idare.ai</a>
+                        <p>An analytical ecosystem planned to examine dataset characteristics, identify missing value
+                            structures, explore distribution dependencies, and isolate structural insights across raw
+                            multi-source data inputs.</p>
                         <ul class="detail-list">
-                            <li><strong>Agile &amp; Git Delivery:</strong> Streamlined task assignments, sprint planning, and oversaw strict Git version controls.</li>
-                            <li><strong>Cross-Functional Collaboration:</strong> Collaborated with the API team to build robust, streamlined JSON data schemas.</li>
+                            <li><strong>Agile &amp; Git Delivery:</strong> Streamlined task assignments, sprint
+                                planning, and oversaw strict Git version controls.</li>
+                            <li><strong>Cross-Functional Collaboration:</strong> Collaborated with the API team to build
+                                robust, streamlined JSON data schemas.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">EDA</span>
@@ -1075,11 +1305,15 @@
 
                     <article class="project-card">
                         <h3>JERP (ERP)</h3>
-                        <a class="project-link" href="https://njpl.jerpbd.com" target="_blank" rel="noreferrer">https://njpl.jerpbd.com</a>
-                        <p>An enterprise-level ERP application ensuring seamless information flow across supply chain, production, sales, distribution, HR, accounts, and collections workflows.</p>
+                        <a class="project-link" href="https://njpl.jerpbd.com" target="_blank"
+                            rel="noreferrer">https://njpl.jerpbd.com</a>
+                        <p>An enterprise-level ERP application ensuring seamless information flow across supply chain,
+                            production, sales, distribution, HR, accounts, and collections workflows.</p>
                         <ul class="detail-list">
-                            <li><strong>Full-Stack Engineering:</strong> Developed application modules across React.js, Node.js, and Express.js ecosystems.</li>
-                            <li><strong>Team Management:</strong> Supervised an 8-member frontend team, collaborating with corporate Business Analysts.</li>
+                            <li><strong>Full-Stack Engineering:</strong> Developed application modules across React.js,
+                                Node.js, and Express.js ecosystems.</li>
+                            <li><strong>Team Management:</strong> Supervised an 8-member frontend team, collaborating
+                                with corporate Business Analysts.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">ERP</span>
@@ -1091,13 +1325,24 @@
 
                     <article class="project-card">
                         <h3>Jetstar (Oracle Maxymiser Integration)</h3>
-                        <a class="project-link" href="https://www.jetstar.com" target="_blank" rel="noreferrer">https://www.jetstar.com</a>
-                        <p>Implemented, scheduled, and maintained localized promotional campaigns, flight-sale advertisements, and personalized content configurations on the Jetstar web portal across 15+ international markets using Vanilla JS, jQuery, HTML, and CSS.</p>
+                        <a class="project-link" href="https://www.jetstar.com" target="_blank"
+                            rel="noreferrer">https://www.jetstar.com</a>
+                        <p>Implemented, scheduled, and maintained localized promotional campaigns, flight-sale
+                            advertisements, and personalized content configurations on the Jetstar web portal across 15+
+                            international markets using Vanilla JS, jQuery, HTML, and CSS.</p>
                         <ul class="detail-list">
-                            <li><strong>Dynamic Custom Content:</strong> Developed and integrated responsive promotional banners, interactive flight-sale advertisements, and personalized web layouts using Vanilla JS, jQuery, HTML, and CSS.</li>
-                            <li><strong>Oracle Maxymiser Campaigns:</strong> Managed, scheduled, and deployed targeted A/B test variations, audience segmentation rules, and behavioral conditions using Oracle Maxymiser.</li>
-                            <li><strong>Multi-Locale Targeting:</strong> Handled complex localization rules for currency conversion, route mappings, regional schedules, and local legal guidelines across APAC locales (e.g., Australia, Japan, South Korea).</li>
-                            <li><strong>Performance &amp; QA:</strong> Enforced thorough cross-browser and cross-device testing to ensure that campaign injection scripts did not interfere with the core flight search or booking engines.</li>
+                            <li><strong>Dynamic Custom Content:</strong> Developed and integrated responsive promotional
+                                banners, interactive flight-sale advertisements, and personalized web layouts using
+                                Vanilla JS, jQuery, HTML, and CSS.</li>
+                            <li><strong>Oracle Maxymiser Campaigns:</strong> Managed, scheduled, and deployed targeted
+                                A/B test variations, audience segmentation rules, and behavioral conditions using Oracle
+                                Maxymiser.</li>
+                            <li><strong>Multi-Locale Targeting:</strong> Handled complex localization rules for currency
+                                conversion, route mappings, regional schedules, and local legal guidelines across APAC
+                                locales (e.g., Australia, Japan, South Korea).</li>
+                            <li><strong>Performance &amp; QA:</strong> Enforced thorough cross-browser and cross-device
+                                testing to ensure that campaign injection scripts did not interfere with the core flight
+                                search or booking engines.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">Vanilla JS</span>
@@ -1114,11 +1359,15 @@
 
                     <article class="project-card">
                         <h3>IPDC - Islamic Practice and Dawah Circle</h3>
-                        <a class="project-link" href="https://report.ipdc.org.au" target="_blank" rel="noreferrer">https://report.ipdc.org.au</a>
-                        <p>A localized multi-tier system managing tracking, workflow planning, and community action logging across hundreds of central, state, and regional organizational nodes.</p>
+                        <a class="project-link" href="https://report.ipdc.org.au" target="_blank"
+                            rel="noreferrer">https://report.ipdc.org.au</a>
+                        <p>A localized multi-tier system managing tracking, workflow planning, and community action
+                            logging across hundreds of central, state, and regional organizational nodes.</p>
                         <ul class="detail-list">
-                            <li><strong>Three-Tier Architecture:</strong> Built using a decoupled RESTful Web API, React Web UI, and a unified Mobile PWA.</li>
-                            <li><strong>Mobile PWA Development:</strong> Built an adaptive progressive application leveraging Onsen UI 2 and Vue.js.</li>
+                            <li><strong>Three-Tier Architecture:</strong> Built using a decoupled RESTful Web API, React
+                                Web UI, and a unified Mobile PWA.</li>
+                            <li><strong>Mobile PWA Development:</strong> Built an adaptive progressive application
+                                leveraging Onsen UI 2 and Vue.js.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">REST API</span>
@@ -1131,11 +1380,16 @@
                     <article class="project-card">
                         <h3>Automated Reporting &amp; Data Collection</h3>
                         <span class="project-link">Industrial Application</span>
-                        <p>An enterprise reporting ecosystem designed to collect, scan, track, and visualize report data onto customized user dashboards with real-time alerting and multi-platform compatibility.</p>
+                        <p>An enterprise reporting ecosystem designed to collect, scan, track, and visualize report data
+                            onto customized user dashboards with real-time alerting and multi-platform compatibility.
+                        </p>
                         <ul class="detail-list">
-                            <li><strong>Configurable Dashboards:</strong> Engineered dynamic panels, drag-and-drop boards, and customizable tabbed views using Plotly.js.</li>
-                            <li><strong>Data Architecture:</strong> Designed high-performance frontend and backend data response architectures utilizing React, Node.js, and Django.</li>
-                            <li><strong>Process Optimization:</strong> Led system analysis and process reviews to translate complex corporate workflows into live dashboards.</li>
+                            <li><strong>Configurable Dashboards:</strong> Engineered dynamic panels, drag-and-drop
+                                boards, and customizable tabbed views using Plotly.js.</li>
+                            <li><strong>Data Architecture:</strong> Designed high-performance frontend and backend data
+                                response architectures utilizing React, Node.js, and Django.</li>
+                            <li><strong>Process Optimization:</strong> Led system analysis and process reviews to
+                                translate complex corporate workflows into live dashboards.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">React</span>
@@ -1150,11 +1404,16 @@
                     <article class="project-card">
                         <h3>Secured Credential Automation</h3>
                         <span class="project-link">Govt. Project</span>
-                        <p>An automated document management system that dynamically generates and updates certified credential documents (PDFs/Docs) utilizing cryptographic signatures and database integrations.</p>
+                        <p>An automated document management system that dynamically generates and updates certified
+                            credential documents (PDFs/Docs) utilizing cryptographic signatures and database
+                            integrations.</p>
                         <ul class="detail-list">
-                            <li><strong>Secure Workflows:</strong> Developed a workflow engine facilitating multi-tier authorization and cryptographic signature verification.</li>
-                            <li><strong>Performance Engineering:</strong> Optimized backend rendering for generating large volumes of document files with low latency.</li>
-                            <li><strong>System Integration:</strong> Spearheaded business logic integration between core databases and document template managers.</li>
+                            <li><strong>Secure Workflows:</strong> Developed a workflow engine facilitating multi-tier
+                                authorization and cryptographic signature verification.</li>
+                            <li><strong>Performance Engineering:</strong> Optimized backend rendering for generating
+                                large volumes of document files with low latency.</li>
+                            <li><strong>System Integration:</strong> Spearheaded business logic integration between core
+                                databases and document template managers.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">React</span>
@@ -1166,12 +1425,18 @@
 
                     <article class="project-card">
                         <h3>Website Personalization (News Corp)</h3>
-                        <a class="project-link" href="https://www.theaustralian.com.au" target="_blank" rel="noreferrer">https://www.theaustralian.com.au</a>
-                        <p>Scaled personalization and conversion rate optimization (CRO) engines for major Australian news outlets, delivering customized reading experiences and targeted advertisements to millions of active daily readers.</p>
+                        <a class="project-link" href="https://www.theaustralian.com.au" target="_blank"
+                            rel="noreferrer">https://www.theaustralian.com.au</a>
+                        <p>Scaled personalization and conversion rate optimization (CRO) engines for major Australian
+                            news outlets, delivering customized reading experiences and targeted advertisements to
+                            millions of active daily readers.</p>
                         <ul class="detail-list">
-                            <li><strong>A/B Testing &amp; Personalization:</strong> Developed and executed data-driven personalization campaigns using enterprise tools (Oracle Maxymiser, Adobe Target).</li>
-                            <li><strong>Frontend Optimization:</strong> Designed high-performance, cross-browser compatible custom components served dynamically to readers.</li>
-                            <li><strong>Behavioral Analytics:</strong> Integrated real-time tracking scripts to analyze reader engagement metrics.</li>
+                            <li><strong>A/B Testing &amp; Personalization:</strong> Developed and executed data-driven
+                                personalization campaigns using enterprise tools (Oracle Maxymiser, Adobe Target).</li>
+                            <li><strong>Frontend Optimization:</strong> Designed high-performance, cross-browser
+                                compatible custom components served dynamically to readers.</li>
+                            <li><strong>Behavioral Analytics:</strong> Integrated real-time tracking scripts to analyze
+                                reader engagement metrics.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">Personalization</span>
@@ -1185,11 +1450,15 @@
                     <article class="project-card">
                         <h3>MMSPL Baseball Community Platform</h3>
                         <span class="project-link">Mississauga Men's Senior Slo-Pitch Club</span>
-                        <p>A dynamic, custom-configurable community platform and business directory developed for a senior baseball league in Toronto, sharing schedules, statistics, and business listings.</p>
+                        <p>A dynamic, custom-configurable community platform and business directory developed for a
+                            senior baseball league in Toronto, sharing schedules, statistics, and business listings.</p>
                         <ul class="detail-list">
-                            <li><strong>Dynamic Features:</strong> Built a custom content management system to dynamically update team schedules, player statistics, and sponsor services.</li>
-                            <li><strong>Quality Assurance:</strong> Implemented strict Test-Driven Development (TDD) practices to ensure reliability across all platform modules.</li>
-                            <li><strong>Release Coordination:</strong> Coordinated with international teams to deliver features, managing deployment timelines and hotfixes.</li>
+                            <li><strong>Dynamic Features:</strong> Built a custom content management system to
+                                dynamically update team schedules, player statistics, and sponsor services.</li>
+                            <li><strong>Quality Assurance:</strong> Implemented strict Test-Driven Development (TDD)
+                                practices to ensure reliability across all platform modules.</li>
+                            <li><strong>Release Coordination:</strong> Coordinated with international teams to deliver
+                                features, managing deployment timelines and hotfixes.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">React</span>
@@ -1203,11 +1472,16 @@
                     <article class="project-card">
                         <h3>Business Tour Management System</h3>
                         <span class="project-link">Petbarns, Australia</span>
-                        <p>A comprehensive planning and validation platform developed for field executives in Australia to plan monthly client visits, track material consumption, and manage manager approval workflows.</p>
+                        <p>A comprehensive planning and validation platform developed for field executives in Australia
+                            to plan monthly client visits, track material consumption, and manage manager approval
+                            workflows.</p>
                         <ul class="detail-list">
-                            <li><strong>Workflow Automation:</strong> Built an approval/denial workflow for sales promotion executive schedules, allowing seamless amendment cycles.</li>
-                            <li><strong>Resource Tracking:</strong> Developed database logging schemas to track product catalogs, leaflets, and promotional asset inventory.</li>
-                            <li><strong>API &amp; Data Sync:</strong> Led the API team in establishing robust backend integration using Node.js, Express, and MongoDB.</li>
+                            <li><strong>Workflow Automation:</strong> Built an approval/denial workflow for sales
+                                promotion executive schedules, allowing seamless amendment cycles.</li>
+                            <li><strong>Resource Tracking:</strong> Developed database logging schemas to track product
+                                catalogs, leaflets, and promotional asset inventory.</li>
+                            <li><strong>API &amp; Data Sync:</strong> Led the API team in establishing robust backend
+                                integration using Node.js, Express, and MongoDB.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">React</span>
@@ -1221,10 +1495,13 @@
                     <article class="project-card">
                         <h3>Driving School Management Platform</h3>
                         <span class="project-link">Driving School, Australia</span>
-                        <p>An online course booking and expert challenge system allowing new learners to book driving training sessions and manage exam scheduling.</p>
+                        <p>An online course booking and expert challenge system allowing new learners to book driving
+                            training sessions and manage exam scheduling.</p>
                         <ul class="detail-list">
-                            <li><strong>Feature Engineering:</strong> Built modular booking calendars and report viewers to manage scheduling and payments.</li>
-                            <li><strong>Custom Functionality:</strong> Designed application-specific report dashboards to allow administrators to track trainer availability and student progress.</li>
+                            <li><strong>Feature Engineering:</strong> Built modular booking calendars and report viewers
+                                to manage scheduling and payments.</li>
+                            <li><strong>Custom Functionality:</strong> Designed application-specific report dashboards
+                                to allow administrators to track trainer availability and student progress.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">React</span>
@@ -1236,10 +1513,13 @@
                     <article class="project-card">
                         <h3>Custom HRM System</h3>
                         <span class="project-link">Banani &amp; Garments Super Shops</span>
-                        <p>A customizable Human Resource Management system covering attendance, employee files, leave applications, and payroll systems, deployed for retail outlets and corporate offices.</p>
+                        <p>A customizable Human Resource Management system covering attendance, employee files, leave
+                            applications, and payroll systems, deployed for retail outlets and corporate offices.</p>
                         <ul class="detail-list">
-                            <li><strong>Org Chain Approvals:</strong> Engineered a custom organizational hierarchy engine that routes leave requests through corporate approval chains.</li>
-                            <li><strong>Report Generation:</strong> Designed dynamic report view panels and payroll calculation engines to automate salary processing.</li>
+                            <li><strong>Org Chain Approvals:</strong> Engineered a custom organizational hierarchy
+                                engine that routes leave requests through corporate approval chains.</li>
+                            <li><strong>Report Generation:</strong> Designed dynamic report view panels and payroll
+                                calculation engines to automate salary processing.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">Java</span>
@@ -1253,10 +1533,13 @@
                     <article class="project-card">
                         <h3>Chemical Jar (Android Game)</h3>
                         <span class="project-link">Southeast University (BD)</span>
-                        <p>An interactive educational Android application designed for chemistry students to safely simulate reactions by mixing shelf chemicals in a virtual reaction jar.</p>
+                        <p>An interactive educational Android application designed for chemistry students to safely
+                            simulate reactions by mixing shelf chemicals in a virtual reaction jar.</p>
                         <ul class="detail-list">
-                            <li><strong>Reaction Simulation:</strong> Programmed game logic in Java to simulate chemical reaction outcomes, success animations, or failure explosions.</li>
-                            <li><strong>UX/UI Design:</strong> Structured a drag-and-drop shelf interface using native Android touch controls.</li>
+                            <li><strong>Reaction Simulation:</strong> Programmed game logic in Java to simulate chemical
+                                reaction outcomes, success animations, or failure explosions.</li>
+                            <li><strong>UX/UI Design:</strong> Structured a drag-and-drop shelf interface using native
+                                Android touch controls.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">Android</span>
@@ -1269,10 +1552,13 @@
                     <article class="project-card">
                         <h3>Digital Krisok (Digital Farmer)</h3>
                         <span class="project-link">Southeast University (BD)</span>
-                        <p>A native Android mobile app designed to bridge communication between farmers and agricultural experts, providing real-time crop disease diagnosis and advisory support.</p>
+                        <p>A native Android mobile app designed to bridge communication between farmers and agricultural
+                            experts, providing real-time crop disease diagnosis and advisory support.</p>
                         <ul class="detail-list">
-                            <li><strong>Advisory Console:</strong> Developed communication channels for farmers to upload crop details and consult directly with experts.</li>
-                            <li><strong>Offline Support:</strong> Built client-side database storage to cache advisory tips and local guides for remote areas.</li>
+                            <li><strong>Advisory Console:</strong> Developed communication channels for farmers to
+                                upload crop details and consult directly with experts.</li>
+                            <li><strong>Offline Support:</strong> Built client-side database storage to cache advisory
+                                tips and local guides for remote areas.</li>
                         </ul>
                         <div class="tag-list">
                             <span class="tag">Android</span>
@@ -1283,7 +1569,8 @@
                     </article>
                 </div>
 
-                <p class="impact-note">More projects: <a href="https://www.linkedin.com/in/frsummit/details/projects" target="_blank" rel="noreferrer">linkedin.com/in/frsummit/details/projects</a></p>
+                <p class="impact-note">More projects: <a href="https://www.linkedin.com/in/frsummit/details/projects"
+                        target="_blank" rel="noreferrer">linkedin.com/in/frsummit/details/projects</a></p>
             </div>
         </section>
 
@@ -1292,8 +1579,10 @@
                 <div class="section-head">
                     <div class="section-label">Skills</div>
                     <div>
-                        <h2 id="skills-title">Technical toolkit for frontend systems, data platforms, cloud delivery, and AI-assisted development.</h2>
-                        <p>Hands-on across product architecture, implementation, collaboration, testing, and deployment.</p>
+                        <h2 id="skills-title">Technical toolkit for frontend systems, data platforms, cloud delivery,
+                            and AI-assisted development.</h2>
+                        <p>Hands-on across product architecture, implementation, collaboration, testing, and deployment.
+                        </p>
                     </div>
                 </div>
 
@@ -1320,7 +1609,8 @@
                     </div>
                     <div class="skill-group">
                         <h3>Specialties</h3>
-                        <p>Custom data visualization, configurable SaaS platforms, digital twin interfaces, predictive analytics, cloud deployment workflows, and team mentorship.</p>
+                        <p>Custom data visualization, configurable SaaS platforms, digital twin interfaces, predictive
+                            analytics, cloud deployment workflows, and team mentorship.</p>
                     </div>
                 </div>
             </div>
@@ -1332,7 +1622,8 @@
                     <div class="section-label">Education</div>
                     <div>
                         <h2 id="credentials-title">Education, certifications, languages, and interests.</h2>
-                        <p>A foundation in Computer Science &amp; Engineering with certifications in Optimizely technical and web foundations.</p>
+                        <p>A foundation in Computer Science &amp; Engineering with certifications in Optimizely
+                            technical and web foundations.</p>
                     </div>
                 </div>
 
@@ -1363,7 +1654,8 @@
                             </li>
                             <li>
                                 <strong>Interests</strong>
-                                <span>Bike touring &amp; exploration. Long-distance cyclist; successfully completed routes exploring 70% of Bangladesh.</span>
+                                <span>Bike touring &amp; exploration. Long-distance cyclist; successfully completed
+                                    routes exploring 70% of Bangladesh.</span>
                             </li>
                         </ul>
                     </div>
@@ -1383,8 +1675,10 @@
                 <div class="contact-actions">
                     <a class="button button-primary" href="mailto:frsummit1@gmail.com">frsummit1@gmail.com</a>
                     <a class="button button-secondary" href="tel:+8801717627896">+8801717627896</a>
-                    <a class="button button-secondary" href="https://www.linkedin.com/in/frsummit" target="_blank" rel="noreferrer">linkedin.com/in/frsummit</a>
-                    <a class="button button-secondary" href="https://github.com/frsummit" target="_blank" rel="noreferrer">github.com/frsummit</a>
+                    <a class="button button-secondary" href="https://www.linkedin.com/in/frsummit" target="_blank"
+                        rel="noreferrer">linkedin.com/in/frsummit</a>
+                    <a class="button button-secondary" href="https://github.com/frsummit" target="_blank"
+                        rel="noreferrer">github.com/frsummit</a>
                 </div>
             </div>
         </section>
@@ -1397,8 +1691,29 @@
         </div>
     </footer>
 
+    <!-- Lightbox Modal for Gallery Images -->
+    <div id="lightbox" class="lightbox-overlay" aria-hidden="true">
+        <div class="lightbox-img-wrapper">
+            <button id="lightbox-close" class="lightbox-close-btn" aria-label="Close Lightbox">&times;</button>
+            <img id="lightbox-img" class="lightbox-img" src="" alt="Maximized view" />
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Helper to convert standard Google Drive sharing links to direct image URLs
+            const getDirectDriveUrl = (url) => {
+                if (url.includes('drive.google.com')) {
+                    // Match either /d/FILE_ID/ or ?id=FILE_ID
+                    const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/) || url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+                    if (match && match[1]) {
+                        return `https://lh3.googleusercontent.com/d/${match[1]}`;
+                    }
+                }
+                return url;
+            };
+
+            // Layout Toggle Logic
             const btnList = document.getElementById('btn-list-view');
             const btnGrid = document.getElementById('btn-grid-view');
             const projectsGrid = document.querySelector('.projects-grid');
@@ -1416,7 +1731,149 @@
                     btnList.classList.remove('active');
                 });
             }
+
+            // Project Galleries Config
+            // Format Google Drive links as: 'https://lh3.googleusercontent.com/d/FILE_ID'
+            // Or use direct image links.
+            const projectGalleries = {
+                "knowverse-ai": [
+                    "https://drive.google.com/file/d/1O9OEE30OSnKPPUSU-agyAc8BisQobF6X/view?usp=sharing",
+                    "https://drive.google.com/file/d/11r89CITiPEhZEWnZG_X2AS5-t0NnoOix/view?usp=sharing",
+                    "https://drive.google.com/file/d/18vuZUD2-MUOKBaMq2UGQ55drHEp0ijOK/view?usp=sharing",
+                    "https://drive.google.com/file/d/1I5zWJ_Ojcf7d28KHu_devTA4q5AMQ0M8/view?usp=sharing",
+                    "https://drive.google.com/file/d/1NBEtfq_7nsfoTbYhT3HNyUhzmS483nKQ/view?usp=sharing",
+                    "https://drive.google.com/file/d/1X1JpGz7LBOqUYtSRmZkfWenPdpSuWlws/view?usp=sharing",
+                    "https://drive.google.com/file/d/1a0IiltgVQDFpPGVJG-U6yxTpsr84DFQy/view?usp=sharing",
+                    "https://drive.google.com/file/d/1a8YGBKhDrM8q9GV91azDncj5g2WALJFf/view?usp=sharing",
+                    "https://drive.google.com/file/d/1nTK3uMlAbdNNlcg_Nv3TnrSG2E2h_PDK/view?usp=sharing",
+                    "https://drive.google.com/file/d/1yVjJZZiDG3COHswTLKuWiEO5DICpbObA/view?usp=sharing",
+                    "https://drive.google.com/file/d/1ys0jHZXDIo7jyaHmUDoagU9eYMZhgQGH/view?usp=sharing"
+                ],
+                "idare-dashboard-analytics": [
+                    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop"
+                ],
+                // Add entries for other projects when you have their links:
+                // "digital-twin-digital-platform": [],
+                // "idare-eda-exploratory-data-analysis": [],
+                // "jerp-erp": [],
+                // "jetstar-oracle-maxymiser-integration": [],
+                // "ipdc-islamic-practice-and-dawah-circle": [],
+                // "automated-reporting-data-collection": [],
+                // "secured-credential-automation": [],
+                // "website-personalization-news-corp": [],
+                // "mmspl-baseball-community-platform": [],
+                // "business-tour-management-system": [],
+                // "driving-school-management-platform": [],
+                // "custom-hrm-system": [],
+                // "chemical-jar-android-game": [],
+                // "digital-krisok-digital-farmer": []
+            };
+
+            // Lightbox Elements
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxClose = document.getElementById('lightbox-close');
+
+            const openLightbox = (src, alt) => {
+                if (lightbox && lightboxImg) {
+                    lightboxImg.src = src;
+                    lightboxImg.alt = alt || 'Maximized project image';
+                    lightbox.classList.add('active');
+                    lightbox.setAttribute('aria-hidden', 'false');
+                }
+            };
+
+            const closeLightbox = () => {
+                if (lightbox) {
+                    lightbox.classList.remove('active');
+                    lightbox.setAttribute('aria-hidden', 'true');
+                }
+            };
+
+            if (lightbox) {
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox || e.target === lightboxClose || e.target.classList.contains('lightbox-img-wrapper')) {
+                        closeLightbox();
+                    }
+                });
+            }
+
+            // Dynamically Render Galleries
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                const titleNode = card.querySelector('h3');
+                if (!titleNode) return;
+
+                const titleText = titleNode.textContent.trim();
+                const slug = titleText.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+                const images = projectGalleries[slug];
+                if (images && images.length > 0) {
+                    // Create gallery elements
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'project-gallery-wrapper';
+
+                    const toggleBtn = document.createElement('button');
+                    toggleBtn.className = 'gallery-toggle-btn';
+                    toggleBtn.setAttribute('aria-expanded', 'false');
+                    toggleBtn.innerHTML = `
+                        <svg class="toggle-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        View Project Gallery
+                    `;
+
+                    const content = document.createElement('div');
+                    content.className = 'gallery-content';
+
+                    const grid = document.createElement('div');
+                    grid.className = 'gallery-grid';
+
+                    images.forEach((imgUrl, idx) => {
+                        const directUrl = getDirectDriveUrl(imgUrl);
+                        const item = document.createElement('div');
+                        item.className = 'gallery-item';
+                        item.innerHTML = `<img src="${directUrl}" alt="${titleText} screenshot ${idx + 1}" loading="lazy" />`;
+                        item.addEventListener('click', () => openLightbox(directUrl, `${titleText} screenshot ${idx + 1}`));
+                        grid.appendChild(item);
+                    });
+
+                    content.appendChild(grid);
+                    wrapper.appendChild(toggleBtn);
+                    wrapper.appendChild(content);
+
+                    // Append below tag-list
+                    const tagList = card.querySelector('.tag-list');
+                    if (tagList) {
+                        tagList.after(wrapper);
+                    } else {
+                        card.appendChild(wrapper);
+                    }
+
+                    // Toggle Expand/Collapse with smooth height calculation
+                    toggleBtn.addEventListener('click', () => {
+                        const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                        toggleBtn.setAttribute('aria-expanded', !isExpanded);
+
+                        if (isExpanded) {
+                            content.style.maxHeight = '0px';
+                            content.classList.remove('expanded');
+                        } else {
+                            content.classList.add('expanded');
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            // Re-calculate height after layout settles
+                            setTimeout(() => {
+                                if (content.classList.contains('expanded')) {
+                                    content.style.maxHeight = 'none';
+                                }
+                            }, 300);
+                        }
+                    });
+                }
+            });
         });
     </script>
 </body>
+
 </html>
