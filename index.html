@@ -9,15 +9,15 @@
     <title>Fayazur Rahman Summit | Senior Software Engineer &amp; Content Creator</title>
     
     <meta name="description"
-        content="Portfolio of Fayazur Rahman Summit, Senior Software Engineer &amp; Tech Blogger. Expert in digital twins, real-time systems, adventure blogging, and video creation." />
+        content="Portfolio of Fayazur Rahman Summit, Senior Software Engineer &amp; Tech Blogger. Expert in digital twins, real-time systems, adventure blogging, video creation, and creator of Animator Pro, a browser-based cartoon animation studio." />
     <meta name="author" content="Fayazur Rahman Summit" />
     
-    <meta name="keywords" content="Fayazur Rahman Summit, Senior Software Engineer, Team Lead, Energy Industry Software, Animator Pro, YouTube Content Creator, Adventure Blogging Bangladesh, Video Editing, CapCut, Krita, Fayazur Rahman, frsummit, software engineer portfolio, web developer portfolio" />
+    <meta name="keywords" content="Fayazur Rahman Summit, Senior Software Engineer, Team Lead, Energy Industry Software, Animator Pro, YouTube Content Creator, Adventure Blogging Bangladesh, Video Editing, CapCut, Krita, Fayazur Rahman, frsummit, software engineer portfolio, web developer portfolio, browser-based animation studio, cartoon character controller, kids learning video software, YouTube animation tool, HTML5 Canvas animation, JavaScript animation app, educational animation software, talking character generator, nursery rhyme animation, animation recorder" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Fayazur Rahman Summit | Senior Software Engineer &amp; Creative Creator" />
     <meta property="og:description"
-        content="Senior Software Engineer, Team Lead, and Creator of Animator Pro. Explorer of 70% of Bangladesh, tech blogger, and visual storyteller." />
+        content="Senior Software Engineer, Team Lead, and Creator of Animator Pro. Explorer of 70% of Bangladesh, tech blogger, visual storyteller, and builder of a browser-based cartoon animation studio for YouTube, kids learning videos, talking characters, and story scenes." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://frsummit.github.io/" />
     <meta property="og:image" content="https://frsummit.github.io/Images/profile.jpg" />
@@ -25,7 +25,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Fayazur Rahman Summit | Senior Software Engineer &amp; Creative Creator" />
-    <meta name="twitter:description" content="Senior Software Engineer, Team Lead, and Creator of Animator Pro. Explorer of 70% of Bangladesh, tech blogger, and visual storyteller." />
+    <meta name="twitter:description" content="Senior Software Engineer, Team Lead, and Creator of Animator Pro. Explorer of 70% of Bangladesh, tech blogger, visual storyteller, and builder of a browser-based cartoon animation studio for YouTube, kids learning videos, talking characters, and story scenes." />
     <meta name="twitter:image" content="https://frsummit.github.io/Images/profile.jpg" />
 
     <link rel="canonical" href="https://frsummit.github.io/" />
@@ -63,9 +63,33 @@
         "Oracle Maxymiser",
         "Video Editing",
         "Cartoon Illustration",
-        "Animator Pro"
+        "Animator Pro",
+        "Browser-Based Animation Tools",
+        "HTML5 Canvas Animation",
+        "Educational Video Software",
+        "YouTube Cartoon Content Creation",
+        "MediaRecorder",
+        "Speech Synthesis"
       ],
       "description": "Senior Software Engineer and Team Lead building enterprise SaaS, digital twin platforms, real-time systems, and advanced data visualization products."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Animator Pro - Cartoon Character Controller",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web browser",
+      "url": "https://frsummit.github.io/animator-pro.html",
+      "creator": {
+        "@type": "Person",
+        "name": "Fayazur Rahman Summit",
+        "url": "https://frsummit.github.io/"
+      },
+      "description": "Animator Pro is a browser-based cartoon animation studio for YouTube videos, kids learning content, nursery rhymes, talking characters, animated news scenes, and social media shorts.",
+      "programmingLanguage": ["HTML", "CSS", "JavaScript"],
+      "keywords": "browser animation studio, cartoon character controller, kids video animation, HTML5 Canvas animation, YouTube animation tool, educational animation software"
     }
     </script>
     <style>
@@ -645,6 +669,137 @@
             margin-bottom: 0;
         }
 
+        .personal-project-section {
+            background: #111c1a;
+            color: var(--paper);
+        }
+
+        .personal-project-section .section-label {
+            color: #66d8cf;
+        }
+
+        .personal-project-section .section-head h2 {
+            color: var(--paper);
+        }
+
+        .personal-project-section .section-head p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .animator-project-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+            gap: 28px;
+            align-items: start;
+        }
+
+        .animator-summary-card {
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.07);
+            padding: 24px;
+        }
+
+        .animator-summary-card h3 {
+            margin-bottom: 12px;
+            color: var(--paper);
+            font-size: 1.25rem;
+        }
+
+        .animator-summary-card p {
+            color: rgba(255, 255, 255, 0.74);
+        }
+
+        .animator-highlight-list {
+            display: grid;
+            gap: 10px;
+            margin: 18px 0 22px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .animator-highlight-list li {
+            border-left: 3px solid #66d8cf;
+            color: rgba(255, 255, 255, 0.78);
+            font-weight: 750;
+            padding-left: 12px;
+        }
+
+        .animator-stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+        .animator-stat {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            background: rgba(0, 127, 115, 0.18);
+            padding: 12px;
+        }
+
+        .animator-stat strong {
+            display: block;
+            color: var(--paper);
+            font-size: 1.3rem;
+            line-height: 1.1;
+        }
+
+        .animator-stat span {
+            display: block;
+            margin-top: 4px;
+            color: rgba(255, 255, 255, 0.68);
+            font-size: 0.82rem;
+            font-weight: 800;
+        }
+
+        .animator-visual-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .animator-visual-card {
+            min-width: 0;
+            margin: 0;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .animator-visual-card img {
+            width: 100%;
+            height: 190px;
+            background: #f5fbfa;
+            object-fit: contain;
+            padding: 16px;
+        }
+
+        .animator-visual-card:nth-child(3) img {
+            object-fit: cover;
+            padding: 0;
+        }
+
+        .animator-visual-card figcaption {
+            display: grid;
+            gap: 4px;
+            padding: 12px 14px 14px;
+        }
+
+        .animator-visual-card strong {
+            color: var(--paper);
+            font-size: 0.96rem;
+        }
+
+        .animator-visual-card span {
+            color: rgba(255, 255, 255, 0.66);
+            font-size: 0.84rem;
+            font-weight: 700;
+            line-height: 1.45;
+        }
+
         .credentials-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -830,7 +985,8 @@
 
             .hero-grid,
             .section-head,
-            .summary-grid {
+            .summary-grid,
+            .animator-project-layout {
                 grid-template-columns: 1fr;
             }
 
@@ -889,7 +1045,9 @@
 
             .stats,
             .projects-grid,
-            .skills-grid {
+            .skills-grid,
+            .animator-visual-grid,
+            .animator-stat-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -911,8 +1069,13 @@
             .timeline-item,
             .project-card,
             .skill-group,
+            .animator-summary-card,
             .compact-card {
                 padding: 20px;
+            }
+
+            .animator-visual-card img {
+                height: 170px;
             }
         }
 
@@ -1240,6 +1403,7 @@
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
+                <a href="#animator-pro">Animator Pro</a>
                 <a href="#credentials">Education</a>
                 <a href="#interests">Hobbies</a>
                 <a href="#contact">Contact</a>
@@ -1946,6 +2110,90 @@
                         <h3>Specialties</h3>
                         <p>Custom data visualization, configurable SaaS platforms, digital twin interfaces, predictive
                             analytics, cloud deployment workflows, and team mentorship.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="animator-pro" class="personal-project-section" aria-labelledby="animator-pro-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Personal Project</div>
+                    <div>
+                        <h2 id="animator-pro-title">Animator Pro: a browser-based cartoon animation studio.</h2>
+                        <p>A personal creative tool for building animated cartoon scenes, talking characters, kids
+                            learning videos, nursery rhymes, story clips, news-style presenters, and social media
+                            shorts directly in the browser.</p>
+                    </div>
+                </div>
+
+                <div class="animator-project-layout">
+                    <div class="animator-summary-card">
+                        <h3>Cartoon production inside the browser</h3>
+                        <p>Animator Pro combines a canvas character engine, scene builder, automation sequence,
+                            speech tools, audio playlist controls, weather/theme system, panel editor, toy overlays,
+                            mini-games, and video recording workflow into one visual animation workspace.</p>
+
+                        <ul class="animator-highlight-list">
+                            <li>Create characters, animals, objects, vehicles, panels, backgrounds, and props.</li>
+                            <li>Animate movement, emotion, view direction, actions, talking, paths, and timelines.</li>
+                            <li>Record outputs for YouTube, Shorts, Reels, ABC lessons, stories, and explainers.</li>
+                        </ul>
+
+                        <div class="animator-stat-grid" aria-label="Animator Pro project highlights">
+                            <div class="animator-stat">
+                                <strong>40</strong>
+                                <span>character presets</span>
+                            </div>
+                            <div class="animator-stat">
+                                <strong>30+</strong>
+                                <span>animal presets</span>
+                            </div>
+                            <div class="animator-stat">
+                                <strong>7</strong>
+                                <span>recording ratios</span>
+                            </div>
+                            <div class="animator-stat">
+                                <strong>4</strong>
+                                <span>mini-game modes</span>
+                            </div>
+                        </div>
+
+                        <a class="button button-primary" href="animator-pro.html">Read Animator Pro Case Study</a>
+                    </div>
+
+                    <div class="animator-visual-grid" aria-label="Animator Pro project visuals">
+                        <figure class="animator-visual-card">
+                            <img src="Images/animator-pro/logo.png" alt="Animator Pro project logo" loading="lazy" />
+                            <figcaption>
+                                <strong>Project Identity</strong>
+                                <span>Creator-focused cartoon animation workspace for browser production.</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="animator-visual-card">
+                            <img src="Images/animator-pro/character-controller.png"
+                                alt="Cartoon character created with Animator Pro" loading="lazy" />
+                            <figcaption>
+                                <strong>Character Controller</strong>
+                                <span>Canvas-rendered characters with face, clothing, body, emotion, and pose controls.</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="animator-visual-card">
+                            <img src="Images/animator-pro/village-landscape.jpg"
+                                alt="Village scene background used in Animator Pro" loading="lazy" />
+                            <figcaption>
+                                <strong>Scene Builder</strong>
+                                <span>Backgrounds, panels, weather, toys, and objects for animated storytelling.</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="animator-visual-card">
+                            <img src="Images/animator-pro/character-style-asset.png"
+                                alt="Character styling asset used for Animator Pro customization" loading="lazy" />
+                            <figcaption>
+                                <strong>Style Assets</strong>
+                                <span>Custom face, hair, clothing, accessory, and reusable scene asset workflows.</span>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>

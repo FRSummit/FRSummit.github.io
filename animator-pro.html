@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animator Pro - Browser-Based Cartoon Animation Studio | Fayazur Rahman Summit</title>
+    <meta name="description"
+        content="Animator Pro by Fayazur Rahman Summit is a browser-based cartoon animation studio for YouTube videos, kids learning content, talking characters, nursery rhymes, animated news scenes, and social media shorts." />
+    <meta name="author" content="Fayazur Rahman Summit" />
+    <meta name="keywords"
+        content="Animator Pro, Fayazur Rahman Summit, browser-based animation studio, cartoon character controller, YouTube animation tool, kids learning video software, HTML5 Canvas animation, JavaScript animation app, educational animation software, nursery rhyme animation, talking character generator, text to speech animation, MediaRecorder video recorder, Web Audio animation, animated news presenter, social media shorts animation, ABC learning video maker, cartoon scene builder" />
+
+    <meta property="og:title" content="Animator Pro - Browser-Based Cartoon Animation Studio" />
+    <meta property="og:description"
+        content="A personal project by Fayazur Rahman Summit: create cartoon characters, scenes, speech, automation, panels, weather, audio, mini-games, and browser-recorded animation content." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://frsummit.github.io/animator-pro.html" />
+    <meta property="og:image" content="https://frsummit.github.io/Images/animator-pro/character-controller.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Animator Pro - Browser-Based Cartoon Animation Studio" />
+    <meta name="twitter:description"
+        content="A browser-based cartoon animation studio for YouTube, kids learning videos, talking characters, story scenes, and social media shorts." />
+    <meta name="twitter:image" content="https://frsummit.github.io/Images/animator-pro/character-controller.png" />
+
+    <link rel="canonical" href="https://frsummit.github.io/animator-pro.html" />
+    <link rel="preload" as="image" href="Images/animator-pro/character-controller.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Animator Pro - Cartoon Character Controller",
+      "alternateName": "Animator Pro",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web browser",
+      "url": "https://frsummit.github.io/animator-pro.html",
+      "image": "https://frsummit.github.io/Images/animator-pro/character-controller.png",
+      "creator": {
+        "@type": "Person",
+        "name": "Fayazur Rahman Summit",
+        "url": "https://frsummit.github.io/",
+        "sameAs": [
+          "https://github.com/frsummit",
+          "https://www.linkedin.com/in/frsummit"
+        ]
+      },
+      "description": "Animator Pro is a browser-based cartoon animation studio for YouTube videos, kids learning content, nursery rhymes, talking characters, animated news scenes, story animations, mini-game scenes, and social media shorts.",
+      "programmingLanguage": ["HTML", "CSS", "JavaScript"],
+      "featureList": [
+        "Canvas character controller",
+        "Scene builder",
+        "Automation sequence timeline",
+        "Text-to-speech and recorded voice workflow",
+        "Panel editor with drawing and GLB support",
+        "Weather and day-night theme engine",
+        "Audio playlist controller",
+        "MediaRecorder video capture",
+        "Toy balloon overlays",
+        "Mini-game controllers",
+        "JSON export and import"
+      ],
+      "keywords": "browser animation studio, cartoon character controller, kids video animation, HTML5 Canvas animation, YouTube animation tool, educational animation software, talking character animation"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Portfolio",
+          "item": "https://frsummit.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Animator Pro",
+          "item": "https://frsummit.github.io/animator-pro.html"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --ink: #f3fbfa;
+            --muted: rgba(243, 251, 250, 0.7);
+            --dim: rgba(243, 251, 250, 0.55);
+            --bg: #0d1413;
+            --panel: #14201e;
+            --panel-2: #182925;
+            --line: rgba(255, 255, 255, 0.14);
+            --accent: #51d7ce;
+            --accent-2: #8cea8c;
+            --warm: #f2b35f;
+            --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:focus-visible,
+        summary:focus-visible {
+            outline: 3px solid rgba(81, 215, 206, 0.38);
+            outline-offset: 3px;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid var(--line);
+            background: rgba(13, 20, 19, 0.88);
+            backdrop-filter: blur(18px);
+        }
+
+        .nav,
+        .container {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .nav {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 850;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(81, 215, 206, 0.35);
+            border-radius: 8px;
+            background: rgba(81, 215, 206, 0.12);
+            color: var(--accent);
+            font-weight: 900;
+        }
+
+        .brand span:last-child {
+            color: var(--muted);
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-top: -3px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            border-radius: 8px;
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-weight: 800;
+            padding: 8px 10px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--ink);
+        }
+
+        section {
+            padding: 72px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0;
+        }
+
+        h1 {
+            margin-bottom: 18px;
+            font-size: clamp(2.65rem, 7vw, 5.4rem);
+            line-height: 0.95;
+            letter-spacing: 0;
+        }
+
+        h2 {
+            margin-bottom: 14px;
+            font-size: clamp(1.8rem, 3.4vw, 3rem);
+            line-height: 1.05;
+            letter-spacing: 0;
+        }
+
+        h3 {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        .eyebrow,
+        .section-label {
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 900;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        .hero {
+            min-height: calc(100vh - 72px);
+            display: grid;
+            align-items: center;
+            background:
+                linear-gradient(135deg, rgba(81, 215, 206, 0.1), transparent 34%),
+                linear-gradient(225deg, rgba(140, 234, 140, 0.12), transparent 38%),
+                var(--bg);
+        }
+
+        .hero-grid,
+        .section-head,
+        .overview-grid,
+        .tech-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+            gap: 42px;
+            align-items: center;
+        }
+
+        .hero-copy {
+            max-width: 700px;
+        }
+
+        .hero-subtitle {
+            margin-bottom: 22px;
+            color: rgba(243, 251, 250, 0.78);
+            font-size: 1.12rem;
+        }
+
+        .hero-actions,
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            font-weight: 850;
+            padding: 10px 16px;
+        }
+
+        .button-primary {
+            background: var(--accent);
+            color: #07100f;
+        }
+
+        .button-secondary {
+            border-color: var(--line);
+            background: rgba(255, 255, 255, 0.07);
+            color: var(--ink);
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+        }
+
+        .app-mockup {
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #0f1917;
+            box-shadow: var(--shadow);
+        }
+
+        .mock-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            border-bottom: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.06);
+            padding: 12px;
+        }
+
+        .mock-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .mock-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--warm);
+        }
+
+        .mock-dots span:nth-child(2) {
+            background: var(--accent);
+        }
+
+        .mock-dots span:nth-child(3) {
+            background: var(--accent-2);
+        }
+
+        .mock-title {
+            color: var(--muted);
+            font-size: 0.84rem;
+            font-weight: 850;
+        }
+
+        .mock-body {
+            display: grid;
+            grid-template-columns: 146px minmax(0, 1fr);
+            min-height: 430px;
+        }
+
+        .mock-sidebar {
+            display: grid;
+            align-content: start;
+            gap: 8px;
+            border-right: 1px solid var(--line);
+            background: rgba(0, 0, 0, 0.18);
+            padding: 14px;
+        }
+
+        .mock-control {
+            height: 28px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .mock-control:nth-child(2n) {
+            width: 72%;
+        }
+
+        .mock-stage {
+            position: relative;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            background: linear-gradient(180deg, #89dbe1, #d7f3d4 58%, #79bd6c 58%);
+            padding: 24px;
+        }
+
+        .mock-stage::before {
+            content: "";
+            position: absolute;
+            inset: 20px;
+            border: 1px dashed rgba(13, 20, 19, 0.28);
+            border-radius: 8px;
+        }
+
+        .mock-stage img {
+            position: relative;
+            z-index: 1;
+            max-height: 300px;
+            object-fit: contain;
+            filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.25));
+        }
+
+        .mock-timeline {
+            position: absolute;
+            right: 18px;
+            bottom: 18px;
+            left: 18px;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr 1fr 0.6fr;
+            gap: 6px;
+            border: 1px solid rgba(13, 20, 19, 0.16);
+            border-radius: 8px;
+            background: rgba(13, 20, 19, 0.7);
+            padding: 8px;
+        }
+
+        .mock-timeline span {
+            height: 10px;
+            border-radius: 4px;
+            background: var(--accent);
+        }
+
+        .mock-timeline span:nth-child(2) {
+            background: var(--accent-2);
+        }
+
+        .mock-timeline span:nth-child(3) {
+            background: var(--warm);
+        }
+
+        .section-head {
+            align-items: start;
+            margin-bottom: 30px;
+        }
+
+        .section-head p {
+            margin-bottom: 0;
+        }
+
+        .panel,
+        .feature-card,
+        .step-card,
+        .use-card,
+        details,
+        .visual-card,
+        .stat-card {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.065);
+        }
+
+        .panel {
+            padding: 24px;
+        }
+
+        .overview-grid {
+            align-items: start;
+        }
+
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .visual-card {
+            min-width: 0;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .visual-card img {
+            width: 100%;
+            height: 170px;
+            background: #f5fbfa;
+            object-fit: contain;
+            padding: 14px;
+        }
+
+        .visual-card:nth-child(3) img {
+            object-fit: cover;
+            padding: 0;
+        }
+
+        .visual-card figcaption {
+            display: grid;
+            gap: 4px;
+            padding: 12px;
+        }
+
+        .visual-card span,
+        .feature-card p,
+        .step-card p,
+        .use-card p,
+        details p,
+        details li {
+            color: var(--muted);
+        }
+
+        .audience-grid,
+        .feature-grid,
+        .use-grid,
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .feature-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .feature-card,
+        .use-card,
+        .step-card,
+        .stat-card {
+            min-width: 0;
+            padding: 18px;
+        }
+
+        .feature-card p,
+        .use-card p,
+        .step-card p {
+            margin-bottom: 0;
+            font-size: 0.94rem;
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(150px, 1fr));
+            gap: 14px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+        }
+
+        .step-number {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 14px;
+            border-radius: 8px;
+            background: var(--accent);
+            color: #07100f;
+            font-weight: 900;
+        }
+
+        .controller-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        details {
+            overflow: hidden;
+        }
+
+        summary {
+            cursor: pointer;
+            color: var(--ink);
+            font-weight: 900;
+            padding: 16px 18px;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid var(--line);
+            color: var(--accent);
+        }
+
+        .details-body {
+            padding: 18px;
+        }
+
+        .details-body ul,
+        .tech-list,
+        .future-list {
+            display: grid;
+            gap: 10px;
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .tech-grid {
+            align-items: start;
+        }
+
+        .code-list {
+            display: grid;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .code-list li {
+            border-left: 3px solid var(--accent);
+            color: var(--muted);
+            padding-left: 12px;
+        }
+
+        .stat-grid {
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+        }
+
+        .stat-card strong {
+            display: block;
+            color: var(--accent);
+            font-size: 1.65rem;
+            line-height: 1;
+        }
+
+        .stat-card span {
+            display: block;
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 0.86rem;
+            font-weight: 800;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, rgba(81, 215, 206, 0.14), rgba(140, 234, 140, 0.08)), #101a18;
+        }
+
+        .footer {
+            padding: 24px 0;
+            color: var(--dim);
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 1000px) {
+            .hero-grid,
+            .section-head,
+            .overview-grid,
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid,
+            .visual-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .stat-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                font-size: 15px;
+            }
+
+            .nav,
+            .container {
+                width: min(370px, calc(100% - 24px));
+            }
+
+            .nav {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 16px 0;
+            }
+
+            .nav-links {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                width: 100%;
+            }
+
+            section {
+                padding: 54px 0;
+            }
+
+            .mock-body {
+                grid-template-columns: 1fr;
+            }
+
+            .mock-sidebar {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .audience-grid,
+            .feature-grid,
+            .visual-grid,
+            .use-grid,
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .visual-card img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Animator Pro navigation">
+            <a class="brand" href="index.html#animator-pro" aria-label="Back to portfolio Animator Pro section">
+                <span class="brand-mark">AP</span>
+                <span>
+                    Animator Pro
+                    <span>Personal Project Case Study</span>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Portfolio</a>
+                <a href="#overview">Overview</a>
+                <a href="#workflow">Workflow</a>
+                <a href="#features">Features</a>
+                <a href="#controllers">Controllers</a>
+                <a href="#technical-build">Technical Build</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Personal Project - Browser Animation Studio</p>
+                    <h1 id="hero-title">Animator Pro</h1>
+                    <p class="hero-subtitle">A browser-based cartoon animation studio for YouTube videos, kids learning
+                        content, storytelling, talking characters, animated news scenes, nursery rhymes, and interactive
+                        scene production.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#features">View Features</a>
+                        <a class="button button-secondary" href="#workflow">Workflow</a>
+                        <a class="button button-secondary" href="#technical-build">Technical Build</a>
+                    </div>
+                </div>
+
+                <div class="app-mockup" aria-label="Animator Pro interface mockup">
+                    <div class="mock-toolbar">
+                        <div class="mock-dots" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="mock-title">Cartoon Character Controller</span>
+                    </div>
+                    <div class="mock-body">
+                        <div class="mock-sidebar" aria-hidden="true">
+                            <span class="mock-control"></span>
+                            <span class="mock-control"></span>
+                            <span class="mock-control"></span>
+                            <span class="mock-control"></span>
+                            <span class="mock-control"></span>
+                            <span class="mock-control"></span>
+                            <span class="mock-control"></span>
+                            <span class="mock-control"></span>
+                        </div>
+                        <div class="mock-stage">
+                            <img src="Images/animator-pro/character-controller.png"
+                                alt="Cartoon character rendered in Animator Pro" />
+                            <div class="mock-timeline" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" aria-labelledby="overview-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Overview</div>
+                    <div>
+                        <h2 id="overview-title">A complete in-browser animation workspace.</h2>
+                        <p>Animator Pro removes the gap between an idea and an animated video. A creator can build a
+                            scene, control a character, add a voice, automate paths, apply weather, compose panels, and
+                            record the result without opening a traditional animation package.</p>
+                    </div>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="panel">
+                        <h3>What I built</h3>
+                        <p>Animator Pro combines HTML, CSS, JavaScript, Canvas rendering, DOM overlays, Web Audio,
+                            Speech Synthesis, MediaRecorder capture, JSON serialization, and model-viewer support for
+                            GLB content inside panels. The product is designed as a creator-friendly visual control
+                            surface with enough depth for advanced scene control.</p>
+                        <p>It is useful for kids ABC videos, number and color lessons, nursery rhyme animations, talking
+                            animal stories, animated news presenter scenes, vertical shorts, game-like learning clips,
+                            and fast social content production.</p>
+                    </div>
+                    <div class="panel">
+                        <h3>Who it is for</h3>
+                        <div class="audience-grid">
+                            <p>YouTube creators producing kids cartoon videos and educational series.</p>
+                            <p>Educators making ABC, number, color, shape, rhyme, and classroom content.</p>
+                            <p>Social creators producing Shorts, Reels, TikTok clips, and animated story posts.</p>
+                            <p>Small teams creating explainers or animated news scenes without heavy software.</p>
+                            <p>Cartoon storytellers building characters, paths, props, and reusable scenes.</p>
+                            <p>Developers exploring browser-based creative tooling and visual automation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="visual-grid" aria-label="Animator Pro project visuals">
+                    <figure class="visual-card">
+                        <img src="Images/animator-pro/logo.png" alt="Animator Pro logo" loading="lazy" />
+                        <figcaption>
+                            <strong>Project Identity</strong>
+                            <span>Personal creative tool for browser-first cartoon production.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="visual-card">
+                        <img src="Images/animator-pro/character-controller.png"
+                            alt="Cartoon character output from Animator Pro" loading="lazy" />
+                        <figcaption>
+                            <strong>Character Engine</strong>
+                            <span>Canvas-rendered character with editable body, face, clothing, and actions.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="visual-card">
+                        <img src="Images/animator-pro/village-landscape.jpg"
+                            alt="Village background scene used in Animator Pro" loading="lazy" />
+                        <figcaption>
+                            <strong>Scene Builder</strong>
+                            <span>Backgrounds, panels, weather, objects, and storytelling layouts.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="visual-card">
+                        <img src="Images/animator-pro/character-style-asset.png"
+                            alt="Character style asset for Animator Pro customization" loading="lazy" />
+                        <figcaption>
+                            <strong>Style Assets</strong>
+                            <span>Reusable character visuals for custom faces, hair, and appearance control.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="workflow" aria-labelledby="workflow-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Workflow</div>
+                    <div>
+                        <h2 id="workflow-title">From character to finished video.</h2>
+                        <p>The main workflow is built around direct manipulation, visual controls, automation steps, and
+                            browser recording.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-grid">
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h3>Add entities</h3>
+                        <p>Spawn characters, animals, aliens, props, vehicles, roads, houses, classroom objects, or
+                            scene assets.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h3>Customize look</h3>
+                        <p>Change colors, face, body, clothing, hair, accessories, scale, speed, and walk style.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h3>Design scene</h3>
+                        <p>Use background images, gradients, day/night theme, weather, panels, GLB content, and drawing
+                            tools.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">4</span>
+                        <h3>Add performance</h3>
+                        <p>Apply emotion, speech, recorded audio, text-to-speech, mouth animation, actions, poses, and
+                            paths.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">5</span>
+                        <h3>Automate</h3>
+                        <p>Build sequences with walk, view, emotion, action, and talk steps, then inspect them in a
+                            timeline.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">6</span>
+                        <h3>Layer media</h3>
+                        <p>Add playlists, sound effects, balloons, panel movements, color adjustments, and mini-game
+                            scenes.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">7</span>
+                        <h3>Record output</h3>
+                        <p>Use aspect guides and browser capture to record landscape, vertical, square, or tutorial
+                            videos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" aria-labelledby="features-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Feature Grid</div>
+                    <div>
+                        <h2 id="features-title">The tool surface covers animation, audio, panels, games, and export.</h2>
+                        <p>The project is intentionally broad: it gives non-technical creators visual controls while
+                            keeping reusable data structures underneath.</p>
+                    </div>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Character Creator</h3>
+                        <p>Preset characters, canvas rigging, face/body controls, clothing, hair, accessories, and
+                            custom images.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Entity Library</h3>
+                        <p>Animals, aliens, objects, vehicles, roads, classroom props, and story elements for fast scene
+                            building.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Emotion &amp; Talk</h3>
+                        <p>Speech bubbles, emotion presets, recorded voice, text-to-speech, lip sync behavior, pitch,
+                            rate, EQ, and voice configs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Automation</h3>
+                        <p>Walk, view, emotion, action, and talk steps with sound effects, loops, scaling, and timeline
+                            inspection.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Scene Builder</h3>
+                        <p>Solid colors, gradients, uploaded backgrounds, pan/zoom, moving background sequences, panels,
+                            and object positioning.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Weather &amp; Theme</h3>
+                        <p>Day/night mode, sky theme, stars, planets, rain, thunderstorm, fog, cold breeze, snow, heavy
+                            rain, and tornado effects.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Panel Editor</h3>
+                        <p>Movable panels with images, HTML, GLB models, canvas drawing, opacity, borders, shadows,
+                            paths, sway, shake, and JSON export.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Drawing Tools</h3>
+                        <p>Pencil, pen, shapes, line, eraser, bucket fill, roads, gradients, edit/deform mode,
+                            undo/redo, and clear tools.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Audio Playlist</h3>
+                        <p>Multi-file uploads, drag reorder, enable/disable, loop, seek, volume, playback rate, pitch,
+                            and modulation controls.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Recorder</h3>
+                        <p>Guides for 16:9, 9:16, 1:1, 4:5, 4:3, 3:2, and 21:9 with editable capture frame and cursor
+                            option.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Toys &amp; Balloons</h3>
+                        <p>Balloon overlays with repeat launch, shapes, text labels, opacity, size ranges, images, and
+                            direction controls.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Mini-Games</h3>
+                        <p>Runner, falling obstacle, snake, and Temple Run 3D modes for game-like educational clips.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Color Adjustment</h3>
+                        <p>Stage, panels, and characters can use brightness, contrast, saturation, exposure, HSL, RGB,
+                            color wheels, LUTs, and presets.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Export &amp; Import</h3>
+                        <p>Character JSON, automation JSON, panel JSON, and full site state export/import for reusable
+                            scene production.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Content Formats</h3>
+                        <p>Designed for YouTube landscape, Shorts/Reels vertical, square posts, animated lessons, and
+                            tutorial capture.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Browser APIs</h3>
+                        <p>Canvas, DOM layers, Web Audio, Speech Synthesis, MediaRecorder, display capture, and
+                            model-viewer integration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="controllers" aria-labelledby="controllers-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Controller Deep Dive</div>
+                    <div>
+                        <h2 id="controllers-title">A large visual control surface for creators.</h2>
+                        <p>The interface is organized as focused controllers so users can compose a scene, tune a
+                            character, animate behavior, and record output from one workspace.</p>
+                    </div>
+                </div>
+
+                <div class="controller-list">
+                    <details open>
+                        <summary>Top controls, recorder, and timeline</summary>
+                        <div class="details-body">
+                            <ul>
+                                <li>Utility controls include sidebar collapse, global play/pause, percentage ruler,
+                                    full site export/import, and recorder drawer access.</li>
+                                <li>The recorder drawer supports 16:9, 9:16, 1:1, 4:5, 4:3, 3:2, and 21:9 guides,
+                                    drag/resize editing, cursor capture, start, pause, and stop.</li>
+                                <li>The animation timeline modal shows current time, a grid, refresh/close controls,
+                                    and play/pause/stop behavior for enabled timelines.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Characters, entities, and layer management</summary>
+                        <div class="details-body">
+                            <ul>
+                                <li>Spawn Character adds one of 40 presets including male, female, children, elderly,
+                                    worker, engineer, coder, office, superhero, villain, doctor, police, chef, teacher,
+                                    robot, zombie, baby/toddler, reporter, and news anchor styles.</li>
+                                <li>Add Entities includes animals such as cow, hen, tiger, lion, elephant, rabbit, dog,
+                                    horse, giraffe, monkey, cat, snake, crocodile, fish, shark, whale, and more.</li>
+                                <li>The entity library also includes aliens, classroom objects, toys, houses, buses,
+                                    trucks, bikes, cycles, ricksha, dirt roads, highways, and city streets.</li>
+                                <li>Active Scene Entities provides a layer list with active/control state, visibility,
+                                    name display, drag mode, and resize transforms.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Appearance, face, clothing, body, and accessories</summary>
+                        <div class="details-body">
+                            <ul>
+                                <li>Modifiers export/import character JSON and control skin, hair, shirt, pants, shoes,
+                                    name, speech bubble, scale, speed, walk type, hair type, and custom face upload.</li>
+                                <li>Custom Face Advanced toggles individual parts such as eyes, mouth, hair, beard,
+                                    ears, nose, head, neck, body, hands, legs, shirt, and pant with outline, 3D, and
+                                    glow effects.</li>
+                                <li>Clothing controls include sleeve and pant dimensions, shirt styles, pockets,
+                                    collars, stripes, buttons, wrinkles, dresses, traditional outfits, shoes, and body
+                                    proportions.</li>
+                                <li>Face, eyes, mouth, nose, hair, ear, mustache, beard, and circle controls tune
+                                    position, scale, curves, colors, lashes, pupils, lips, teeth, tongue, and custom
+                                    shape dots.</li>
+                                <li>Body rotation and limb tools tune body angle, torso, arms, hands, legs, curves,
+                                    start/end points, mirroring, and single-limb control.</li>
+                                <li>Custom body and object attachment supports uploaded body images, attached image or
+                                    HTML objects, placement, and bounce while moving.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Emotion, voice, path movement, actions, and automation</summary>
+                        <div class="details-body">
+                            <ul>
+                                <li>Emotion controls include idle, smile, joy, laugh, love, sad, crying, angry, fear,
+                                    surprise, thinking, confused, nervous, embarrassed, sleepy, and other expressions.</li>
+                                <li>Talk tools support text, uploaded audio, recorded audio, preview/split/update/add,
+                                    text-to-speech voice presets, pitch, rate, EQ, volume, saved configs, per-character
+                                    voices, bubbles, head tilt, mouth animation, text sync, and recorded voice effects.</li>
+                                <li>View Direction supports auto, front, back, left, and right views.</li>
+                                <li>Path and Movement includes path mode, clear path, speed, show path, auto wrinkles,
+                                    multi-path looping, jump start, path lists, distance offset, and auto depth scaling.</li>
+                                <li>Actions and poses include teaching, guns with recoil, waving, hands up, smoking,
+                                    dance, microphone, sitting, laying, and fine controls for hands, aim, bullets,
+                                    puffs, body motion, and dance speed.</li>
+                                <li>Automation Sequence exports/imports JSON and runs walk, view, emotion, action, and
+                                    talk steps with target picking, sound effects, coordinates, speed multipliers,
+                                    scaling, loop sequence, loop jump, timeline view, play all, pause, stop, and clear.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Backgrounds, theme, panels, drawing, and color adjustment</summary>
+                        <div class="details-body">
+                            <ul>
+                                <li>Background controls support solid color, radial and linear gradients, custom CSS
+                                    gradients, multiple images, size modes, zoom, scale, pan, moving background
+                                    sequences, wait steps, reorder/edit, and stage object pan behavior.</li>
+                                <li>Theme and Scene Control supports sky theme, sun/moon visibility, day/night toggle,
+                                    stars, planets, cloud wisps, shooting stars, rain, thunderstorm, fog, cold breeze,
+                                    snow, heavy rain, and tornado overlays.</li>
+                                <li>Panel Controls add movable layers with titles, image uploads, GLB uploads, HTML
+                                    content, fit modes, headers, borders, shadows, transparent backgrounds, drawing
+                                    canvases, auto-rotation, movement paths, look-at behavior, sway, shake, and JSON
+                                    import/export.</li>
+                                <li>Drawing tools include move all, pencil, pen, circle, triangle, square, line, eraser,
+                                    bucket fill, road, free road, fill colors, gradients, stroke settings, edit mode,
+                                    deform mode, undo, redo, and clear.</li>
+                                <li>Color Adjustment applies to stage, panels, and/or characters with brightness,
+                                    contrast, saturation, exposure, highlights, shadows, temperature, tint, sharpness,
+                                    HSL, luma ranges, RGB channels, color wheels, LUT upload, and filter presets.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Audio controller, toy controller, games, and reusable exports</summary>
+                        <div class="details-body">
+                            <ul>
+                                <li>Audio Controller uploads multiple files, drag-reorders playlists, enables/disables
+                                    tracks, deletes tracks, loops, seeks, controls volume, changes rate and pitch, and
+                                    supports modulation.</li>
+                                <li>Toy Controller launches balloons once or on repeat with count, interval, direction,
+                                    opacity, size, shape, text labels, and uploaded images.</li>
+                                <li>Games include runner, falling obstacles, snake, and Temple Run 3D with score, auto
+                                    modes, custom characters/obstacles/foods, text overlays, speed, zoom, and direction
+                                    controls.</li>
+                                <li>Export/import paths include character JSON, automation sequence JSON, panel JSON,
+                                    and full site state JSON containing characters, entities, backgrounds, panels, color
+                                    adjustment, and audio playlists.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="technical-build" aria-labelledby="technical-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Technical Build</div>
+                    <div>
+                        <h2 id="technical-title">Vanilla web technologies powering a creative workspace.</h2>
+                        <p>The project demonstrates browser APIs, real-time rendering, visual editors, reusable JSON
+                            state, and modular JavaScript architecture.</p>
+                    </div>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="panel">
+                        <h3>Architecture summary</h3>
+                        <ul class="tech-list">
+                            <li>Canvas renders rigged cartoon characters and scene entities.</li>
+                            <li>DOM overlays handle panels that can contain images, HTML, drawings, and GLB models.</li>
+                            <li>Automation steps are stored as JSON and run as per-character queues.</li>
+                            <li>Web Audio and Speech Synthesis power voice, pitch, rate, EQ, and lip sync behavior.</li>
+                            <li>MediaRecorder and display/canvas capture support browser-based video recording.</li>
+                            <li>Serializers save and restore characters, panels, automation, audio, and full scenes.</li>
+                        </ul>
+                    </div>
+                    <div class="panel">
+                        <h3>Important source files</h3>
+                        <ul class="code-list">
+                            <li><strong>index.html:</strong> main interface and sidebar controls.</li>
+                            <li><strong>script.js:</strong> character engine, stage loop, automation, talk/TTS, movement.</li>
+                            <li><strong>entities.js:</strong> animals, aliens, objects, vehicles, and props.</li>
+                            <li><strong>panel_control.js:</strong> external panel editor, drawing, movement, effects.</li>
+                            <li><strong>panel_color_adjustment.js:</strong> stage, panel, and character color grading.</li>
+                            <li><strong>audio_playlist_engine.js:</strong> playlist playback engine.</li>
+                            <li><strong>audio_playlist_controller.js:</strong> playlist UI, pitch, rate, and modulation.</li>
+                            <li><strong>toy_controller.js:</strong> balloon overlay tool.</li>
+                            <li><strong>game_controller.js:</strong> runner, falling obstacle, and snake controllers.</li>
+                            <li><strong>temple_run_game.js:</strong> Temple Run 3D game mode.</li>
+                            <li><strong>theme_engine.js:</strong> day/night, sky, weather, and atmosphere.</li>
+                            <li><strong>stage_recorder.js:</strong> recorder drawer, aspect guides, and capture workflow.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="use-cases" aria-labelledby="use-cases-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Demo Scenarios</div>
+                    <div>
+                        <h2 id="use-cases-title">Designed around real creator workflows.</h2>
+                        <p>Animator Pro is practical for fast educational and social animation production.</p>
+                    </div>
+                </div>
+
+                <div class="use-grid">
+                    <div class="use-card">
+                        <h3>Kids ABC Cartoon</h3>
+                        <p>Add a child character, letter panels, colorful backgrounds, TTS narration, happy emotions,
+                            walk/talk automation, and balloons.</p>
+                    </div>
+                    <div class="use-card">
+                        <h3>Nursery Rhyme</h3>
+                        <p>Load a scene background, add animals, play music from the audio playlist, loop character
+                            paths, and record a 16:9 video.</p>
+                    </div>
+                    <div class="use-card">
+                        <h3>Talking Animal Story</h3>
+                        <p>Add an animal, speech bubble, recorded voice, weather effect, panel captions, and reusable
+                            story scenes.</p>
+                    </div>
+                    <div class="use-card">
+                        <h3>Animated News Scene</h3>
+                        <p>Use a news anchor preset, lower-third panel, moving background, sound effects, TTS voice,
+                            and graphic panels.</p>
+                    </div>
+                    <div class="use-card">
+                        <h3>YouTube Short</h3>
+                        <p>Switch to the 9:16 guide, compose vertically, add speech and motion, then record for Shorts,
+                            Reels, or TikTok.</p>
+                    </div>
+                    <div class="use-card">
+                        <h3>Game Learning Clip</h3>
+                        <p>Use runner, falling obstacle, snake, or Temple Run mode with custom text and images for
+                            letters, words, or math answers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="highlights" aria-labelledby="highlights-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Project Highlights</div>
+                    <div>
+                        <h2 id="highlights-title">Built for rapid YouTube and educational content production.</h2>
+                        <p>The project favors visual controls, reusable state, and practical output formats.</p>
+                    </div>
+                </div>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <strong>40</strong>
+                        <span>character presets</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>30+</strong>
+                        <span>animal presets</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>5</strong>
+                        <span>automation step types</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>7</strong>
+                        <span>recorder ratios</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>4</strong>
+                        <span>mini-game modes</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>JSON</strong>
+                        <span>reusable exports</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="future" aria-labelledby="future-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Future Improvements</div>
+                    <div>
+                        <h2 id="future-title">Where the project can grow next.</h2>
+                        <p>The foundation supports richer production workflows, reusable templates, and AI-assisted
+                            creation.</p>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <ul class="future-list">
+                        <li>Template library for common YouTube, classroom, nursery rhyme, news, and social formats.</li>
+                        <li>More premade character packs, entity packs, backgrounds, and style presets.</li>
+                        <li>Timeline keyframe editor improvements for more precise motion control.</li>
+                        <li>Cloud project saving for multi-device scene editing and series production.</li>
+                        <li>One-click video rendering/export workflow after browser recording.</li>
+                        <li>AI-assisted scene generation from story prompts, educational scripts, and video outlines.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Final Takeaway</div>
+                    <div>
+                        <h2 id="cta-title">Animator Pro turns a browser into a lightweight cartoon production studio.</h2>
+                        <p>It gives creators a fast way to build, animate, narrate, reuse, and record cartoon content
+                            for YouTube and beyond, while demonstrating a deep browser engineering skill set.</p>
+                        <div class="button-row">
+                            <a class="button button-primary" href="index.html#animator-pro">Back to Portfolio</a>
+                            <a class="button button-secondary" href="mailto:frsummit1@gmail.com">Contact Fayazur</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span>&copy; 2026 Fayazur Rahman Summit</span>
+            <span>Animator Pro - Personal Project Case Study</span>
+        </div>
+    </footer>
+</body>
+
+</html>
