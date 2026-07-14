@@ -593,7 +593,7 @@
 
         .credentials-grid {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1fr;
             gap: 18px;
         }
 
@@ -618,6 +618,102 @@
             display: block;
             font-size: 0.92rem;
             font-weight: 750;
+        }
+
+        /* Interests Section */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .interest-card {
+            padding: 24px;
+        }
+
+        .interest-card h3 {
+            margin-bottom: 6px;
+            font-size: 1.1rem;
+        }
+
+        .interest-card > p {
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        .interest-inline-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        @media (max-width: 640px) {
+            .interest-inline-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .interest-inline-gallery .gallery-item {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 6px;
+            border: 1px solid var(--line);
+            background: var(--wash);
+            cursor: pointer;
+            transition: transform 160ms ease, box-shadow 160ms ease;
+        }
+
+        .interest-inline-gallery .gallery-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(23, 32, 29, 0.08);
+            border-color: var(--accent);
+        }
+
+        .interest-inline-gallery .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .see-more-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 10px;
+            color: var(--accent);
+            font-size: 0.88rem;
+            font-weight: 800;
+            transition: color 160ms ease;
+        }
+
+        .see-more-link:hover {
+            color: var(--accent-dark);
+        }
+
+        .see-more-link svg {
+            transition: transform 160ms ease;
+        }
+
+        .see-more-link:hover svg {
+            transform: translateX(3px);
+        }
+
+        .languages-bar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .lang-pill {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--wash);
+            color: var(--muted);
+            font-size: 0.88rem;
+            font-weight: 800;
+            padding: 6px 14px;
         }
 
         .contact-band {
@@ -680,8 +776,7 @@
 
             .hero-grid,
             .section-head,
-            .summary-grid,
-            .credentials-grid {
+            .summary-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1667,9 +1762,8 @@
                 <div class="section-head">
                     <div class="section-label">Education</div>
                     <div>
-                        <h2 id="credentials-title">Education, certifications, languages, and interests.</h2>
-                        <p>A foundation in Computer Science &amp; Engineering with certifications in Optimizely
-                            technical and web foundations.</p>
+                        <h2 id="credentials-title">Education &amp; certifications.</h2>
+                        <p>A foundation in Computer Science &amp; Engineering with certifications in Optimizely technical and web foundations.</p>
                     </div>
                 </div>
 
@@ -1691,45 +1785,50 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="compact-card">
-                        <h3>Languages &amp; Interests</h3>
-                        <ul class="credential-list">
-                            <li>
-                                <strong>Languages</strong>
-                                <span>Bangla (Native), English</span>
-                            </li>
-                            <li>
-                                <strong>Bike Touring &amp; Exploration:</strong>
-                                <span>Passionate long-distance cyclist; successfully planned and completed routes
-                                    exploring 70% of Bangladesh. Experienced in route mapping, endurance riding, and
-                                    cross-cultural community engagement.</span>
-                            </li>
-                            <li>
-                                <strong>YouTube Content Creation:</strong>
-                                <span>Create and manage video content focused on travel and adventure. Experienced in
-                                    digital storytelling, audience building, and translating personal experiences into
-                                    engaging online narratives.</span>
-                            </li>
-                            <li>
-                                <strong>Video Editing:</strong>
-                                <span>Skilled in post-production workflows, pacing, and visual storytelling. Proficient
-                                    in transforming raw footage into high-quality, cohesive videos with seamless
-                                    transitions and clean audio design.</span>
-                            </li>
-                            <li>
-                                <strong>Cartoon Illustration:</strong>
-                                <span>Design and draw original cartoons and digital illustrations. Focused on character
-                                    design, storyboarding, and using visual art to communicate complex ideas with humor
-                                    and creativity.</span>
-                            </li>
-                            <li>
-                                <strong>Blogging:</strong>
-                                <span>Write and maintain a personal blog covering adventure travel, cycling culture, and
-                                    creative insights. Experienced in content writing, editorial planning, and engaging
-                                    readers through written narratives.</span>
-                            </li>
-                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" aria-labelledby="interests-title">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-label">Interests</div>
+                    <div>
+                        <h2 id="interests-title">Languages, hobbies &amp; creative pursuits.</h2>
+                        <p>Beyond engineering — cycling adventures, content creation, visual art, and storytelling.</p>
                     </div>
+                </div>
+
+                <div class="languages-bar">
+                    <span class="lang-pill">Bangla (Native)</span>
+                    <span class="lang-pill">English</span>
+                </div>
+
+                <div class="interests-grid">
+                    <article class="interest-card" data-interest="bike-touring">
+                        <h3>Bike Touring &amp; Exploration</h3>
+                        <p>Passionate long-distance cyclist; successfully planned and completed routes exploring 70% of Bangladesh. Experienced in route mapping, endurance riding, and cross-cultural community engagement.</p>
+                    </article>
+
+                    <article class="interest-card" data-interest="youtube-content-creation">
+                        <h3>YouTube Content Creation</h3>
+                        <p>Create and manage video content focused on travel and adventure. Experienced in digital storytelling, audience building, and translating personal experiences into engaging online narratives.</p>
+                    </article>
+
+                    <article class="interest-card" data-interest="video-editing">
+                        <h3>Video Editing</h3>
+                        <p>Skilled in post-production workflows, pacing, and visual storytelling. Proficient in transforming raw footage into high-quality, cohesive videos with seamless transitions and clean audio design.</p>
+                    </article>
+
+                    <article class="interest-card" data-interest="cartoon-illustration">
+                        <h3>Cartoon Illustration</h3>
+                        <p>Design and draw original cartoons and digital illustrations. Focused on character design, storyboarding, and using visual art to communicate complex ideas with humor and creativity.</p>
+                    </article>
+
+                    <article class="interest-card" data-interest="blogging">
+                        <h3>Blogging</h3>
+                        <p>Write and maintain a personal blog covering adventure travel, cycling culture, and creative insights. Experienced in content writing, editorial planning, and engaging readers through written narratives.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -1772,16 +1871,31 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const MAX_INLINE_IMAGES = 4;
+
             // Helper to convert standard Google Drive sharing links to direct image URLs
             const getDirectDriveUrl = (url) => {
                 if (url.includes('drive.google.com')) {
-                    // Match either /d/FILE_ID/ or ?id=FILE_ID
                     const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/) || url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
                     if (match && match[1]) {
                         return `https://lh3.googleusercontent.com/d/${match[1]}`;
                     }
                 }
                 return url;
+            };
+
+            // Helper to create a "See more" link
+            const createSeeMoreLink = (slug, totalCount, type) => {
+                const link = document.createElement('a');
+                link.className = 'see-more-link';
+                link.href = `gallery.html?category=${slug}`;
+                link.innerHTML = `
+                    Explore full gallery (${totalCount} images)
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                `;
+                return link;
             };
 
             // Layout Toggle Logic
@@ -1804,8 +1918,6 @@
             }
 
             // Project Galleries Config
-            // Format Google Drive links as: 'https://lh3.googleusercontent.com/d/FILE_ID'
-            // Or use direct image links.
             const projectGalleries = {
                 "knowverse-ai": [
                     "https://drive.google.com/file/d/1O9OEE30OSnKPPUSU-agyAc8BisQobF6X/view?usp=sharing",
@@ -1851,6 +1963,16 @@
                 // "digital-krisok-digital-farmer": []
             };
 
+            // Interest Galleries Config
+            const interestGalleries = {
+                // Add your Google Drive links for each interest:
+                // "bike-touring": [],
+                // "youtube-content-creation": [],
+                // "video-editing": [],
+                // "cartoon-illustration": [],
+                // "blogging": []
+            };
+
             // Lightbox Elements
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
@@ -1880,7 +2002,12 @@
                 });
             }
 
-            // Dynamically Render Galleries
+            // Close lightbox on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeLightbox();
+            });
+
+            // ── Render Project Galleries (max 4 inline + "See More") ──
             const projectCards = document.querySelectorAll('.project-card');
             projectCards.forEach(card => {
                 const titleNode = card.querySelector('h3');
@@ -1891,7 +2018,6 @@
 
                 const images = projectGalleries[slug];
                 if (images && images.length > 0) {
-                    // Create gallery elements
                     const wrapper = document.createElement('div');
                     wrapper.className = 'project-gallery-wrapper';
 
@@ -1902,7 +2028,7 @@
                         <svg class="toggle-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
-                        View Project Gallery
+                        View Project Gallery (${images.length})
                     `;
 
                     const content = document.createElement('div');
@@ -1911,7 +2037,9 @@
                     const grid = document.createElement('div');
                     grid.className = 'gallery-grid';
 
-                    images.forEach((imgUrl, idx) => {
+                    // Show only first MAX_INLINE_IMAGES
+                    const visibleImages = images.slice(0, MAX_INLINE_IMAGES);
+                    visibleImages.forEach((imgUrl, idx) => {
                         const directUrl = getDirectDriveUrl(imgUrl);
                         const item = document.createElement('div');
                         item.className = 'gallery-item';
@@ -1921,10 +2049,15 @@
                     });
 
                     content.appendChild(grid);
+
+                    // Add "See More" link if there are more than 4 images
+                    if (images.length > MAX_INLINE_IMAGES) {
+                        content.appendChild(createSeeMoreLink(slug, images.length, 'project'));
+                    }
+
                     wrapper.appendChild(toggleBtn);
                     wrapper.appendChild(content);
 
-                    // Append below tag-list
                     const tagList = card.querySelector('.tag-list');
                     if (tagList) {
                         tagList.after(wrapper);
@@ -1932,7 +2065,7 @@
                         card.appendChild(wrapper);
                     }
 
-                    // Toggle Expand/Collapse with smooth height calculation
+                    // Toggle Expand/Collapse
                     toggleBtn.addEventListener('click', () => {
                         const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
                         toggleBtn.setAttribute('aria-expanded', !isExpanded);
@@ -1943,7 +2076,6 @@
                         } else {
                             content.classList.add('expanded');
                             content.style.maxHeight = content.scrollHeight + 'px';
-                            // Re-calculate height after layout settles
                             setTimeout(() => {
                                 if (content.classList.contains('expanded')) {
                                     content.style.maxHeight = 'none';
@@ -1951,6 +2083,36 @@
                             }, 300);
                         }
                     });
+                }
+            });
+
+            // ── Render Interest Galleries (max 4 inline + "See More") ──
+            const interestCards = document.querySelectorAll('.interest-card');
+            interestCards.forEach(card => {
+                const slug = card.getAttribute('data-interest');
+                if (!slug) return;
+
+                const titleText = card.querySelector('h3')?.textContent?.trim() || slug;
+                const images = interestGalleries[slug];
+                if (images && images.length > 0) {
+                    const gallery = document.createElement('div');
+                    gallery.className = 'interest-inline-gallery';
+
+                    const visibleImages = images.slice(0, MAX_INLINE_IMAGES);
+                    visibleImages.forEach((imgUrl, idx) => {
+                        const directUrl = getDirectDriveUrl(imgUrl);
+                        const item = document.createElement('div');
+                        item.className = 'gallery-item';
+                        item.innerHTML = `<img src="${directUrl}" alt="${titleText} ${idx + 1}" loading="lazy" />`;
+                        item.addEventListener('click', () => openLightbox(directUrl, `${titleText} ${idx + 1}`));
+                        gallery.appendChild(item);
+                    });
+
+                    card.appendChild(gallery);
+
+                    if (images.length > MAX_INLINE_IMAGES) {
+                        card.appendChild(createSeeMoreLink(slug, images.length, 'interest'));
+                    }
                 }
             });
         });
