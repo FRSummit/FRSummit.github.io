@@ -328,7 +328,7 @@
             background: rgba(81, 215, 206, 0.09);
         }
 
-        .channel-panel + .button-row {
+        .channel-panel+.button-row {
             margin-top: 14px;
         }
 
@@ -736,6 +736,7 @@
         }
 
         @media (max-width: 1000px) {
+
             .hero-grid,
             .section-head,
             .overview-grid,
@@ -851,21 +852,21 @@
                                 <span class="channel-label">YouTube</span>
                                 <span class="channel-name">@FRMonoToon</span>
                             </a>
-                            <a class="channel-link" href="https://www.youtube.com/@বাঙ্গিvsতরমুজ" target="_blank"
+                            <!-- <a class="channel-link" href="https://www.youtube.com/@বাঙ্গিvsতরমুজ" target="_blank"
                                 rel="noreferrer">
                                 <span class="channel-label">YouTube</span>
                                 <span class="channel-name">@বাঙ্গিvsতরমুজ</span>
-                            </a>
+                            </a> -->
                             <a class="channel-link" href="https://www.facebook.com/profile.php?id=61582285929030"
                                 target="_blank" rel="noreferrer">
                                 <span class="channel-label">Facebook Page</span>
                                 <span class="channel-name">FRMonotoon</span>
                             </a>
-                            <a class="channel-link" href="https://www.facebook.com/bangiVStormuz/" target="_blank"
+                            <!-- <a class="channel-link" href="https://www.facebook.com/bangiVStormuz/" target="_blank"
                                 rel="noreferrer">
                                 <span class="channel-label">Facebook Page</span>
                                 <span class="channel-name">বাঙ্গিvsতরমুজ</span>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -1053,7 +1054,8 @@
                 <div class="section-head">
                     <div class="section-label">Feature Grid</div>
                     <div>
-                        <h2 id="features-title">The tool surface covers animation, audio, panels, games, and export.</h2>
+                        <h2 id="features-title">The tool surface covers animation, audio, panels, games, and export.
+                        </h2>
                         <p>The project is intentionally broad: it gives non-technical creators visual controls while
                             keeping reusable data structures underneath.</p>
                     </div>
@@ -1191,7 +1193,8 @@
                         <div class="details-body">
                             <ul>
                                 <li>Modifiers export/import character JSON and control skin, hair, shirt, pants, shoes,
-                                    name, speech bubble, scale, speed, walk type, hair type, and custom face upload.</li>
+                                    name, speech bubble, scale, speed, walk type, hair type, and custom face upload.
+                                </li>
                                 <li>Custom Face Advanced toggles individual parts such as eyes, mouth, hair, beard,
                                     ears, nose, head, neck, body, hands, legs, shirt, and pant with outline, 3D, and
                                     glow effects.</li>
@@ -1214,19 +1217,23 @@
                         <div class="details-body">
                             <ul>
                                 <li>Emotion controls include idle, smile, joy, laugh, love, sad, crying, angry, fear,
-                                    surprise, thinking, confused, nervous, embarrassed, sleepy, and other expressions.</li>
+                                    surprise, thinking, confused, nervous, embarrassed, sleepy, and other expressions.
+                                </li>
                                 <li>Talk tools support text, uploaded audio, recorded audio, preview/split/update/add,
                                     text-to-speech voice presets, pitch, rate, EQ, volume, saved configs, per-character
-                                    voices, bubbles, head tilt, mouth animation, text sync, and recorded voice effects.</li>
+                                    voices, bubbles, head tilt, mouth animation, text sync, and recorded voice effects.
+                                </li>
                                 <li>View Direction supports auto, front, back, left, and right views.</li>
                                 <li>Path and Movement includes path mode, clear path, speed, show path, auto wrinkles,
-                                    multi-path looping, jump start, path lists, distance offset, and auto depth scaling.</li>
+                                    multi-path looping, jump start, path lists, distance offset, and auto depth scaling.
+                                </li>
                                 <li>Actions and poses include teaching, guns with recoil, waving, hands up, smoking,
                                     dance, microphone, sitting, laying, and fine controls for hands, aim, bullets,
                                     puffs, body motion, and dance speed.</li>
                                 <li>Automation Sequence exports/imports JSON and runs walk, view, emotion, action, and
                                     talk steps with target picking, sound effects, coordinates, speed multipliers,
-                                    scaling, loop sequence, loop jump, timeline view, play all, pause, stop, and clear.</li>
+                                    scaling, loop sequence, loop jump, timeline view, play all, pause, stop, and clear.
+                                </li>
                             </ul>
                         </div>
                     </details>
@@ -1297,24 +1304,31 @@
                             <li>Automation steps are stored as JSON and run as per-character queues.</li>
                             <li>Web Audio and Speech Synthesis power voice, pitch, rate, EQ, and lip sync behavior.</li>
                             <li>MediaRecorder and display/canvas capture support browser-based video recording.</li>
-                            <li>Serializers save and restore characters, panels, automation, audio, and full scenes.</li>
+                            <li>Serializers save and restore characters, panels, automation, audio, and full scenes.
+                            </li>
                         </ul>
                     </div>
                     <div class="panel">
                         <h3>Important source files</h3>
                         <ul class="code-list">
                             <li><strong>index.html:</strong> main interface and sidebar controls.</li>
-                            <li><strong>script.js:</strong> character engine, stage loop, automation, talk/TTS, movement.</li>
+                            <li><strong>script.js:</strong> character engine, stage loop, automation, talk/TTS,
+                                movement.</li>
                             <li><strong>entities.js:</strong> animals, aliens, objects, vehicles, and props.</li>
-                            <li><strong>panel_control.js:</strong> external panel editor, drawing, movement, effects.</li>
-                            <li><strong>panel_color_adjustment.js:</strong> stage, panel, and character color grading.</li>
+                            <li><strong>panel_control.js:</strong> external panel editor, drawing, movement, effects.
+                            </li>
+                            <li><strong>panel_color_adjustment.js:</strong> stage, panel, and character color grading.
+                            </li>
                             <li><strong>audio_playlist_engine.js:</strong> playlist playback engine.</li>
-                            <li><strong>audio_playlist_controller.js:</strong> playlist UI, pitch, rate, and modulation.</li>
+                            <li><strong>audio_playlist_controller.js:</strong> playlist UI, pitch, rate, and modulation.
+                            </li>
                             <li><strong>toy_controller.js:</strong> balloon overlay tool.</li>
-                            <li><strong>game_controller.js:</strong> runner, falling obstacle, and snake controllers.</li>
+                            <li><strong>game_controller.js:</strong> runner, falling obstacle, and snake controllers.
+                            </li>
                             <li><strong>temple_run_game.js:</strong> Temple Run 3D game mode.</li>
                             <li><strong>theme_engine.js:</strong> day/night, sky, weather, and atmosphere.</li>
-                            <li><strong>stage_recorder.js:</strong> recorder drawer, aspect guides, and capture workflow.</li>
+                            <li><strong>stage_recorder.js:</strong> recorder drawer, aspect guides, and capture
+                                workflow.</li>
                         </ul>
                     </div>
                 </div>
@@ -1418,12 +1432,14 @@
 
                 <div class="panel">
                     <ul class="future-list">
-                        <li>Template library for common YouTube, classroom, nursery rhyme, news, and social formats.</li>
+                        <li>Template library for common YouTube, classroom, nursery rhyme, news, and social formats.
+                        </li>
                         <li>More premade character packs, entity packs, backgrounds, and style presets.</li>
                         <li>Timeline keyframe editor improvements for more precise motion control.</li>
                         <li>Cloud project saving for multi-device scene editing and series production.</li>
                         <li>One-click video rendering/export workflow after browser recording.</li>
-                        <li>AI-assisted scene generation from story prompts, educational scripts, and video outlines.</li>
+                        <li>AI-assisted scene generation from story prompts, educational scripts, and video outlines.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1434,7 +1450,8 @@
                 <div class="section-head">
                     <div class="section-label">Final Takeaway</div>
                     <div>
-                        <h2 id="cta-title">Animator Pro turns a browser into a lightweight cartoon production studio.</h2>
+                        <h2 id="cta-title">Animator Pro turns a browser into a lightweight cartoon production studio.
+                        </h2>
                         <p>It gives creators a fast way to build, animate, narrate, reuse, and record cartoon content
                             for YouTube and beyond, while demonstrating a deep browser engineering skill set.</p>
                         <div class="channel-panel" aria-labelledby="footer-channels-title">
