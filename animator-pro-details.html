@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery Details - Animator Case Study | Fayazur Rahman Summit</title>
+    <meta name="description" content="Detailed look at Animator Pro components and workflows." />
+    <meta name="author" content="Fayazur Rahman Summit" />
+
+    <style>
+        :root {
+            --ink: #f3fbfa;
+            --muted: rgba(243, 251, 250, 0.7);
+            --dim: rgba(243, 251, 250, 0.55);
+            --bg: #0d1413;
+            --panel: #14201e;
+            --panel-2: #182925;
+            --line: rgba(255, 255, 255, 0.14);
+            --accent: #51d7ce;
+            --accent-dark: #3baca4;
+            --warm: #f2b35f;
+            --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid rgba(81, 215, 206, 0.38);
+            outline-offset: 3px;
+        }
+
+        /* Nav & Brand */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid var(--line);
+            background: rgba(13, 20, 19, 0.9);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav {
+            width: min(960px, calc(100% - 32px));
+            min-height: 72px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            background: var(--ink);
+            color: var(--bg);
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-weight: 700;
+            padding: 8px 10px;
+            border-radius: 6px;
+            transition: color 120ms ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--ink);
+        }
+
+        /* Container & Details Main */
+        .container {
+            width: min(780px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 48px 0 64px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 0.92rem;
+            margin-bottom: 32px;
+            transition: color 120ms ease, transform 120ms ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-dark);
+            transform: translateX(-2px);
+        }
+
+        /* Details Rendering Elements */
+        h1.details-title {
+            font-size: 2.4rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin: 0 0 24px;
+            color: var(--ink);
+        }
+
+        .details-image-wrapper {
+            margin: 0 0 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: #f5fbfa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* padding: 24px; */
+        }
+
+        .details-image-wrapper img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        .details-caption {
+            font-size: 1.1rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin: 0 0 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .details-html-content {
+            color: var(--ink);
+        }
+
+        .details-html-content h3 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin: 32px 0 16px;
+        }
+
+        .details-html-content p {
+            margin: 0 0 20px;
+            line-height: 1.8;
+            color: var(--muted);
+        }
+
+        .details-html-content ul {
+            margin: 0 0 24px;
+            padding-left: 24px;
+            color: var(--muted);
+        }
+
+        .details-html-content li {
+            margin-bottom: 12px;
+        }
+
+        .details-html-content strong {
+            color: var(--ink);
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--line);
+            background: rgba(13, 20, 19, 0.7);
+            color: var(--dim);
+            padding: 24px 0;
+            font-size: 0.92rem;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            h1.details-title {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 32px 0 48px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Details navigation">
+            <a class="brand" href="animator-pro.html">
+                <span class="brand-mark" aria-hidden="true">AP</span>
+                <span>
+                    <strong>Animator Pro</strong><br>
+                    <span style="font-weight: 500; font-size: 0.82rem; color: var(--accent);">Case Study</span>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Portfolio</a>
+                <a href="animator-pro.html">Case Study</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container" id="details-container">
+            <!-- Dynamic Details Content Will Be Rendered Here -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container" style="padding: 0;">
+            <span>&copy; 2026 Fayazur Rahman Summit &middot; Personal Project Case Study</span>
+        </div>
+    </footer>
+
+    <!-- Load the shared JSON-LD data -->
+    <script src="animator-pro-data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('details-container');
+            const params = new URLSearchParams(window.location.search);
+            const index = parseInt(params.get('id'), 10);
+
+            if (isNaN(index) || !animatorProProjectImages || !animatorProProjectImages[index]) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 48px 0;">
+                        <h2>Details Not Found</h2>
+                        <p style="color: var(--muted); margin-bottom: 24px;">The requested gallery details could not be found.</p>
+                        <a href="animator-pro.html" class="back-link" style="margin-bottom: 0;">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                            Back to Animator Pro Case Study
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+
+            const data = animatorProProjectImages[index];
+
+            // Render Title first as details page title
+            const titleEl = document.createElement('h1');
+            titleEl.className = 'details-title';
+            titleEl.textContent = data.title || 'Animator Pro Component Details';
+            document.title = `${data.title || 'Component Details'} | Animator Pro Case Study`;
+
+            // Back link
+            const backLink = document.createElement('a');
+            backLink.className = 'back-link';
+            backLink.href = 'animator-pro.html';
+            backLink.innerHTML = `
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                Back to Case Study
+            `;
+
+            // Then image
+            const imgWrapper = document.createElement('div');
+            imgWrapper.className = 'details-image-wrapper';
+            const img = document.createElement('img');
+            img.src = data.src;
+            img.alt = data.alt || data.title || 'Animator Pro visual component';
+            imgWrapper.appendChild(img);
+
+            // Then caption
+            const captionEl = document.createElement('div');
+            captionEl.className = 'details-caption';
+            captionEl.textContent = data.caption || '';
+
+            // Render wrapper
+            container.appendChild(backLink);
+            container.appendChild(titleEl);
+            container.appendChild(imgWrapper);
+            if (data.caption) {
+                container.appendChild(captionEl);
+            }
+
+            // Then details html if present
+            if (data.detailsHtml) {
+                const detailsWrapper = document.createElement('div');
+                detailsWrapper.className = 'details-html-content';
+                detailsWrapper.innerHTML = data.detailsHtml;
+                container.appendChild(detailsWrapper);
+            }
+        });
+    </script>
+</body>
+
+</html>
