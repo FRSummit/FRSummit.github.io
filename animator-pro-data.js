@@ -292,12 +292,135 @@ const animatorProProjectImages = [
         `
     },
     {
-        src: 'Images/animator-pro/',
+        src: 'Images/animator-pro/animator-pro-0104.webp',
         alt: 'Animator Pro gallery placeholder character controller',
-        title: '',
-        caption: '',
+        title: 'Animator Pro — Interactive Animation Studio with Digital Twin Scene Controls',
+        caption: 'Animator Pro is a visual animation content creation platform designed for producing engaging videos for YouTube, Facebook, TikTok, training materials, presentations, and other digital channels. This showcase highlights its environmental controls, scene-layer management, color adjustment, audio tools, interactive modules, and live preview canvas featuring a female reporter within a rainy offshore digital twin environment.',
         detailsHtml: `
-            
+            <article class="portfolio-project animator-pro-project">
+  <header class="project-header">
+    <span class="project-category">
+      Animation Platform • UI/UX Design • Interactive Content Creation
+    </span>
+
+    <h1>
+      Animator Pro — Interactive Animation and Digital Scene Composition Studio
+    </h1>
+
+    <p class="project-introduction">
+      <strong>Animator Pro</strong> is a visual animation content creation
+      platform developed for producing professional videos for
+      <span class="platform">YouTube</span>,
+      <span class="platform">Facebook</span>,
+      <span class="platform">TikTok</span>, digital presentations, training
+      materials, and corporate communication. The application combines scene
+      customization, animated characters, visual effects, interactive elements,
+      audio controls, and real-time composition tools within one structured
+      workspace. This portfolio showcase demonstrates how the platform can turn
+      a complex offshore digital twin environment into an engaging,
+      character-led animated story.
+    </p>
+  </header>
+
+  <section class="project-section">
+    <h2>Theme and Environmental Controls</h2>
+
+    <p>
+      The <strong>Theme / Scene Control</strong> section manages the overall
+      appearance and atmosphere of the animation. Users can enable or disable
+      the selected theme, switch between day and night modes, hide environmental
+      elements, and apply weather effects. In the presented scene,
+      <span class="highlight">Heavy Rain</span> has been selected to create a
+      dramatic offshore environment with visible rainfall, dark clouds, moving
+      ocean water, and illuminated industrial structures.
+    </p>
+
+    <p>
+      These controls allow creators to adapt the same background for different
+      moods, narratives, and presentation requirements. A bright daytime scene
+      may be suitable for an educational explanation, while a rainy nighttime
+      environment can support emergency training, operational reporting, or
+      cinematic storytelling.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Panel and Layer Management</h2>
+
+    <p>
+      The <strong>Panel Controls</strong> section allows users to create,
+      organize, and manage information panels inside the animation. New panels
+      can be added to display operational statistics, labels, charts, alerts,
+      instructions, or supporting content. The layer-management system also
+      enables creators to reorder visual elements and control which items appear
+      in front of or behind the animation canvas.
+    </p>
+
+    <p>
+      This functionality is especially useful for technical explainers and
+      digital twin presentations, where animated characters must be combined
+      with dashboards, real-time measurements, diagrams, and background
+      infrastructure without making the composition difficult to manage.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Visual, Audio, and Interactive Tools</h2>
+
+    <p>
+      The <strong>Color Adjustment</strong> panel provides controls for
+      brightness, contrast, saturation, and temperature. These settings help
+      creators maintain consistent visual quality and ensure that characters,
+      text, data panels, and background imagery remain readable within different
+      lighting conditions.
+    </p>
+
+    <p>
+      The <strong>Audio Controller</strong> manages sound-related behavior for
+      animated content, including narration, dialogue, music, and supporting
+      effects. The <strong>Toy Controller</strong> provides access to
+      interactive animated objects and auxiliary character controls, while the
+      <strong>Games</strong> section supports gameplay-oriented or interactive
+      scene modules. Together, these features expand Animator Pro beyond
+      standard video composition into interactive storytelling and audience
+      engagement.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Main Preview Canvas</h2>
+
+    <p>
+      The central preview canvas displays the selected background and live
+      animation composition. In this example, it presents a rainy offshore oil
+      and gas digital twin containing a production platform, support vessel,
+      subsea pipelines, well infrastructure, monitoring panels, operational
+      statistics, weather information, and system alerts.
+    </p>
+
+    <p>
+      A professionally styled
+      <span class="character-type">female reporter character</span> is placed in
+      the foreground with a microphone, transforming the technical dashboard
+      into an approachable animated presentation. She can be used to explain
+      production data, introduce safety procedures, deliver operational updates,
+      or guide viewers through a complex industrial environment.
+    </p>
+  </section>
+
+  <footer class="project-footer">
+    <h2>Project Value</h2>
+
+    <p>
+      Animator Pro brings scene design, environmental effects, character-based
+      storytelling, audio management, interactive controls, and visual
+      customization into one application. Its live composition workflow helps
+      creators build content faster, communicate complex information clearly,
+      and prepare polished animation videos for social media, education,
+      marketing, industrial training, and professional presentations.
+    </p>
+  </footer>
+</article>
         `
     },
     {

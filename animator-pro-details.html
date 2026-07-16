@@ -221,6 +221,88 @@
                 padding: 32px 0 48px;
             }
         }
+        /* Lightbox overlay for single image */
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(13, 20, 19, 0.96);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 250ms ease;
+        }
+
+        .lightbox-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-stage {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 64px 32px;
+        }
+
+        .lightbox-img-wrapper {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(0.95);
+            transition: transform 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .lightbox-overlay.active .lightbox-img-wrapper {
+            transform: scale(1);
+        }
+
+        .lightbox-img {
+            display: block;
+            max-width: 100%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+        }
+
+        .lightbox-close-btn {
+            position: absolute;
+            top: 18px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 8px;
+            color: var(--ink);
+            font-size: 1.8rem;
+            line-height: 1;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 160ms ease, background 160ms ease;
+            z-index: 2;
+        }
+
+        .lightbox-close-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+            opacity: 1;
+        }
+
+        .details-image-wrapper img {
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -252,6 +334,16 @@
             <span>&copy; 2026 Fayazur Rahman Summit &middot; Personal Project Case Study</span>
         </div>
     </footer>
+
+    <!-- Lightbox Modal for details page image -->
+    <div id="lightbox" class="lightbox-overlay" aria-hidden="true">
+        <div class="lightbox-stage" role="dialog" aria-modal="true" aria-label="Image preview">
+            <button id="lightbox-close" class="lightbox-close-btn" type="button" aria-label="Close Lightbox">&times;</button>
+            <div class="lightbox-img-wrapper">
+                <img id="lightbox-img" class="lightbox-img" src="" alt="Maximized view" />
+            </div>
+        </div>
+    </div>
 
     <!-- Load the shared JSON-LD data -->
     <script src="animator-pro-data.js"></script>
@@ -304,6 +396,19 @@
             img.alt = data.alt || data.title || 'Animator Pro visual component';
             imgWrapper.appendChild(img);
 
+            // Enable lightbox click
+            img.addEventListener('click', () => {
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImg = document.getElementById('lightbox-img');
+                if (lightbox && lightboxImg) {
+                    lightboxImg.src = data.src;
+                    lightboxImg.alt = data.alt || data.title || 'Maximized view';
+                    lightbox.classList.add('active');
+                    lightbox.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+
             // Then caption
             const captionEl = document.createElement('div');
             captionEl.className = 'details-caption';
@@ -324,6 +429,29 @@
                 detailsWrapper.innerHTML = data.detailsHtml;
                 container.appendChild(detailsWrapper);
             }
+
+            // Lightbox close logic
+            const lightbox = document.getElementById('lightbox');
+            const lightboxClose = document.getElementById('lightbox-close');
+            const closeLightbox = () => {
+                if (lightbox) {
+                    lightbox.classList.remove('active');
+                    lightbox.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                }
+            };
+            if (lightbox) {
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox || e.target === lightboxClose || e.target.classList.contains('lightbox-stage')) {
+                        closeLightbox();
+                    }
+                });
+            }
+            document.addEventListener('keydown', (e) => {
+                if (lightbox?.classList.contains('active') && e.key === 'Escape') {
+                    closeLightbox();
+                }
+            });
         });
     </script>
 </body>
