@@ -1,130 +1,94 @@
 const animatorProProjectImages = [
     {
-        src: 'Images/animator-pro/animator-pro-0101.webp',
-        alt: 'Animator Pro gallery placeholder logo',
-        title: 'High-Performance Composite Animation Suite',
-        caption: 'A comprehensive, web-based 2D/3D animation environment tailored for modern creators on YouTube, TikTok, and Facebook. Featuring an intuitive suite of layer mechanics, dynamic path planning, and robust background tools, the workspace is shown here compositing a stylized Viking Saga scene complete with grid-aligned precision markers and modular behavior controls.',
+        src: 'Images/animator-pro/animator-pro-0108.webp',
+        alt: 'Animator Pro gallery placeholder character controller',
+        title: 'Educational Kids Animation and Social Content Creation Studio',
+        caption: 'Animator Pro is a visual animation production platform for creating colorful educational videos, children’s stories, social media content, and interactive entertainment. This showcase highlights its scene controls, visual panels, color tools, audio management, animated toy controls, mini-games, and live preview canvas, alongside creator branding for the FR Mono Toon YouTube channel and Facebook page.',
         detailsHtml: `
-            <section class="portfolio-project">
-    <h1>Animator Pro: Web-Based 2D/3D Composite Animation Suite</h1>
-    
-    <p class="project-overview">
-        <strong>Animator Pro</strong> is a powerful, web-based 2D/3D composite animation suite designed specifically for modern content creators on <span class="platform-tag">YouTube</span>, <span class="platform-tag">TikTok</span>, and <span class="platform-tag">Facebook</span>. It streamlines the animation workflow, allowing users to build rich environments, manage complex character behaviors, and sequence automation without heavy desktop software.
-    </p>
-
-    <hr>
-
-    <h2>Key Features &amp; Architecture</h2>
-    <ul class="features-list">
-        <li><strong>1. Emotion Controller:</strong> A dedicated module for adjusting character facial expressions and mapping nuanced emotional cues dynamically.</li>
-        <li><strong>2. Viewpoint Manager:</strong> Controls camera perspective and direction, allowing creators to shift character focus and framing fluidly.</li>
-        <li><strong>3. Path Planner:</strong> An interactive tool for setting down movement trajectories, guiding characters across the screen via custom pathing.</li>
-        <li><strong>4. Action Library:</strong> A repository of pre-built poses and active character movements to eliminate manual frame-by-frame rendering.</li>
-        <li><strong>5. Automation Engine:</strong> Handles complex chronological event handling and structural sequencing for efficient scene production.</li>
-        <li><strong>6. Background &amp; Layer Tools:</strong> A robust environment compositor supporting gradients, direct asset uploads, real-time scaling (X/Y axis), advanced panning, and canvas zooming (2.2x).</li>
-        <li><strong>7. Layer Compositing Canvas:</strong> A structured, grid-aligned viewport featuring precision percentage markers (0% to 100%) for strict layer positioning and seamless background asset rendering.</li>
-    </ul>
-
-    <hr>
-
-    <h2>Featured Project Insight: Viking Saga Scene</h2>
-    <p>
-        To demonstrate the application's capabilities, the environment showcased features a <strong>Viking Village Scene</strong> built as a versatile backdrop for short-form video content:
-    </p>
-    
-    <blockquote>
-        <strong>Composition Details:</strong> A detailed, low-poly 3D miniature composite set on a tiered island. The setting features a traditional wooden longhouse, palisade defensive walls, diverse mixed forest foliage (spruce and autumn hues), all bordered by a textured sea complete with rocky breakwaters and a docked longship. It provides the ideal, high-contrast framing required for mobile-first and desktop video platforms alike.
-    </blockquote>
-</section>
-        `
-    },
-    {
-        src: 'Images/animator-pro/animator-pro-0102.webp',
-        alt: 'Animator Pro gallery placeholder logo',
-        title: 'Animator Pro — All-in-One Animation Video Creation Platform',
-        caption: 'Animator Pro is a visual animation content creation platform designed for producing engaging videos for YouTube, Facebook, TikTok, and other digital channels. It combines script planning, facial expressions, character movement, poses, automated sequences, and background customization within one intuitive workspace.',
-        detailsHtml: `
-            <article class="project-description">
+            <article class="portfolio-project animator-pro-kids-showcase">
   <header class="project-header">
-    <span class="project-label">Product Design & Development</span>
+    <span class="project-category">
+      Animation Software • Educational Content • Kids Entertainment • UI/UX Design
+    </span>
 
-    <h1>Animator Pro — Visual Animation Video Creation Platform</h1>
+    <h1>
+      Animator Pro — Educational Kids Animation and Social Content Creation Studio
+    </h1>
 
     <p class="project-introduction">
-      <strong>Animator Pro</strong> is a comprehensive animation content
-      creation platform developed to help creators produce engaging animated
-      videos for
-      <span class="platform-name">YouTube</span>,
-      <span class="platform-name">Facebook</span>,
-      <span class="platform-name">TikTok</span>, and other digital media
-      platforms. The application brings essential animation controls into one
-      organized workspace, allowing users to design scenes, control characters,
-      arrange movements, customize backgrounds, and prepare complete animation
-      sequences without working across multiple tools.
+      <strong>Animator Pro</strong> is a visual animation content creation
+      platform developed for producing engaging videos for
+      <span class="platform">YouTube</span>,
+      <span class="platform">Facebook</span>,
+      <span class="platform">TikTok</span>, educational programs, children’s
+      stories, and interactive entertainment. The platform combines scene
+      customization, visual overlays, audio, animated objects, mini-games, and
+      real-time preview tools within one organized production workspace. This
+      portfolio showcase demonstrates how Animator Pro can transform an
+      alphabet-learning concept into a colorful, child-friendly animation ready
+      for social publishing.
     </p>
   </header>
 
   <section class="project-section">
-    <h2>Project Overview</h2>
+    <h2>Theme and Scene Control</h2>
 
     <p>
-      The main objective of Animator Pro is to simplify the animation production
-      process while providing creators with flexible visual controls. The
-      interface is divided into a structured control panel and a large preview
-      canvas. Users can configure different parts of an animation from the left
-      sidebar and immediately review the visual result inside the central
-      workspace.
+      The <strong>Theme / Scene Control</strong> section manages the visual
+      environment and overall mood of an animation. Creators can select a scene
+      style that matches the audience, subject, and storytelling direction. In
+      this example, the selected theme presents a bright educational playground
+      filled with trees, flowers, balloons, a kite, playground equipment, and
+      cheerful children.
     </p>
 
     <p>
-      This workflow makes the platform suitable for content creators, marketers,
-      educators, social media teams, and independent designers who need to
-      create animated storytelling content efficiently. The application is
-      designed to support both beginners and experienced users through clearly
-      categorized controls, immediate visual feedback, and a focused editing
-      environment.
-    </p>
-  </section>
-
-  <section class="project-section">
-    <h2>Animation and Character Controls</h2>
-
-    <p>
-      The <strong>Script &amp; Content</strong> section allows creators to
-      define the story, scene structure, dialogue, and overall content flow.
-      The <strong>Emotion &amp; Face</strong> controls make it possible to
-      adjust facial expressions and the emotional tone of animated characters.
-      With <strong>View Direction</strong>, users can control where characters
-      are looking or how they are positioned relative to the camera.
-    </p>
-
-    <p>
-      The <strong>Path &amp; Movement</strong> section manages character
-      movement, direction, timing, and motion behavior across a scene.
-      <strong>Actions &amp; Poses</strong> provides options for selecting body
-      positions, gestures, and character actions. Together, these features help
-      users create more natural, expressive, and visually engaging animated
-      performances.
+      The <strong>Panel Controls</strong> section helps organize scene overlays,
+      information cards, learning labels, and other visual content. These panels
+      can support titles, instructions, educational prompts, and additional
+      storytelling elements while keeping the main composition structured and
+      easy to manage.
     </p>
   </section>
 
   <section class="project-section">
-    <h2>Automation and Scene Customization</h2>
+    <h2>Color and Audio Customization</h2>
 
     <p>
-      The <strong>Automation Sequence</strong> feature enables users to arrange
-      animation steps into an organized timeline or execution sequence. This
-      reduces repetitive manual work and makes it easier to coordinate complex
-      combinations of expressions, actions, movements, and scene changes.
+      The <strong>Color Adjustment</strong> tools allow creators to refine
+      brightness, contrast, saturation, and the overall visual balance of a
+      scene. These controls are useful for maintaining clarity across animated
+      characters, backgrounds, alphabet letters, and decorative elements.
+      Adjustments can be previewed directly on the canvas, allowing users to
+      evaluate the final appearance immediately.
     </p>
 
     <p>
-      The <strong>Background</strong> section provides detailed scene
-      customization options. Users can apply background images or colors,
-      configure gradients, adjust image scale, control zoom levels, reposition
-      scenes horizontally or vertically, and create moving background effects.
-      These controls allow the same character animation to be adapted for
-      different environments, stories, and visual styles.
+      The <strong>Audio Controller</strong> manages narration, music, sound
+      effects, and playback settings. For educational animations, it can be used
+      to coordinate spoken letters, vocabulary, background music, and character
+      dialogue with the visual sequence. This integrated workflow helps keep
+      sound and animation synchronized throughout the production process.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Animated Toys and Mini-Games</h2>
+
+    <p>
+      The <strong>Toy Controller</strong> manages interactive animated objects
+      such as balloons. Creators can control quantity, size, floating speed,
+      direction, color, and interactive behavior. These settings make scenes
+      more playful and can encourage visual engagement in children’s learning
+      videos.
+    </p>
+
+    <p>
+      Animator Pro also includes a <strong>Games</strong> section containing
+      modules such as Runner, Falling Obstacles, Snake, and Temple Run 3D.
+      These features expand the platform beyond standard animation by supporting
+      game-inspired scenes, interactive learning, and entertainment-focused
+      content.
     </p>
   </section>
 
@@ -133,30 +97,42 @@ const animatorProProjectImages = [
 
     <p>
       The central preview canvas displays the selected background and live
-      animation composition. It acts as the primary visual workspace where users
-      can evaluate character placement, movement, scene balance, and background
-      positioning. Changes made through the control panel are reflected in the
-      preview, creating a responsive and efficient editing experience.
+      animation composition. The showcased scene presents children playing in a
+      vibrant park with balloons, a colorful kite, a slide, swings, flowers,
+      trees, and large alphabet letters. The composition combines education and
+      entertainment, creating a friendly environment for teaching letters,
+      words, colors, and basic vocabulary.
     </p>
 
     <p>
-      In the showcased example, the canvas presents a colorful countryside
-      environment featuring hills, trees, village houses, a stream, flowers,
-      animals, and walking characters. This demonstrates how Animator Pro can
-      combine illustrated environments with animated subjects to create
-      visually rich storytelling scenes.
+      Playback controls beneath the canvas allow creators to review timing,
+      audio, object movement, and scene transitions before rendering. The final
+      composition can then be prepared for publication across multiple digital
+      platforms.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Creator Branding and Audience Engagement</h2>
+
+    <p>
+      The showcase includes dedicated branding for
+      <span class="brand-name">FR Mono Toon</span>, featuring the YouTube handle
+      <strong>@frmonotoon</strong> and the Facebook page
+      <strong>FR Mono Toon</strong>. Like, Share, and Subscribe buttons reinforce
+      the platform’s focus on audience growth and social engagement.
     </p>
   </section>
 
   <footer class="project-footer">
-    <h2>Project Value</h2>
+    <h2>Project Outcome</h2>
 
     <p>
-      Animator Pro represents a complete creative solution that combines
-      animation control, scene composition, automation, and content preparation
-      in a single platform. Its structured interface and real-time preview
-      workflow help creators work faster, maintain visual consistency, and
-      produce platform-ready animation content more efficiently.
+      Animator Pro brings visual editing, educational storytelling, audio,
+      animated toys, interactive games, creator branding, and export tools
+      together in one platform. It helps creators build polished children’s
+      content faster and prepare engaging animations for learning,
+      entertainment, and social media publication.
     </p>
   </footer>
 </article>
@@ -165,7 +141,7 @@ const animatorProProjectImages = [
     {
         src: 'Images/animator-pro/animator-pro-0103.webp',
         alt: 'Animator Pro gallery placeholder character controller',
-        title: 'Animator Pro — Character Animation Studio with Digital Twin Scene Integration',
+        title: 'Character Animation Studio with Digital Twin Scene Integration',
         caption: 'Animator Pro is a visual animation content creation platform for producing professional videos for YouTube, Facebook, TikTok, and other digital channels. This showcase demonstrates its character management, appearance customization, movement controls, scene composition tools, and real-time preview capabilities within an offshore oil and gas digital twin environment.',
         detailsHtml: `
             <article class="portfolio-project">
@@ -292,9 +268,149 @@ const animatorProProjectImages = [
         `
     },
     {
+        src: 'Images/animator-pro/animator-pro-0109.webp',
+        alt: 'Animator Pro gallery placeholder character controller',
+        title: 'Joyful Kids Animation and Social Media Content Creation Studio',
+        caption: 'Animator Pro is a creative animation production platform built for making colorful videos for YouTube, Facebook, TikTok, educational projects, children’s entertainment, and digital storytelling. This showcase presents its scene controls, visual layers, color adjustments, audio tools, interactive props, mini-games, timeline editor, and live preview canvas featuring a joyful baby girl dancing in a vibrant park.',
+        detailsHtml: `
+            <article class="portfolio-project animator-pro-kids-animation">
+  <header class="project-header">
+    <span class="project-category">
+      Animation Software • Kids Content • Social Media Videos • UI/UX Design
+    </span>
+
+    <h1>
+      Animator Pro — Joyful Kids Animation and Social Content Creation Studio
+    </h1>
+
+    <p class="project-introduction">
+      <strong>Animator Pro</strong> is a visual animation production platform
+      designed for creating engaging content for
+      <span class="platform">YouTube</span>,
+      <span class="platform">Facebook</span>,
+      <span class="platform">TikTok</span>, educational programs, children’s
+      stories, music videos, and digital entertainment. The application combines
+      scene customization, animated characters, visual layers, audio management,
+      interactive objects, mini-games, and timeline-based editing within one
+      organized workspace. This portfolio showcase demonstrates how Animator Pro
+      can transform a simple children’s video concept into a colorful,
+      professionally presented animation.
+    </p>
+  </header>
+
+  <section class="project-section">
+    <h2>Theme and Scene Control</h2>
+
+    <p>
+      The <strong>Theme / Scene Control</strong> section allows creators to
+      select and manage the visual environment of an animation. Users can choose
+      a background theme, review scene thumbnails, and establish the atmosphere
+      that best matches the story. In this example, the selected theme is a
+      bright and cheerful park featuring green trees, colorful flowers, a
+      fountain, playground equipment, a small house, and a sunny blue sky.
+    </p>
+
+    <p>
+      The <strong>Panel Controls</strong> organize the visual structure of the
+      composition. Backgrounds, environments, characters, objects, overlays,
+      text, and titles can be managed as separate layers. This structured
+      approach helps creators maintain control over complex scenes and quickly
+      adjust the visibility or position of individual elements.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Color and Audio Customization</h2>
+
+    <p>
+      The <strong>Color Adjustment</strong> tools provide controls for
+      brightness, contrast, saturation, and the overall visual balance of the
+      scene. These settings help maintain vivid colors while ensuring that the
+      character, background, decorative text, and playground objects remain
+      clear and visually consistent.
+    </p>
+
+    <p>
+      The <strong>Audio Controller</strong> supports background music,
+      narration, dialogue, sound effects, playback levels, and synchronization.
+      For this dancing animation, creators can coordinate music and character
+      movement while reviewing audio waveforms directly on the editing
+      timeline. This makes it easier to match actions with musical beats and
+      create a more entertaining final video.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Interactive Toys and Mini-Games</h2>
+
+    <p>
+      The <strong>Toy Controller</strong> enables creators to add playful
+      animated objects such as stars, balls, balloons, toys, and other
+      interactive props. These elements can enhance the energy of a children’s
+      scene and provide additional opportunities for movement, interaction, and
+      visual storytelling.
+    </p>
+
+    <p>
+      Animator Pro also includes a <strong>Games</strong> section with modules
+      such as Runner, Falling Obstacles, Snake, and Temple Run 3D. These
+      features expand the application beyond traditional video editing by
+      supporting game-inspired animation, interactive learning, and playful
+      entertainment experiences.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Main Preview Canvas</h2>
+
+    <p>
+      The central preview canvas displays the complete animation composition in
+      real time. The showcased scene features a cheerful baby girl dancing in a
+      pink dress inside a beautiful park. Musical notes, butterflies, flowers,
+      a fountain, a playground slide, and a charming house create a joyful
+      environment, while the title
+      <span class="scene-title">“A Joyful Baby Girl Dances in the Park!”</span>
+      communicates the story immediately.
+    </p>
+
+    <p>
+      Playback controls and a multi-track timeline appear beneath the canvas,
+      allowing creators to review scene timing, animation clips, music,
+      narration, and transitions before rendering the final video.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Social Branding and Publishing</h2>
+
+    <p>
+      The showcase includes creator branding for the
+      <strong>FR Mono Toon</strong> YouTube channel, the handle
+      <strong>@frmonotoon</strong>, and the Facebook page
+      <strong>FR Mono Toon</strong>. Prominent Like, Share, and Subscribe
+      buttons encourage audience interaction and reinforce the platform’s focus
+      on social media publishing.
+    </p>
+  </section>
+
+  <footer class="project-footer">
+    <h2>Project Outcome</h2>
+
+    <p>
+      Animator Pro brings character animation, scene design, audio, interactive
+      objects, timeline editing, creator branding, and export tools into one
+      accessible platform. It helps creators develop polished children’s
+      animations faster and prepare engaging content for education,
+      entertainment, storytelling, and multi-platform publication.
+    </p>
+  </footer>
+</article>
+        `
+    },
+    {
         src: 'Images/animator-pro/animator-pro-0104.webp',
         alt: 'Animator Pro gallery placeholder character controller',
-        title: 'Animator Pro — Interactive Animation Studio with Digital Twin Scene Controls',
+        title: 'Interactive Animation Studio with Digital Twin Scene Controls',
         caption: 'Animator Pro is a visual animation content creation platform designed for producing engaging videos for YouTube, Facebook, TikTok, training materials, presentations, and other digital channels. This showcase highlights its environmental controls, scene-layer management, color adjustment, audio tools, interactive modules, and live preview canvas featuring a female reporter within a rainy offshore digital twin environment.',
         detailsHtml: `
             <article class="portfolio-project animator-pro-project">
@@ -422,11 +538,279 @@ const animatorProProjectImages = [
   </footer>
 </article>
         `
+    }, {
+        src: 'Images/animator-pro/animator-pro-0110.webp',
+        alt: 'Animator Pro portfolio showcase featuring a child-friendly solar system and galaxy animation scene, creative editing tools, timeline controls, social media branding, and publishing actions.',
+        title: 'Animator Pro — Solar System and Galaxy Animation Creation Studio',
+        caption: 'Animator Pro is a visual animation production platform for creating educational videos, children’s stories, social media content, and interactive presentations. This showcase highlights its scene controls, panel management, color adjustment, audio tools, animated props, mini-games, timeline editor, and live preview canvas featuring a child-friendly solar system and galaxy adventure.',
+        detailsHtml: `
+        <article class="portfolio-project animator-pro-space-showcase">
+            <header class="project-header">
+                <span class="project-category">
+                    Animation Software • Educational Content • Space Visualization • UI/UX Design
+                </span>
+
+                <h1>
+                    Animator Pro — Solar System and Galaxy Animation Creation Studio
+                </h1>
+
+                <p class="project-introduction">
+                    <strong>Animator Pro</strong> is a visual animation content creation platform
+                    developed for producing engaging videos for
+                    <span class="platform">YouTube</span>,
+                    <span class="platform">Facebook</span>,
+                    <span class="platform">TikTok</span>, educational channels,
+                    children’s stories, science explainers, and digital entertainment.
+                    The platform combines scene customization, visual panels, color tools,
+                    audio management, animated objects, mini-games, and timeline-based
+                    editing within one organized production workspace. This portfolio
+                    showcase demonstrates how Animator Pro can transform a space-learning
+                    concept into a colorful and professionally presented animated experience.
+                </p>
+            </header>
+
+            <section class="project-section">
+                <h2>Theme and Scene Control</h2>
+
+                <p>
+                    The <strong>Theme / Scene Control</strong> section allows creators to
+                    define the environment, visual mood, and overall direction of an
+                    animation. For this project, the selected scene uses a vivid outer-space
+                    theme containing a spiral galaxy, glowing stars, planetary orbits, a
+                    bright sun, Earth, Saturn, and other recognizable planets. The space
+                    environment is designed to feel exciting and cinematic while remaining
+                    friendly and understandable for younger audiences.
+                </p>
+
+                <p>
+                    The <strong>Panel Controls</strong> help organize scene overlays,
+                    educational labels, titles, supporting graphics, and visual information.
+                    These panels can be managed separately from the main background, making
+                    it easier to arrange content without affecting the rest of the composition.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>Color and Audio Customization</h2>
+
+                <p>
+                    The <strong>Color Adjustment</strong> tools provide control over
+                    brightness, contrast, saturation, and the overall appearance of the
+                    animation. These settings help creators enhance galaxy colors, increase
+                    the visibility of planetary details, balance the character with the
+                    background, and maintain a consistent visual style throughout the video.
+                </p>
+
+                <p>
+                    The <strong>Audio Controller</strong> manages narration, background
+                    music, sound effects, volume, and playback. For an educational space
+                    animation, narration can explain the solar system, introduce the planets,
+                    or guide viewers through scientific ideas while music and effects add
+                    energy and atmosphere to the experience.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>Interactive Objects and Mini-Games</h2>
+
+                <p>
+                    The <strong>Toy Controller</strong> allows creators to add and manage
+                    animated props that support the story. These objects can include stars,
+                    rockets, floating labels, interactive planets, or other decorative
+                    elements. Such features make educational scenes more playful and help
+                    maintain viewer attention.
+                </p>
+
+                <p>
+                    Animator Pro also includes a <strong>Games</strong> section with modules
+                    such as Runner, Falling Obstacles, Snake, and Temple Run 3D. These tools
+                    extend the platform beyond standard video production by supporting
+                    interactive learning, game-inspired storytelling, and entertainment
+                    experiences.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>Main Preview Canvas</h2>
+
+                <p>
+                    The central preview canvas displays the complete animation composition
+                    in real time. In this example, a curious animated child points toward a
+                    glowing solar system while the title
+                    <span class="scene-title">“Amazing Solar System &amp; Galaxy”</span>
+                    introduces the educational topic. Earth is highlighted with a dedicated
+                    label, Saturn appears prominently with its rings, and orbital paths help
+                    communicate how planets move around the sun.
+                </p>
+
+                <p>
+                    A timeline beneath the preview provides clip thumbnails, playback
+                    controls, a movable playhead, and a narration waveform. This allows
+                    creators to coordinate scenes, character movement, labels, transitions,
+                    and audio before exporting the final animation.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>Creator Branding and Publishing</h2>
+
+                <p>
+                    The showcase includes branding for the
+                    <strong>FR Mono Toon</strong> YouTube channel, the handle
+                    <strong>@frmonotoon</strong>, and the Facebook page
+                    <strong>FR Mono Toon</strong>. Like, Share, and Subscribe buttons
+                    reinforce the platform’s focus on social engagement and multi-platform
+                    publishing.
+                </p>
+            </section>
+
+            <footer class="project-footer">
+                <h2>Project Outcome</h2>
+
+                <p>
+                    Animator Pro combines visual editing, educational storytelling, audio,
+                    interactive elements, timeline production, creator branding, and export
+                    tools in one platform. It helps creators develop polished science and
+                    children’s content faster while preparing engaging animations for
+                    education, entertainment, and social media publication.
+                </p>
+            </footer>
+        </article>
+    `
+    },
+    {
+        src: 'Images/animator-pro/animator-pro-0106.webp',
+        alt: 'Animator Pro gallery placeholder character controller',
+        title: 'Renewable Energy Digital Twin Animation and Research Presentation Studio',
+        caption: 'Animator Pro is an advanced visual content creation platform for producing animated videos, research presentations, technical explainers, and social media content. This showcase demonstrates professional color-grading controls, real-time scene preview, renewable energy data visualization, and a female research presenter integrated into a realistic hydro and solar digital twin environment.',
+        detailsHtml: `
+            <article class="portfolio-project animator-pro-energy-showcase">
+  <header class="project-header">
+    <span class="project-category">
+      Animation Software • Digital Twin • Research Visualization • UI/UX Design
+    </span>
+
+    <h1>
+      Animator Pro — Renewable Energy Digital Twin Animation Studio
+    </h1>
+
+    <p class="project-introduction">
+      <strong>Animator Pro</strong> is a visual animation and presentation
+      platform developed for creating professional content for
+      <span class="platform">YouTube</span>,
+      <span class="platform">Facebook</span>,
+      <span class="platform">TikTok</span>, research reports, educational
+      videos, technical demonstrations, and corporate presentations. The
+      application combines scene editing, advanced color correction, animated
+      characters, data visualization, and real-time preview tools within one
+      structured workspace. This showcase demonstrates how Animator Pro can
+      transform a complex renewable energy digital twin into an accessible,
+      presenter-led visual story.
+    </p>
+  </header>
+
+  <section class="project-section">
+    <h2>Professional Scene Enhancement</h2>
+
+    <p>
+      The <strong>Basic Adjustments</strong> panel provides essential controls
+      for improving the overall appearance of an animation scene. Creators can
+      modify brightness, contrast, saturation, exposure, highlights, shadows,
+      white balance, tint, and sharpness. These settings make it possible to
+      correct lighting problems, improve visual clarity, and establish a
+      consistent cinematic style before the animation is exported.
+    </p>
+
+    <p>
+      The interface uses compact sliders and clearly displayed values, allowing
+      users to make precise changes without interrupting the creative workflow.
+      Adjustments are reflected directly inside the preview canvas, enabling
+      creators to evaluate the visual result immediately.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Advanced Color-Grading Controls</h2>
+
+    <p>
+      The <strong>Advanced Color Tools</strong> section offers targeted HSL
+      adjustments for individual color ranges. Users can select a color group
+      and modify its hue, saturation, and lightness independently. This provides
+      greater control over environmental colors, interface overlays, clothing,
+      landscape elements, and the overall emotional tone of the scene.
+    </p>
+
+    <p>
+      Animator Pro also includes a dedicated <strong>Curves</strong> editor for
+      balancing shadows, midtones, and highlights. The visual curve graph allows
+      creators to shape image contrast more accurately and produce a polished,
+      cinematic appearance. The <strong>RGB Channel Controls</strong> extend
+      this functionality by allowing separate correction of red, green, and
+      blue channels across different tonal regions.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Live Digital Twin Preview</h2>
+
+    <p>
+      The <strong>Preview Scene Dashboard</strong> displays all grading and
+      composition changes in real time. In this example, the main canvas
+      presents a realistic hydro and solar energy digital twin featuring a
+      mountain reservoir, hydroelectric dam, flowing waterways, solar panel
+      fields, a powerhouse, transmission lines, and an electrical substation.
+    </p>
+
+    <p>
+      Interactive data overlays communicate total generation, energy mix,
+      weather conditions, system status, reservoir levels, turbine efficiency,
+      solar irradiance, live output, and carbon offset. Glowing connection paths
+      visually explain how water and electrical energy move through the
+      infrastructure, making the scene suitable for educational and
+      research-oriented storytelling.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Female Research Report Presenter</h2>
+
+    <p>
+      A professionally styled
+      <span class="character-highlight">female research presenter</span> is
+      integrated into the animation canvas to guide viewers through technical
+      information. She holds an energy report tablet and uses a confident
+      presentation gesture to direct attention toward the renewable energy
+      infrastructure and performance metrics.
+    </p>
+
+    <p>
+      This character-led approach makes complex reports easier to understand and
+      more engaging for non-technical audiences. The presenter can support
+      research summaries, energy-performance reports, technical training,
+      sustainability campaigns, corporate briefings, and social media
+      explainers.
+    </p>
+  </section>
+
+  <footer class="project-footer">
+    <h2>Project Outcome</h2>
+
+    <p>
+      Animator Pro combines professional visual editing, data-driven scene
+      composition, animated presenters, and real-time preview capabilities in
+      one creative platform. The result is a flexible production workflow that
+      helps creators communicate technical subjects clearly, develop polished
+      animations faster, and prepare compelling content for research,
+      education, marketing, and multi-platform publication.
+    </p>
+  </footer>
+</article>
+        `
     },
     {
         src: 'Images/animator-pro/animator-pro-0105.webp',
         alt: 'Animator Pro gallery placeholder character controller',
-        title: 'Animator Pro — Cinematic Horror Animation and Interactive Scene Creation Studio',
+        title: 'Cinematic Horror Animation and Interactive Scene Creation Studio',
         caption: 'Animator Pro is a visual animation content creation platform for producing engaging videos for YouTube, Facebook, TikTok, and other digital channels. This horror-themed showcase demonstrates its content panels, visual styling, transparency controls, movement paths, character animation, playback tools, effects, and live scene preview within a cinematic moonlit forest.',
         detailsHtml: `
             <article class="portfolio-project animator-pro-horror-showcase">
@@ -562,138 +946,9 @@ const animatorProProjectImages = [
         `
     },
     {
-        src: 'Images/animator-pro/animator-pro-0106.webp',
-        alt: 'Animator Pro gallery placeholder character controller',
-        title: 'Animator Pro — Renewable Energy Digital Twin Animation and Research Presentation Studio',
-        caption: 'Animator Pro is an advanced visual content creation platform for producing animated videos, research presentations, technical explainers, and social media content. This showcase demonstrates professional color-grading controls, real-time scene preview, renewable energy data visualization, and a female research presenter integrated into a realistic hydro and solar digital twin environment.',
-        detailsHtml: `
-            <article class="portfolio-project animator-pro-energy-showcase">
-  <header class="project-header">
-    <span class="project-category">
-      Animation Software • Digital Twin • Research Visualization • UI/UX Design
-    </span>
-
-    <h1>
-      Animator Pro — Renewable Energy Digital Twin Animation Studio
-    </h1>
-
-    <p class="project-introduction">
-      <strong>Animator Pro</strong> is a visual animation and presentation
-      platform developed for creating professional content for
-      <span class="platform">YouTube</span>,
-      <span class="platform">Facebook</span>,
-      <span class="platform">TikTok</span>, research reports, educational
-      videos, technical demonstrations, and corporate presentations. The
-      application combines scene editing, advanced color correction, animated
-      characters, data visualization, and real-time preview tools within one
-      structured workspace. This showcase demonstrates how Animator Pro can
-      transform a complex renewable energy digital twin into an accessible,
-      presenter-led visual story.
-    </p>
-  </header>
-
-  <section class="project-section">
-    <h2>Professional Scene Enhancement</h2>
-
-    <p>
-      The <strong>Basic Adjustments</strong> panel provides essential controls
-      for improving the overall appearance of an animation scene. Creators can
-      modify brightness, contrast, saturation, exposure, highlights, shadows,
-      white balance, tint, and sharpness. These settings make it possible to
-      correct lighting problems, improve visual clarity, and establish a
-      consistent cinematic style before the animation is exported.
-    </p>
-
-    <p>
-      The interface uses compact sliders and clearly displayed values, allowing
-      users to make precise changes without interrupting the creative workflow.
-      Adjustments are reflected directly inside the preview canvas, enabling
-      creators to evaluate the visual result immediately.
-    </p>
-  </section>
-
-  <section class="project-section">
-    <h2>Advanced Color-Grading Controls</h2>
-
-    <p>
-      The <strong>Advanced Color Tools</strong> section offers targeted HSL
-      adjustments for individual color ranges. Users can select a color group
-      and modify its hue, saturation, and lightness independently. This provides
-      greater control over environmental colors, interface overlays, clothing,
-      landscape elements, and the overall emotional tone of the scene.
-    </p>
-
-    <p>
-      Animator Pro also includes a dedicated <strong>Curves</strong> editor for
-      balancing shadows, midtones, and highlights. The visual curve graph allows
-      creators to shape image contrast more accurately and produce a polished,
-      cinematic appearance. The <strong>RGB Channel Controls</strong> extend
-      this functionality by allowing separate correction of red, green, and
-      blue channels across different tonal regions.
-    </p>
-  </section>
-
-  <section class="project-section">
-    <h2>Live Digital Twin Preview</h2>
-
-    <p>
-      The <strong>Preview Scene Dashboard</strong> displays all grading and
-      composition changes in real time. In this example, the main canvas
-      presents a realistic hydro and solar energy digital twin featuring a
-      mountain reservoir, hydroelectric dam, flowing waterways, solar panel
-      fields, a powerhouse, transmission lines, and an electrical substation.
-    </p>
-
-    <p>
-      Interactive data overlays communicate total generation, energy mix,
-      weather conditions, system status, reservoir levels, turbine efficiency,
-      solar irradiance, live output, and carbon offset. Glowing connection paths
-      visually explain how water and electrical energy move through the
-      infrastructure, making the scene suitable for educational and
-      research-oriented storytelling.
-    </p>
-  </section>
-
-  <section class="project-section">
-    <h2>Female Research Report Presenter</h2>
-
-    <p>
-      A professionally styled
-      <span class="character-highlight">female research presenter</span> is
-      integrated into the animation canvas to guide viewers through technical
-      information. She holds an energy report tablet and uses a confident
-      presentation gesture to direct attention toward the renewable energy
-      infrastructure and performance metrics.
-    </p>
-
-    <p>
-      This character-led approach makes complex reports easier to understand and
-      more engaging for non-technical audiences. The presenter can support
-      research summaries, energy-performance reports, technical training,
-      sustainability campaigns, corporate briefings, and social media
-      explainers.
-    </p>
-  </section>
-
-  <footer class="project-footer">
-    <h2>Project Outcome</h2>
-
-    <p>
-      Animator Pro combines professional visual editing, data-driven scene
-      composition, animated presenters, and real-time preview capabilities in
-      one creative platform. The result is a flexible production workflow that
-      helps creators communicate technical subjects clearly, develop polished
-      animations faster, and prepare compelling content for research,
-      education, marketing, and multi-platform publication.
-    </p>
-  </footer>
-</article>
-        `
-    },
-    {
         src: 'Images/animator-pro/animator-pro-0107.webp',
         alt: 'Animator Pro gallery placeholder character controller',
-        title: 'Animator Pro — Renewable Energy Digital Twin Animation and Multimedia Creation Platform',
+        title: 'Renewable Energy Digital Twin Animation and Multimedia Creation Platform',
         caption: 'Animator Pro is a visual animation production platform for creating engaging videos for YouTube, Facebook, TikTok, presentations, and digital campaigns. This showcase highlights its character management, scene panels, color-enhancement tools, filters, audio controls, interactive modules, and live preview canvas featuring a female reporter within a connected renewable energy digital twin.',
         detailsHtml: `
             <article class="portfolio-project animator-pro-showcase">
@@ -821,30 +1076,311 @@ const animatorProProjectImages = [
         `
     },
     {
-        src: 'Images/animator-pro/',
-        alt: 'Animator Pro gallery placeholder character controller',
-        title: '',
-        caption: '',
+        src: 'Images/animator-pro/animator-pro-0101.webp',
+        alt: 'Animator Pro gallery placeholder logo',
+        title: 'High-Performance Composite Animation Suite',
+        caption: 'A comprehensive, web-based 2D/3D animation environment tailored for modern creators on YouTube, TikTok, and Facebook. Featuring an intuitive suite of layer mechanics, dynamic path planning, and robust background tools, the workspace is shown here compositing a stylized Viking Saga scene complete with grid-aligned precision markers and modular behavior controls.',
         detailsHtml: `
-            
+            <section class="portfolio-project">
+    <h1>Animator Pro: Web-Based 2D/3D Composite Animation Suite</h1>
+    
+    <p class="project-overview">
+        <strong>Animator Pro</strong> is a powerful, web-based 2D/3D composite animation suite designed specifically for modern content creators on <span class="platform-tag">YouTube</span>, <span class="platform-tag">TikTok</span>, and <span class="platform-tag">Facebook</span>. It streamlines the animation workflow, allowing users to build rich environments, manage complex character behaviors, and sequence automation without heavy desktop software.
+    </p>
+
+    <hr>
+
+    <h2>Key Features &amp; Architecture</h2>
+    <ul class="features-list">
+        <li><strong>1. Emotion Controller:</strong> A dedicated module for adjusting character facial expressions and mapping nuanced emotional cues dynamically.</li>
+        <li><strong>2. Viewpoint Manager:</strong> Controls camera perspective and direction, allowing creators to shift character focus and framing fluidly.</li>
+        <li><strong>3. Path Planner:</strong> An interactive tool for setting down movement trajectories, guiding characters across the screen via custom pathing.</li>
+        <li><strong>4. Action Library:</strong> A repository of pre-built poses and active character movements to eliminate manual frame-by-frame rendering.</li>
+        <li><strong>5. Automation Engine:</strong> Handles complex chronological event handling and structural sequencing for efficient scene production.</li>
+        <li><strong>6. Background &amp; Layer Tools:</strong> A robust environment compositor supporting gradients, direct asset uploads, real-time scaling (X/Y axis), advanced panning, and canvas zooming (2.2x).</li>
+        <li><strong>7. Layer Compositing Canvas:</strong> A structured, grid-aligned viewport featuring precision percentage markers (0% to 100%) for strict layer positioning and seamless background asset rendering.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Featured Project Insight: Viking Saga Scene</h2>
+    <p>
+        To demonstrate the application's capabilities, the environment showcased features a <strong>Viking Village Scene</strong> built as a versatile backdrop for short-form video content:
+    </p>
+    
+    <blockquote>
+        <strong>Composition Details:</strong> A detailed, low-poly 3D miniature composite set on a tiered island. The setting features a traditional wooden longhouse, palisade defensive walls, diverse mixed forest foliage (spruce and autumn hues), all bordered by a textured sea complete with rocky breakwaters and a docked longship. It provides the ideal, high-contrast framing required for mobile-first and desktop video platforms alike.
+    </blockquote>
+</section>
         `
     },
     {
-        src: 'Images/animator-pro/',
-        alt: 'Animator Pro gallery placeholder character controller',
-        title: '',
-        caption: '',
+        src: 'Images/animator-pro/animator-pro-0102.webp',
+        alt: 'Animator Pro gallery placeholder logo',
+        title: 'All-in-One Animation Video Creation Platform',
+        caption: 'Animator Pro is a visual animation content creation platform designed for producing engaging videos for YouTube, Facebook, TikTok, and other digital channels. It combines script planning, facial expressions, character movement, poses, automated sequences, and background customization within one intuitive workspace.',
         detailsHtml: `
-            
+            <article class="project-description">
+  <header class="project-header">
+    <span class="project-label">Product Design & Development</span>
+
+    <h1>Animator Pro — Visual Animation Video Creation Platform</h1>
+
+    <p class="project-introduction">
+      <strong>Animator Pro</strong> is a comprehensive animation content
+      creation platform developed to help creators produce engaging animated
+      videos for
+      <span class="platform-name">YouTube</span>,
+      <span class="platform-name">Facebook</span>,
+      <span class="platform-name">TikTok</span>, and other digital media
+      platforms. The application brings essential animation controls into one
+      organized workspace, allowing users to design scenes, control characters,
+      arrange movements, customize backgrounds, and prepare complete animation
+      sequences without working across multiple tools.
+    </p>
+  </header>
+
+  <section class="project-section">
+    <h2>Project Overview</h2>
+
+    <p>
+      The main objective of Animator Pro is to simplify the animation production
+      process while providing creators with flexible visual controls. The
+      interface is divided into a structured control panel and a large preview
+      canvas. Users can configure different parts of an animation from the left
+      sidebar and immediately review the visual result inside the central
+      workspace.
+    </p>
+
+    <p>
+      This workflow makes the platform suitable for content creators, marketers,
+      educators, social media teams, and independent designers who need to
+      create animated storytelling content efficiently. The application is
+      designed to support both beginners and experienced users through clearly
+      categorized controls, immediate visual feedback, and a focused editing
+      environment.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Animation and Character Controls</h2>
+
+    <p>
+      The <strong>Script &amp; Content</strong> section allows creators to
+      define the story, scene structure, dialogue, and overall content flow.
+      The <strong>Emotion &amp; Face</strong> controls make it possible to
+      adjust facial expressions and the emotional tone of animated characters.
+      With <strong>View Direction</strong>, users can control where characters
+      are looking or how they are positioned relative to the camera.
+    </p>
+
+    <p>
+      The <strong>Path &amp; Movement</strong> section manages character
+      movement, direction, timing, and motion behavior across a scene.
+      <strong>Actions &amp; Poses</strong> provides options for selecting body
+      positions, gestures, and character actions. Together, these features help
+      users create more natural, expressive, and visually engaging animated
+      performances.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Automation and Scene Customization</h2>
+
+    <p>
+      The <strong>Automation Sequence</strong> feature enables users to arrange
+      animation steps into an organized timeline or execution sequence. This
+      reduces repetitive manual work and makes it easier to coordinate complex
+      combinations of expressions, actions, movements, and scene changes.
+    </p>
+
+    <p>
+      The <strong>Background</strong> section provides detailed scene
+      customization options. Users can apply background images or colors,
+      configure gradients, adjust image scale, control zoom levels, reposition
+      scenes horizontally or vertically, and create moving background effects.
+      These controls allow the same character animation to be adapted for
+      different environments, stories, and visual styles.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Main Preview Canvas</h2>
+
+    <p>
+      The central preview canvas displays the selected background and live
+      animation composition. It acts as the primary visual workspace where users
+      can evaluate character placement, movement, scene balance, and background
+      positioning. Changes made through the control panel are reflected in the
+      preview, creating a responsive and efficient editing experience.
+    </p>
+
+    <p>
+      In the showcased example, the canvas presents a colorful countryside
+      environment featuring hills, trees, village houses, a stream, flowers,
+      animals, and walking characters. This demonstrates how Animator Pro can
+      combine illustrated environments with animated subjects to create
+      visually rich storytelling scenes.
+    </p>
+  </section>
+
+  <footer class="project-footer">
+    <h2>Project Value</h2>
+
+    <p>
+      Animator Pro represents a complete creative solution that combines
+      animation control, scene composition, automation, and content preparation
+      in a single platform. Its structured interface and real-time preview
+      workflow help creators work faster, maintain visual consistency, and
+      produce platform-ready animation content more efficiently.
+    </p>
+  </footer>
+</article>
         `
     },
     {
-        src: 'Images/animator-pro/',
-        alt: 'Animator Pro gallery placeholder character controller',
-        title: '',
-        caption: '',
+        src: 'Images/animator-pro/animator-pro-0111.webp',
+        alt: 'Animator Pro portfolio showcase featuring a colorful airplane adventure animation, child-friendly airport characters, scene controls, audio tools, interactive props, mini-games, social media branding, and publishing actions.',
+        title: 'Animator Pro — Airplane Adventure Animation and Kids Content Creation Studio',
+        caption: 'Animator Pro is a visual animation production platform for creating colorful videos for YouTube, Facebook, TikTok, educational channels, children’s entertainment, and digital storytelling. This showcase highlights its scene controls, panel management, color adjustment, audio tools, animated props, mini-games, and live preview canvas featuring a cheerful airport adventure with smiling airplanes and young pilot characters.',
         detailsHtml: `
-            
-        `
+        <article class="portfolio-project animator-pro-airplane-showcase">
+            <header class="project-header">
+                <span class="project-category">
+                    Animation Software • Kids Content • Educational Entertainment • UI/UX Design
+                </span>
+
+                <h1>
+                    Animator Pro — Airplane Adventure Animation and Kids Content Creation Studio
+                </h1>
+
+                <p class="project-introduction">
+                    <strong>Animator Pro</strong> is a visual animation content creation
+                    platform designed for producing engaging videos for
+                    <span class="platform">YouTube</span>,
+                    <span class="platform">Facebook</span>,
+                    <span class="platform">TikTok</span>, educational channels,
+                    children’s stories, music videos, and digital entertainment.
+                    The platform brings scene customization, visual layer management,
+                    animated characters, audio control, interactive objects, mini-games,
+                    and publishing tools into one organized creative workspace. This
+                    portfolio showcase demonstrates how Animator Pro can transform a
+                    playful airport concept into a colorful, professional, and
+                    child-friendly animated presentation.
+                </p>
+            </header>
+
+            <section class="project-section">
+                <h2>Theme and Scene Control</h2>
+
+                <p>
+                    The <strong>Theme / Scene Control</strong> section allows creators to
+                    define the environment, mood, and visual direction of an animation.
+                    Users can select scene themes, review background thumbnails, change
+                    environmental settings, and choose a suitable atmosphere for the
+                    story. In this example, the selected theme presents a bright airport
+                    adventure with a blue sky, rainbow, control tower, airport terminal,
+                    runway, flowers, and playful travel elements.
+                </p>
+
+                <p>
+                    Mood controls can also support different storytelling styles, from
+                    cheerful educational scenes to exciting travel adventures. This makes
+                    it possible to reuse the same characters and objects across multiple
+                    visual environments without rebuilding the complete project.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>Panel and Visual Management</h2>
+
+                <p>
+                    The <strong>Panel Controls</strong> help organize scene layers,
+                    overlays, labels, titles, character elements, and supporting visual
+                    information. Creators can keep different parts of the composition
+                    separated and manageable, making it easier to update a background,
+                    replace a character, or adjust a title without affecting the entire
+                    scene.
+                </p>
+
+                <p>
+                    The <strong>Color Adjustment</strong> tools provide control over
+                    brightness, contrast, saturation, and vibrance. These settings help
+                    maintain strong visual clarity and ensure that the airplanes,
+                    characters, rainbow, flowers, and interface elements remain colorful
+                    and balanced. Changes can be reviewed immediately within the live
+                    preview canvas.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>Audio, Toys, and Interactive Features</h2>
+
+                <p>
+                    The <strong>Audio Controller</strong> manages narration, music, sound
+                    effects, volume, and playback. For an airplane-themed children’s
+                    animation, creators can combine flight sounds, cheerful background
+                    music, character dialogue, and educational narration to create a more
+                    complete viewing experience.
+                </p>
+
+                <p>
+                    The <strong>Toy Controller</strong> allows users to add and manage
+                    playful animated objects such as airplanes, balloons, luggage,
+                    decorative stars, and other interactive props. Animator Pro also
+                    includes a <strong>Games</strong> section with modules such as Runner,
+                    Falling Obstacles, Snake, and Temple Run 3D. These features expand the
+                    platform beyond traditional video editing and support game-inspired
+                    storytelling and interactive learning.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>Main Preview Canvas</h2>
+
+                <p>
+                    The central preview canvas displays the complete animation composition
+                    in real time. The showcased scene features two smiling cartoon
+                    airplanes, a young pilot, a cheerful girl character, an airport control
+                    tower, a colorful terminal, a rainbow, a hot-air balloon, and bright
+                    flowers surrounding the runway.
+                </p>
+
+                <p>
+                    The title
+                    <span class="scene-title">“Airplane Adventure — Fun Flight!”</span>
+                    introduces the story and immediately communicates its playful theme.
+                    The preview allows creators to evaluate character placement, visual
+                    balance, colors, props, and scene composition before rendering the
+                    final animation.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>Creator Branding and Social Publishing</h2>
+
+                <p>
+                    The showcase includes branding for the
+                    <strong>FR Mono Toon</strong> YouTube channel, the handle
+                    <strong>@frmonotoon</strong>, and the Facebook page
+                    <strong>FR Mono Toon</strong>. Like, Share, and Subscribe buttons
+                    reinforce the platform’s focus on audience growth, content promotion,
+                    and multi-platform publishing.
+                </p>
+            </section>
+
+            <footer class="project-footer">
+                <h2>Project Outcome</h2>
+
+                <p>
+                    Animator Pro combines visual editing, animated characters, audio,
+                    interactive props, mini-games, creator branding, and export tools in
+                    one accessible platform. It helps creators build polished children’s
+                    animations faster and prepare engaging content for education,
+                    entertainment, storytelling, and social media publication.
+                </p>
+            </footer>
+        </article>
+    `
     },
 ];
