@@ -424,30 +424,400 @@ const animatorProProjectImages = [
         `
     },
     {
-        src: 'Images/animator-pro/',
+        src: 'Images/animator-pro/animator-pro-0105.webp',
         alt: 'Animator Pro gallery placeholder character controller',
-        title: '',
-        caption: '',
+        title: 'Animator Pro — Cinematic Horror Animation and Interactive Scene Creation Studio',
+        caption: 'Animator Pro is a visual animation content creation platform for producing engaging videos for YouTube, Facebook, TikTok, and other digital channels. This horror-themed showcase demonstrates its content panels, visual styling, transparency controls, movement paths, character animation, playback tools, effects, and live scene preview within a cinematic moonlit forest.',
         detailsHtml: `
-            
+            <article class="portfolio-project animator-pro-horror-showcase">
+  <header class="project-header">
+    <span class="project-category">
+      Animation Platform • Creative Tool • UI/UX Design • Video Production
+    </span>
+
+    <h1>
+      Animator Pro — Cinematic Horror Animation and Interactive Scene Studio
+    </h1>
+
+    <p class="project-introduction">
+      <strong>Animator Pro</strong> is a visual animation content creation
+      platform designed for producing engaging videos for
+      <span class="platform">YouTube</span>,
+      <span class="platform">Facebook</span>,
+      <span class="platform">TikTok</span>, presentations, advertisements, and
+      other digital media. The application brings scene composition, character
+      animation, visual styling, movement controls, effects, and content
+      management into a single creative workspace. This portfolio showcase
+      demonstrates how the platform can be used to produce an atmospheric
+      horror animation featuring a supernatural character inside a cinematic
+      moonlit forest.
+    </p>
+  </header>
+
+  <section class="project-section">
+    <h2>Content and Display Management</h2>
+
+    <p>
+      The <strong>Content Panel</strong> allows creators to add visual assets or
+      HTML-based information directly to an animation scene. Users can apply new
+      content, reset the selected panel, or remove existing material without
+      leaving the main editor. This makes it easier to combine characters,
+      images, labels, overlays, and supporting information within a single
+      composition.
+    </p>
+
+    <p>
+      The <strong>Display Options</strong> section provides control over image
+      fitting, stage visibility, headers, borders, shadows, and canvas
+      rendering. These settings help creators decide how each panel should
+      appear and how it should interact with the surrounding scene. The
+      selected image can also be displayed using a cover-and-crop layout,
+      ensuring that the background fills the available canvas effectively.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Transparency and Creative Styling</h2>
+
+    <p>
+      The <strong>Opacity &amp; Transparency</strong> tools control the
+      visibility of images and panels. Creators can adjust image opacity,
+      modify overall panel transparency, or enable a completely transparent
+      background. This is useful when layering animated characters, visual
+      effects, interface elements, or decorative assets over a detailed
+      background.
+    </p>
+
+    <p>
+      The <strong>Style Controls</strong> provide additional customization for
+      panel borders, rotation, shadows, and background colors. These options
+      allow each visual element to match the creative direction of the scene.
+      In this horror composition, dark surfaces, cyan interface highlights, and
+      intense red accents establish a dramatic visual identity while keeping
+      the application controls readable.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Movement and Character Animation</h2>
+
+    <p>
+      The <strong>Panel Movement</strong> section enables creators to capture
+      custom motion paths and animate selected elements across the scene.
+      Movement can be looped, displayed visually, or combined with jumping
+      behavior. A configurable path color also helps users understand and edit
+      an element's route inside the animation workspace.
+    </p>
+
+    <p>
+      The <strong>Character Motion</strong> controls manage look direction,
+      movement speed, and rotation speed. These settings help characters react
+      to objects, follow action points, or move through the environment at the
+      required pace. They are especially important for suspenseful scenes where
+      character timing, direction, and entrance speed contribute to the overall
+      emotional impact.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Playback and Visual Effects</h2>
+
+    <p>
+      Animator Pro includes accessible <strong>Playback Controls</strong> for
+      starting, pausing, and stopping an animation. Users can also clear saved
+      movement locations and rebuild a sequence when required. The
+      <strong>Effects</strong> section adds secondary motion, including sway
+      behavior and adjustable intensity, to make characters and scene elements
+      feel more dynamic.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Main Preview Canvas</h2>
+
+    <p>
+      The central preview canvas displays the complete scene and live animation
+      composition. In this example, the canvas presents a haunted moonlit
+      forest with twisted trees, rolling fog, a distant castle, glowing embers,
+      and a supernatural red atmosphere. A terrifying animated creature with
+      luminous eyes, sharp fangs, and a fiery aura stands in the foreground,
+      while a secondary ghoul portrait demonstrates how additional horror
+      assets can be layered into the composition.
+    </p>
+  </section>
+
+  <footer class="project-footer">
+    <h2>Project Outcome</h2>
+
+    <p>
+      This showcase highlights Animator Pro as a flexible solution for
+      character-based storytelling, cinematic scene design, and platform-ready
+      video production. By combining visual controls with real-time previews,
+      the platform helps creators build distinctive animated content faster and
+      prepare polished videos for entertainment, marketing, social media, and
+      creative campaigns.
+    </p>
+  </footer>
+</article>
         `
     },
     {
-        src: 'Images/animator-pro/',
+        src: 'Images/animator-pro/animator-pro-0106.webp',
         alt: 'Animator Pro gallery placeholder character controller',
-        title: '',
-        caption: '',
+        title: 'Animator Pro — Renewable Energy Digital Twin Animation and Research Presentation Studio',
+        caption: 'Animator Pro is an advanced visual content creation platform for producing animated videos, research presentations, technical explainers, and social media content. This showcase demonstrates professional color-grading controls, real-time scene preview, renewable energy data visualization, and a female research presenter integrated into a realistic hydro and solar digital twin environment.',
         detailsHtml: `
-            
+            <article class="portfolio-project animator-pro-energy-showcase">
+  <header class="project-header">
+    <span class="project-category">
+      Animation Software • Digital Twin • Research Visualization • UI/UX Design
+    </span>
+
+    <h1>
+      Animator Pro — Renewable Energy Digital Twin Animation Studio
+    </h1>
+
+    <p class="project-introduction">
+      <strong>Animator Pro</strong> is a visual animation and presentation
+      platform developed for creating professional content for
+      <span class="platform">YouTube</span>,
+      <span class="platform">Facebook</span>,
+      <span class="platform">TikTok</span>, research reports, educational
+      videos, technical demonstrations, and corporate presentations. The
+      application combines scene editing, advanced color correction, animated
+      characters, data visualization, and real-time preview tools within one
+      structured workspace. This showcase demonstrates how Animator Pro can
+      transform a complex renewable energy digital twin into an accessible,
+      presenter-led visual story.
+    </p>
+  </header>
+
+  <section class="project-section">
+    <h2>Professional Scene Enhancement</h2>
+
+    <p>
+      The <strong>Basic Adjustments</strong> panel provides essential controls
+      for improving the overall appearance of an animation scene. Creators can
+      modify brightness, contrast, saturation, exposure, highlights, shadows,
+      white balance, tint, and sharpness. These settings make it possible to
+      correct lighting problems, improve visual clarity, and establish a
+      consistent cinematic style before the animation is exported.
+    </p>
+
+    <p>
+      The interface uses compact sliders and clearly displayed values, allowing
+      users to make precise changes without interrupting the creative workflow.
+      Adjustments are reflected directly inside the preview canvas, enabling
+      creators to evaluate the visual result immediately.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Advanced Color-Grading Controls</h2>
+
+    <p>
+      The <strong>Advanced Color Tools</strong> section offers targeted HSL
+      adjustments for individual color ranges. Users can select a color group
+      and modify its hue, saturation, and lightness independently. This provides
+      greater control over environmental colors, interface overlays, clothing,
+      landscape elements, and the overall emotional tone of the scene.
+    </p>
+
+    <p>
+      Animator Pro also includes a dedicated <strong>Curves</strong> editor for
+      balancing shadows, midtones, and highlights. The visual curve graph allows
+      creators to shape image contrast more accurately and produce a polished,
+      cinematic appearance. The <strong>RGB Channel Controls</strong> extend
+      this functionality by allowing separate correction of red, green, and
+      blue channels across different tonal regions.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Live Digital Twin Preview</h2>
+
+    <p>
+      The <strong>Preview Scene Dashboard</strong> displays all grading and
+      composition changes in real time. In this example, the main canvas
+      presents a realistic hydro and solar energy digital twin featuring a
+      mountain reservoir, hydroelectric dam, flowing waterways, solar panel
+      fields, a powerhouse, transmission lines, and an electrical substation.
+    </p>
+
+    <p>
+      Interactive data overlays communicate total generation, energy mix,
+      weather conditions, system status, reservoir levels, turbine efficiency,
+      solar irradiance, live output, and carbon offset. Glowing connection paths
+      visually explain how water and electrical energy move through the
+      infrastructure, making the scene suitable for educational and
+      research-oriented storytelling.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Female Research Report Presenter</h2>
+
+    <p>
+      A professionally styled
+      <span class="character-highlight">female research presenter</span> is
+      integrated into the animation canvas to guide viewers through technical
+      information. She holds an energy report tablet and uses a confident
+      presentation gesture to direct attention toward the renewable energy
+      infrastructure and performance metrics.
+    </p>
+
+    <p>
+      This character-led approach makes complex reports easier to understand and
+      more engaging for non-technical audiences. The presenter can support
+      research summaries, energy-performance reports, technical training,
+      sustainability campaigns, corporate briefings, and social media
+      explainers.
+    </p>
+  </section>
+
+  <footer class="project-footer">
+    <h2>Project Outcome</h2>
+
+    <p>
+      Animator Pro combines professional visual editing, data-driven scene
+      composition, animated presenters, and real-time preview capabilities in
+      one creative platform. The result is a flexible production workflow that
+      helps creators communicate technical subjects clearly, develop polished
+      animations faster, and prepare compelling content for research,
+      education, marketing, and multi-platform publication.
+    </p>
+  </footer>
+</article>
         `
     },
     {
-        src: 'Images/animator-pro/',
+        src: 'Images/animator-pro/animator-pro-0107.webp',
         alt: 'Animator Pro gallery placeholder character controller',
-        title: '',
-        caption: '',
+        title: 'Animator Pro — Renewable Energy Digital Twin Animation and Multimedia Creation Platform',
+        caption: 'Animator Pro is a visual animation production platform for creating engaging videos for YouTube, Facebook, TikTok, presentations, and digital campaigns. This showcase highlights its character management, scene panels, color-enhancement tools, filters, audio controls, interactive modules, and live preview canvas featuring a female reporter within a connected renewable energy digital twin.',
         detailsHtml: `
-            
+            <article class="portfolio-project animator-pro-showcase">
+  <header class="project-header">
+    <span class="project-category">
+      Animation Software • Digital Twin • Multimedia Production • UI/UX Design
+    </span>
+
+    <h1>
+      Animator Pro — Renewable Energy Animation and Multimedia Creation Platform
+    </h1>
+
+    <p class="project-introduction">
+      <strong>Animator Pro</strong> is a comprehensive visual content creation
+      platform designed to produce animated videos for
+      <span class="platform">YouTube</span>,
+      <span class="platform">Facebook</span>,
+      <span class="platform">TikTok</span>, educational presentations,
+      technical explainers, marketing campaigns, and corporate communication.
+      The application combines character-based storytelling, scene composition,
+      visual enhancement, audio management, interactive elements, and live
+      preview capabilities within one organized workspace. This portfolio
+      showcase demonstrates how the platform can transform a complex renewable
+      energy digital twin into a polished and accessible animated presentation.
+    </p>
+  </header>
+
+  <section class="project-section">
+    <h2>Panel and Character Management</h2>
+
+    <p>
+      The <strong>Panels</strong> section allows creators to organize visual
+      panels, information cards, scene overlays, and other interface elements
+      used throughout an animation. These panels can support titles, statistics,
+      instructions, charts, labels, and contextual information without
+      distracting from the central story. A structured panel system also makes
+      complex scenes easier to manage and update.
+    </p>
+
+    <p>
+      The <strong>Characters</strong> section provides tools for adding and
+      managing animated presenters inside the scene. In this example, a
+      professionally styled female reporter appears in the foreground holding a
+      microphone and presenting the energy infrastructure. Her friendly
+      expression and confident gesture help turn technical information into a
+      more approachable visual narrative for general audiences.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Visual Adjustments and Creative Styling</h2>
+
+    <p>
+      The <strong>Basic Adjustments</strong> panel provides essential controls
+      for brightness, contrast, saturation, and overall color balance. These
+      tools help creators improve scene clarity and maintain consistent visual
+      quality across backgrounds, characters, overlays, and interface elements.
+      Adjustments are reflected directly inside the preview, allowing users to
+      evaluate changes without leaving the editing environment.
+    </p>
+
+    <p>
+      The <strong>Advanced Color Tools</strong> offer more detailed control over
+      temperature, tint, and selected color ranges. Creators can use these
+      settings to establish a cinematic atmosphere, balance warm and cool
+      lighting, or match an animation to a specific visual identity. The
+      <strong>Filters and Presets</strong> section provides reusable styles that
+      can quickly transform the mood and appearance of a complete scene.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Audio and Interactive Content</h2>
+
+    <p>
+      The <strong>Audio Controller</strong> manages narration, background music,
+      sound effects, volume, playback, and track selection. Integrating audio
+      directly into the animation workflow allows creators to coordinate
+      character presentations with voiceovers, music, and timed visual events.
+    </p>
+
+    <p>
+      The <strong>Toy Controller</strong> and <strong>Games</strong> modules
+      introduce interactive objects and playful scene behavior. These tools can
+      support audience interaction, educational activities, animated
+      simulations, or game-inspired storytelling experiences beyond traditional
+      video production.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Main Preview Canvas</h2>
+
+    <p>
+      The central preview canvas displays the selected background and complete
+      animation composition in real time. The showcased environment presents a
+      connected renewable energy network containing a hydroelectric plant, wind
+      turbines, a solar farm, battery storage, and an electrical substation.
+      Bright energy-flow paths connect each asset and visually communicate how
+      power moves through the digital infrastructure.
+    </p>
+
+    <p>
+      Dashboard cards provide information about total power output, fleet
+      efficiency, avoided carbon emissions, revenue, weather, grid stability,
+      and the contribution of individual energy sources. Component labels make
+      the technical environment easier to explore, while the female reporter
+      guides the audience through the information as an animated host.
+    </p>
+  </section>
+
+  <footer class="project-footer">
+    <h2>Project Outcome</h2>
+
+    <p>
+      Animator Pro brings visual editing, animated presenters, audio,
+      interactive controls, digital twin environments, and publishing tools
+      together in one creative platform. Its streamlined workflow helps users
+      build scenes faster, explain complex subjects clearly, and prepare
+      professional animation content for education, marketing, reporting, and
+      multi-platform publication.
+    </p>
+  </footer>
+</article>
         `
     },
     {
