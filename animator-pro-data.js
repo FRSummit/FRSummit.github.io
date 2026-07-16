@@ -12,7 +12,7 @@ const animatorProProjectImages = [
     </span>
 
     <h1>
-      Animator Pro — Educational Kids Animation and Social Content Creation Studio
+      Educational Kids Animation and Social Content Creation Studio
     </h1>
 
     <p class="project-introduction">
@@ -151,7 +151,7 @@ const animatorProProjectImages = [
     </span>
 
     <h1>
-      ANimator Pro — Character Animation and Digital Scene Composition Platform
+      Character Animation and Digital Scene Composition Platform
     </h1>
 
     <p class="project-summary">
@@ -280,7 +280,7 @@ const animatorProProjectImages = [
     </span>
 
     <h1>
-      Animator Pro — Joyful Kids Animation and Social Content Creation Studio
+      Joyful Kids Animation and Social Content Creation Studio
     </h1>
 
     <p class="project-introduction">
@@ -420,7 +420,7 @@ const animatorProProjectImages = [
     </span>
 
     <h1>
-      Animator Pro — Interactive Animation and Digital Scene Composition Studio
+      Interactive Animation and Digital Scene Composition Studio
     </h1>
 
     <p class="project-introduction">
@@ -541,7 +541,7 @@ const animatorProProjectImages = [
     }, {
         src: 'Images/animator-pro/animator-pro-0110.webp',
         alt: 'Animator Pro portfolio showcase featuring a child-friendly solar system and galaxy animation scene, creative editing tools, timeline controls, social media branding, and publishing actions.',
-        title: 'Animator Pro — Solar System and Galaxy Animation Creation Studio',
+        title: 'Solar System and Galaxy Animation Creation Studio',
         caption: 'Animator Pro is a visual animation production platform for creating educational videos, children’s stories, social media content, and interactive presentations. This showcase highlights its scene controls, panel management, color adjustment, audio tools, animated props, mini-games, timeline editor, and live preview canvas featuring a child-friendly solar system and galaxy adventure.',
         detailsHtml: `
         <article class="portfolio-project animator-pro-space-showcase">
@@ -551,7 +551,7 @@ const animatorProProjectImages = [
                 </span>
 
                 <h1>
-                    Animator Pro — Solar System and Galaxy Animation Creation Studio
+                    Solar System and Galaxy Animation Creation Studio
                 </h1>
 
                 <p class="project-introduction">
@@ -691,7 +691,7 @@ const animatorProProjectImages = [
     </span>
 
     <h1>
-      Animator Pro — Renewable Energy Digital Twin Animation Studio
+      Renewable Energy Digital Twin Animation Studio
     </h1>
 
     <p class="project-introduction">
@@ -820,7 +820,7 @@ const animatorProProjectImages = [
     </span>
 
     <h1>
-      Animator Pro — Cinematic Horror Animation and Interactive Scene Studio
+      Cinematic Horror Animation and Interactive Scene Studio
     </h1>
 
     <p class="project-introduction">
@@ -958,7 +958,7 @@ const animatorProProjectImages = [
     </span>
 
     <h1>
-      Animator Pro — Renewable Energy Animation and Multimedia Creation Platform
+      Renewable Energy Animation and Multimedia Creation Platform
     </h1>
 
     <p class="project-introduction">
@@ -1124,7 +1124,7 @@ const animatorProProjectImages = [
   <header class="project-header">
     <span class="project-label">Product Design & Development</span>
 
-    <h1>Animator Pro — Visual Animation Video Creation Platform</h1>
+    <h1>Visual Animation Video Creation Platform</h1>
 
     <p class="project-introduction">
       <strong>Animator Pro</strong> is a comprehensive animation content
@@ -1241,7 +1241,7 @@ const animatorProProjectImages = [
     {
         src: 'Images/animator-pro/animator-pro-0111.webp',
         alt: 'Animator Pro portfolio showcase featuring a colorful airplane adventure animation, child-friendly airport characters, scene controls, audio tools, interactive props, mini-games, social media branding, and publishing actions.',
-        title: 'Animator Pro — Airplane Adventure Animation and Kids Content Creation Studio',
+        title: 'Airplane Adventure Animation and Kids Content Creation Studio',
         caption: 'Animator Pro is a visual animation production platform for creating colorful videos for YouTube, Facebook, TikTok, educational channels, children’s entertainment, and digital storytelling. This showcase highlights its scene controls, panel management, color adjustment, audio tools, animated props, mini-games, and live preview canvas featuring a cheerful airport adventure with smiling airplanes and young pilot characters.',
         detailsHtml: `
         <article class="portfolio-project animator-pro-airplane-showcase">
@@ -1251,7 +1251,7 @@ const animatorProProjectImages = [
                 </span>
 
                 <h1>
-                    Animator Pro — Airplane Adventure Animation and Kids Content Creation Studio
+                    Airplane Adventure Animation and Kids Content Creation Studio
                 </h1>
 
                 <p class="project-introduction">
@@ -1386,7 +1386,7 @@ const animatorProProjectImages = [
     {
         src: 'Images/animator-pro/animator-pro-0112.webp',
         alt: 'Animator Pro portfolio showcase featuring a colorful first-time train station animation, child-friendly characters, scene controls, audio tools, interactive props, mini-games, social branding, and publishing actions.',
-        title: 'Animator Pro — Train Station Adventure Animation and Kids Content Creation Studio',
+        title: 'Train Station Adventure Animation and Kids Content Creation Studio',
         caption: 'Animator Pro is a visual animation production platform for creating educational videos, children’s stories, music content, and social media animations. This showcase highlights its scene controls, panel organization, color adjustment, audio tools, interactive props, mini-games, and live preview canvas featuring a cheerful child meeting a friendly train at a colorful railway station.',
         detailsHtml: `
             <article class="portfolio-project animator-pro-train-showcase">
@@ -1396,7 +1396,7 @@ const animatorProProjectImages = [
                     </span>
 
                     <h1>
-                        Animator Pro — Train Station Adventure Animation and Kids Content Creation Studio
+                        Train Station Adventure Animation and Kids Content Creation Studio
                     </h1>
 
                     <p class="project-introduction">
@@ -1532,7 +1532,7 @@ const animatorProProjectImages = [
     {
         src: 'Images/animator-pro/animator-pro-0113.webp',
         alt: 'Animator Pro portfolio showcase featuring a colorful Lost in Space kids animation, alien characters, scene controls, timeline editing, audio tools, social media branding, and publishing actions.',
-        title: 'Animator Pro — Lost in Space Kids Animation and Storytelling Studio',
+        title: 'Lost in Space Kids Animation and Storytelling Studio',
         caption: 'Animator Pro is a visual animation production platform for creating colorful videos for YouTube, Facebook, TikTok, children’s entertainment, educational storytelling, and digital campaigns. This showcase highlights its scene controls, panel organization, color adjustment, audio tools, animated props, mini-games, timeline editor, and live preview canvas featuring a playful Lost in Space adventure with cute alien characters.',
         detailsHtml: `
             <article class="portfolio-project animator-pro-space-adventure">
@@ -1542,7 +1542,7 @@ const animatorProProjectImages = [
                     </span>
 
                     <h1>
-                        Animator Pro — Lost in Space Kids Animation and Storytelling Studio
+                        Lost in Space Kids Animation and Storytelling Studio
                     </h1>
 
                     <p class="project-introduction">
