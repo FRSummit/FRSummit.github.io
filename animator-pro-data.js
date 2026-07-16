@@ -1381,6 +1381,152 @@ const animatorProProjectImages = [
                 </p>
             </footer>
         </article>
-    `
+        `
     },
+    {
+        src: 'Images/animator-pro/animator-pro-0112.webp',
+        alt: 'Animator Pro portfolio showcase featuring a colorful first-time train station animation, child-friendly characters, scene controls, audio tools, interactive props, mini-games, social branding, and publishing actions.',
+        title: 'Animator Pro — Train Station Adventure Animation and Kids Content Creation Studio',
+        caption: 'Animator Pro is a visual animation production platform for creating educational videos, children’s stories, music content, and social media animations. This showcase highlights its scene controls, panel organization, color adjustment, audio tools, interactive props, mini-games, and live preview canvas featuring a cheerful child meeting a friendly train at a colorful railway station.',
+        detailsHtml: `
+            <article class="portfolio-project animator-pro-train-showcase">
+                <header class="project-header">
+                    <span class="project-category">
+                        Animation Software • Kids Entertainment • Educational Content • UI/UX Design
+                    </span>
+
+                    <h1>
+                        Animator Pro — Train Station Adventure Animation and Kids Content Creation Studio
+                    </h1>
+
+                    <p class="project-introduction">
+                        <strong>Animator Pro</strong> is a visual animation content creation
+                        platform designed for producing engaging videos for
+                        <span class="platform">YouTube</span>,
+                        <span class="platform">Facebook</span>,
+                        <span class="platform">TikTok</span>, educational channels,
+                        children’s stories, nursery songs, and digital entertainment.
+                        The application brings scene customization, visual panel management,
+                        animated characters, audio control, interactive objects, mini-games,
+                        and publishing tools into one organized creative workspace. This
+                        portfolio showcase demonstrates how Animator Pro can transform a
+                        child’s first railway journey into a colorful, friendly, and
+                        professionally presented animated story.
+                    </p>
+                </header>
+
+                <section class="project-section">
+                    <h2>Theme and Scene Control</h2>
+
+                    <p>
+                        The <strong>Theme / Scene Control</strong> section enables creators to
+                        choose the environment, mood, and visual identity of an animation.
+                        Users can select a background theme, replace environmental elements,
+                        and establish the atmosphere that best supports the story. In this
+                        example, the selected scene presents a bright railway station with a
+                        platform canopy, station clock, train tracks, landscaped surroundings,
+                        a welcoming station building, and a sunny child-friendly atmosphere.
+                    </p>
+
+                    <p>
+                        This flexible theme system allows the same characters and animation
+                        sequences to be adapted for different locations, lessons, and stories
+                        without rebuilding every element from the beginning.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Panel and Visual Management</h2>
+
+                    <p>
+                        The <strong>Panel Controls</strong> help organize backgrounds,
+                        characters, labels, titles, overlays, and supporting visual elements.
+                        By separating content into manageable sections, creators can update
+                        individual parts of a composition without disturbing the rest of the
+                        scene. This makes complex animation projects easier to maintain and
+                        improves the overall production workflow.
+                    </p>
+
+                    <p>
+                        The <strong>Color Adjustment</strong> tools provide control over
+                        brightness, contrast, saturation, and the overall visual balance.
+                        These settings help preserve the vivid colors of the train, station,
+                        character clothing, flowers, sky, and decorative titles while keeping
+                        every element clear and consistent.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Audio, Interactive Toys, and Games</h2>
+
+                    <p>
+                        The <strong>Audio Controller</strong> manages narration, background
+                        music, sound effects, volume, and playback. For a railway-themed
+                        children’s animation, creators can combine a fun train song with
+                        station announcements, train sounds, character dialogue, and
+                        educational narration. Integrated audio controls make it easier to
+                        synchronize sound with actions and scene transitions.
+                    </p>
+
+                    <p>
+                        The <strong>Toy Controller</strong> supports animated props and playful
+                        objects that enrich the story. These may include toy trains, luggage,
+                        signs, balloons, stars, or interactive decorations. Animator Pro also
+                        includes a <strong>Games</strong> section with modules such as Runner,
+                        Falling Obstacles, Snake, and Temple Run 3D, extending the platform
+                        beyond standard video editing into interactive learning and
+                        game-inspired entertainment.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Main Preview Canvas</h2>
+
+                    <p>
+                        The central preview canvas displays the complete animation composition
+                        in real time. The showcased scene features a cheerful boy wearing a
+                        yellow hoodie, red cap, and backpack while waving beside a friendly
+                        smiling train. A detailed railway station, platform clock, blue sky,
+                        trees, flowers, and city background create an inviting environment.
+                    </p>
+
+                    <p>
+                        The title
+                        <span class="scene-title">“First Time at the Train Station”</span>
+                        and the ribbon
+                        <span class="scene-subtitle">“Fun Train Song!”</span>
+                        immediately communicate the educational and entertaining concept.
+                        Playback controls beneath the canvas allow creators to review timing,
+                        character placement, scene transitions, audio, and visual balance
+                        before exporting the finished animation.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Creator Branding and Social Publishing</h2>
+
+                    <p>
+                        The showcase includes branding for the
+                        <strong>FR Mono Toon</strong> YouTube channel, the handle
+                        <strong>@frmonotoon</strong>, and the Facebook page
+                        <strong>FR Mono Toon</strong>. Like, Share, and Subscribe buttons
+                        emphasize audience engagement and the platform’s focus on
+                        multi-channel content distribution.
+                    </p>
+                </section>
+
+                <footer class="project-footer">
+                    <h2>Project Outcome</h2>
+
+                    <p>
+                        Animator Pro combines scene design, character animation, audio,
+                        interactive props, mini-games, social branding, and export tools in
+                        one accessible platform. It helps creators produce polished children’s
+                        animations faster and prepare engaging content for education,
+                        entertainment, storytelling, and social media publication.
+                    </p>
+                </footer>
+            </article>
+        `
+    }
 ];
