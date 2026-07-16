@@ -1528,5 +1528,150 @@ const animatorProProjectImages = [
                 </footer>
             </article>
         `
+    },
+    {
+        src: 'Images/animator-pro/animator-pro-0113.webp',
+        alt: 'Animator Pro portfolio showcase featuring a colorful Lost in Space kids animation, alien characters, scene controls, timeline editing, audio tools, social media branding, and publishing actions.',
+        title: 'Animator Pro — Lost in Space Kids Animation and Storytelling Studio',
+        caption: 'Animator Pro is a visual animation production platform for creating colorful videos for YouTube, Facebook, TikTok, children’s entertainment, educational storytelling, and digital campaigns. This showcase highlights its scene controls, panel organization, color adjustment, audio tools, animated props, mini-games, timeline editor, and live preview canvas featuring a playful Lost in Space adventure with cute alien characters.',
+        detailsHtml: `
+            <article class="portfolio-project animator-pro-space-adventure">
+                <header class="project-header">
+                    <span class="project-category">
+                        Animation Software • Kids Content • Space Adventure • UI/UX Design
+                    </span>
+
+                    <h1>
+                        Animator Pro — Lost in Space Kids Animation and Storytelling Studio
+                    </h1>
+
+                    <p class="project-introduction">
+                        <strong>Animator Pro</strong> is a visual animation content creation
+                        platform developed for producing engaging videos for
+                        <span class="platform">YouTube</span>,
+                        <span class="platform">Facebook</span>,
+                        <span class="platform">TikTok</span>, educational channels,
+                        children’s stories, music content, and digital entertainment.
+                        The platform combines scene customization, visual panel management,
+                        animated characters, audio controls, interactive props, mini-games,
+                        and timeline-based editing within one organized creative workspace.
+                        This portfolio showcase demonstrates how Animator Pro can transform
+                        a playful space-adventure idea into a colorful, polished, and
+                        child-friendly animated production.
+                    </p>
+                </header>
+
+                <section class="project-section">
+                    <h2>Theme and Scene Control</h2>
+
+                    <p>
+                        The <strong>Theme / Scene Control</strong> section allows creators to
+                        define the environment, visual mood, and overall direction of an
+                        animation. Users can choose a theme, change the background, and apply
+                        environmental styling that matches the story. In this example, the
+                        selected theme presents a glowing outer-space environment filled with
+                        planets, galaxies, stars, a smiling sun, a crescent moon, colorful
+                        nebula effects, and floating spacecraft.
+                    </p>
+
+                    <p>
+                        The scene is designed to feel adventurous and imaginative while
+                        remaining friendly for younger viewers. This flexible theme system
+                        allows creators to reuse characters and animation sequences across
+                        multiple settings without rebuilding the project from the beginning.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Panel and Visual Management</h2>
+
+                    <p>
+                        The <strong>Panel Controls</strong> help organize titles, characters,
+                        planets, effects, backgrounds, and supporting overlays. By separating
+                        each element into manageable layers, creators can update one part of
+                        the composition without affecting the rest of the scene. This makes
+                        complex animations easier to edit and improves the overall production
+                        workflow.
+                    </p>
+
+                    <p>
+                        The <strong>Color Adjustment</strong> tools provide control over
+                        brightness, contrast, saturation, and the overall visual appearance.
+                        These settings help enhance neon galaxy colors, improve character
+                        visibility, balance the background, and keep the title and decorative
+                        effects clear throughout the animation.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Audio, Interactive Props, and Games</h2>
+
+                    <p>
+                        The <strong>Audio Controller</strong> manages narration, background
+                        music, sound effects, volume, and playback. For a space-themed
+                        children’s animation, creators can combine storytelling narration,
+                        rocket sounds, magical effects, character dialogue, and energetic
+                        music to create a more immersive viewing experience.
+                    </p>
+
+                    <p>
+                        The <strong>Toy Controller</strong> supports interactive animated
+                        objects such as rockets, stars, planets, satellites, and playful
+                        visual props. Animator Pro also includes a <strong>Games</strong>
+                        section with modules such as Runner, Falling Obstacles, Snake, and
+                        Temple Run 3D. These features extend the platform beyond standard
+                        video editing and support game-inspired scenes, interactive learning,
+                        and entertainment-focused content.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Main Preview Canvas</h2>
+
+                    <p>
+                        The central preview canvas displays the complete animation composition
+                        in real time. The showcased scene features three cheerful green alien
+                        children floating through a colorful galaxy in bright spacesuits.
+                        Planets, stars, a glowing sun, a smiling moon, rockets, and cosmic
+                        effects surround the characters and create a playful sense of movement.
+                    </p>
+
+                    <p>
+                        The title
+                        <span class="scene-title">“Lost in Space!”</span>
+                        and the subtitle
+                        <span class="scene-subtitle">“Space Adventure”</span>
+                        immediately establish the story. A scene settings panel and multi-track
+                        timeline allow creators to manage layers, arrange clips, synchronize
+                        music, adjust timing, and preview the complete sequence before export.
+                    </p>
+                </section>
+
+                <section class="project-section">
+                    <h2>Creator Branding and Social Publishing</h2>
+
+                    <p>
+                        The showcase includes branding for the
+                        <strong>FR Mono Toon</strong> YouTube channel, the handle
+                        <strong>@frmonotoon</strong>, and the Facebook page
+                        <strong>FR Mono Toon</strong>. Like, Share, and Subscribe buttons
+                        reinforce the platform’s focus on audience engagement and
+                        multi-platform content distribution.
+                    </p>
+                </section>
+
+                <footer class="project-footer">
+                    <h2>Project Outcome</h2>
+
+                    <p>
+                        Animator Pro combines scene design, animated characters, audio,
+                        interactive props, mini-games, timeline production, social branding,
+                        and export tools in one accessible platform. It helps creators build
+                        polished children’s animations faster and prepare engaging content for
+                        education, entertainment, storytelling, and social media publication.
+                    </p>
+                </footer>
+            </article>
+        `
     }
 ];
