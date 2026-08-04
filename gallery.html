@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-default-theme="light">
 
 <head>
     <meta charset="utf-8" />
@@ -17,6 +17,8 @@
     <meta property="og:image" content="https://frsummit.github.io/Images/profile.jpg" />
 
     <link rel="canonical" href="https://frsummit.github.io/gallery.html" />
+    <script src="theme-toggle.js"></script>
+    <link rel="stylesheet" href="theme-toggle.css" />
 
     <!-- JSON-LD Structured Data for SEO -->
     <script type="application/ld+json">
@@ -44,6 +46,25 @@
             --accent: #007f73;
             --accent-dark: #045c55;
             --shadow: 0 18px 50px rgba(23, 32, 29, 0.12);
+            color-scheme: light;
+        }
+
+        :root[data-theme="dark"] {
+            --ink: #edf7f4;
+            --muted: #aebfba;
+            --paper: #111816;
+            --wash: #0b1110;
+            --soft: #1c2926;
+            --line: #2d3b37;
+            --accent: #51d7ce;
+            --accent-dark: #8cebe3;
+            --shadow: 0 18px 50px rgba(0, 0, 0, 0.34);
+            color-scheme: dark;
+        }
+
+        :root[data-theme="dark"] .site-header {
+            border-bottom-color: rgba(45, 59, 55, 0.86);
+            background: rgba(11, 17, 16, 0.9);
         }
 
         * {
@@ -121,6 +142,7 @@
 
         .nav-links {
             display: flex;
+            align-items: center;
             gap: 8px;
             flex-wrap: wrap;
         }
@@ -365,7 +387,7 @@
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.18);
             border-radius: 8px;
-            color: var(--paper);
+            color: #ffffff;
             font-size: 1.8rem;
             line-height: 1;
             cursor: pointer;
@@ -390,7 +412,7 @@
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.18);
             border-radius: 8px;
-            color: var(--paper);
+            color: #ffffff;
             cursor: pointer;
             opacity: 0.82;
             transform: translateY(-50%);
@@ -496,6 +518,7 @@
 
         /* Footer */
         .footer {
+            --ink: #111c1a;
             border-top: 1px solid var(--line);
             background: var(--ink);
             color: rgba(255, 255, 255, 0.66);
@@ -598,6 +621,15 @@
                 <a href="index.html#projects">Projects</a>
                 <a href="index.html#interests">Interests</a>
                 <a href="index.html#contact">Contact</a>
+                <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme" data-theme-toggle>
+                    <svg class="theme-toggle-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+                    </svg>
+                    <svg class="theme-toggle-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A8 8 0 1 1 11.21 3 6.2 6.2 0 0 0 21 12.79Z"></path>
+                    </svg>
+                </button>
             </div>
         </nav>
     </header>

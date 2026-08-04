@@ -1,0 +1,82 @@
+.theme-toggle {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper, var(--panel));
+    color: var(--muted);
+    appearance: none;
+    font: inherit;
+    padding: 4px 7px;
+    cursor: pointer;
+    transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--ink);
+}
+
+.theme-toggle::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
+    transition: transform 180ms ease;
+}
+
+:root[data-theme="dark"] .theme-toggle::before {
+    transform: translateX(20px);
+}
+
+.theme-toggle svg {
+    position: relative;
+    z-index: 1;
+    width: 13px;
+    height: 13px;
+    flex: 0 0 auto;
+    pointer-events: none;
+}
+
+.theme-toggle-sun {
+    color: #07100f;
+}
+
+.theme-toggle-moon {
+    color: var(--muted);
+    opacity: 0.68;
+}
+
+:root[data-theme="dark"] .theme-toggle-sun {
+    color: var(--muted);
+    opacity: 0.68;
+}
+
+:root[data-theme="dark"] .theme-toggle-moon {
+    color: #07100f;
+    opacity: 1;
+}
+
+@media (max-width: 640px) {
+    .theme-toggle {
+        justify-self: center;
+        margin-inline: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .theme-toggle,
+    .theme-toggle::before {
+        transition: none;
+    }
+}

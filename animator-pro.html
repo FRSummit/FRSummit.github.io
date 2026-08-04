@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-default-theme="dark">
 
 <head>
     <meta charset="utf-8" />
@@ -9,7 +9,7 @@
         content="Animator Pro by Fayazur Rahman Summit is a browser-based cartoon animation studio for YouTube videos, kids learning content, talking characters, nursery rhymes, animated news scenes, and social media shorts." />
     <meta name="author" content="Fayazur Rahman Summit" />
     <meta name="keywords"
-        content="Animator Pro, Fayazur Rahman Summit, FRMonoToon, FRMonotoon, বাঙ্গিvsতরমুজ, Bangi vs Tormuz, browser-based animation studio, cartoon character controller, YouTube animation tool, kids learning video software, HTML5 Canvas animation, JavaScript animation app, educational animation software, nursery rhyme animation, talking character generator, text to speech animation, MediaRecorder video recorder, Web Audio animation, animated news presenter, social media shorts animation, ABC learning video maker, cartoon scene builder" />
+        content="Animator Pro, Fayazur Rahman Summit, FRMonoToon, FRMonotoon, frsummitworld, Bangi vs Tormuz, browser-based animation studio, cartoon character controller, YouTube animation tool, kids learning video software, HTML5 Canvas animation, JavaScript animation app, educational animation software, nursery rhyme animation, talking character generator, text to speech animation, MediaRecorder video recorder, Web Audio animation, animated news presenter, social media shorts animation, ABC learning video maker, cartoon scene builder" />
 
     <meta property="og:title" content="Animator Pro - Browser-Based Cartoon Animation Studio" />
     <meta property="og:description"
@@ -26,6 +26,8 @@
 
     <link rel="canonical" href="https://frsummit.github.io/animator-pro.html" />
     <link rel="preload" as="image" href="Images/animator-pro/character-controller.png" />
+    <script src="theme-toggle.js"></script>
+    <link rel="stylesheet" href="theme-toggle.css" />
 
     <script type="application/ld+json">
     {
@@ -63,7 +65,7 @@
       ],
       "sameAs": [
         "https://www.youtube.com/@FRMonoToon",
-        "https://www.youtube.com/@বাঙ্গিvsতরমুজ",
+        "https://www.youtube.com/@frsummitworld",
         "https://www.facebook.com/profile.php?id=61582285929030",
         "https://www.facebook.com/bangiVStormuz/"
       ],
@@ -104,6 +106,67 @@
             --accent-2: #8cea8c;
             --warm: #f2b35f;
             --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+            color-scheme: dark;
+        }
+
+        :root[data-theme="light"] {
+            --ink: #17201d;
+            --muted: #5d6a64;
+            --dim: #75847e;
+            --bg: #f4f7f6;
+            --panel: #ffffff;
+            --panel-2: #e8f0ed;
+            --line: #d6e0da;
+            --accent: #007f73;
+            --accent-2: #5f9e4e;
+            --warm: #bf7a00;
+            --shadow: 0 18px 50px rgba(23, 32, 29, 0.12);
+            color-scheme: light;
+        }
+
+        :root[data-theme="light"] .site-header {
+            border-bottom-color: rgba(214, 224, 218, 0.86);
+            background: rgba(244, 247, 246, 0.92);
+        }
+
+        :root[data-theme="light"] .nav-links a:hover {
+            background: rgba(0, 127, 115, 0.08);
+        }
+
+        :root[data-theme="light"] .hero-subtitle {
+            color: var(--muted);
+        }
+
+        :root[data-theme="light"] .channel-panel,
+        :root[data-theme="light"] .button-secondary,
+        :root[data-theme="light"] .panel,
+        :root[data-theme="light"] .feature-card,
+        :root[data-theme="light"] .step-card,
+        :root[data-theme="light"] .use-card,
+        :root[data-theme="light"] details,
+        :root[data-theme="light"] .visual-card,
+        :root[data-theme="light"] .project-image-card,
+        :root[data-theme="light"] .stat-card {
+            background: var(--panel);
+        }
+
+        :root[data-theme="light"] .channel-link,
+        :root[data-theme="light"] .app-mockup,
+        :root[data-theme="light"] .mock-toolbar,
+        :root[data-theme="light"] .mock-sidebar {
+            background: var(--panel-2);
+        }
+
+        :root[data-theme="light"] .channel-link {
+            border-color: var(--line);
+        }
+
+        :root[data-theme="light"] .mock-control {
+            background: rgba(0, 127, 115, 0.14);
+        }
+
+        :root[data-theme="light"] .cta {
+            background: linear-gradient(135deg, rgba(0, 127, 115, 0.12), rgba(95, 158, 78, 0.09)), #ffffff;
         }
 
         * {
@@ -135,6 +198,7 @@
         }
 
         a:focus-visible,
+        button:focus-visible,
         summary:focus-visible {
             outline: 3px solid rgba(81, 215, 206, 0.38);
             outline-offset: 3px;
@@ -1057,6 +1121,15 @@
                 <a href="#features">Features</a>
                 <a href="#controllers">Controllers</a>
                 <a href="#technical-build">Technical Build</a>
+                <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true" title="Switch to light theme" data-theme-toggle>
+                    <svg class="theme-toggle-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+                    </svg>
+                    <svg class="theme-toggle-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A8 8 0 1 1 11.21 3 6.2 6.2 0 0 0 21 12.79Z"></path>
+                    </svg>
+                </button>
             </div>
         </nav>
     </header>
@@ -1081,23 +1154,23 @@
                             <a class="channel-link" href="https://www.youtube.com/@FRMonoToon" target="_blank"
                                 rel="noreferrer">
                                 <span class="channel-label">YouTube</span>
-                                <span class="channel-name">@FRMonoToon</span>
+                                <span class="channel-name">FRMonoToon</span>
                             </a>
-                            <!-- <a class="channel-link" href="https://www.youtube.com/@বাঙ্গিvsতরমুজ" target="_blank"
+                            <a class="channel-link" href="https://www.youtube.com/@frsummitworld" target="_blank"
                                 rel="noreferrer">
                                 <span class="channel-label">YouTube</span>
-                                <span class="channel-name">@বাঙ্গিvsতরমুজ</span>
-                            </a> -->
+                                <span class="channel-name">FRSummit World!</span>
+                            </a>
                             <a class="channel-link" href="https://www.facebook.com/profile.php?id=61582285929030"
                                 target="_blank" rel="noreferrer">
                                 <span class="channel-label">Facebook Page</span>
                                 <span class="channel-name">FRMonotoon</span>
                             </a>
-                            <!-- <a class="channel-link" href="https://www.facebook.com/bangiVStormuz/" target="_blank"
+                            <a class="channel-link" href="https://www.facebook.com/frsummitworld/" target="_blank"
                                 rel="noreferrer">
                                 <span class="channel-label">Facebook Page</span>
-                                <span class="channel-name">বাঙ্গিvsতরমুজ</span>
-                            </a> -->
+                                <span class="channel-name">FRSummit World!</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1693,20 +1766,20 @@
                                     <span class="channel-label">YouTube</span>
                                     <span class="channel-name">@FRMonoToon</span>
                                 </a>
-                                <a class="channel-link" href="https://www.youtube.com/@বাঙ্গিvsতরমুজ" target="_blank"
+                                <a class="channel-link" href="https://www.youtube.com/@frsummitworld" target="_blank"
                                     rel="noreferrer">
                                     <span class="channel-label">YouTube</span>
-                                    <span class="channel-name">@বাঙ্গিvsতরমুজ</span>
+                                    <span class="channel-name">FRSummit World!</span>
                                 </a>
                                 <a class="channel-link" href="https://www.facebook.com/profile.php?id=61582285929030"
                                     target="_blank" rel="noreferrer">
                                     <span class="channel-label">Facebook Page</span>
                                     <span class="channel-name">FRMonotoon</span>
                                 </a>
-                                <a class="channel-link" href="https://www.facebook.com/bangiVStormuz/" target="_blank"
+                                <a class="channel-link" href="https://www.facebook.com/frsummitworld/" target="_blank"
                                     rel="noreferrer">
                                     <span class="channel-label">Facebook Page</span>
-                                    <span class="channel-name">বাঙ্গিvsতরমুজ</span>
+                                    <span class="channel-name">FRSummit World!</span>
                                 </a>
                             </div>
                         </div>

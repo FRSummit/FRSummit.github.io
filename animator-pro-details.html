@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-default-theme="dark">
 
 <head>
     <meta charset="utf-8" />
@@ -7,6 +7,8 @@
     <title>Gallery Details - Animator Case Study | Fayazur Rahman Summit</title>
     <meta name="description" content="Detailed look at Animator Pro components and workflows." />
     <meta name="author" content="Fayazur Rahman Summit" />
+    <script src="theme-toggle.js"></script>
+    <link rel="stylesheet" href="theme-toggle.css" />
 
     <style>
         :root {
@@ -21,6 +23,32 @@
             --accent-dark: #3baca4;
             --warm: #f2b35f;
             --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+            color-scheme: dark;
+        }
+
+        :root[data-theme="light"] {
+            --ink: #17201d;
+            --muted: #5d6a64;
+            --dim: #75847e;
+            --bg: #f4f7f6;
+            --panel: #ffffff;
+            --panel-2: #e8f0ed;
+            --line: #d6e0da;
+            --accent: #007f73;
+            --accent-dark: #045c55;
+            --warm: #bf7a00;
+            --shadow: 0 18px 50px rgba(23, 32, 29, 0.12);
+            color-scheme: light;
+        }
+
+        :root[data-theme="light"] .site-header {
+            border-bottom-color: rgba(214, 224, 218, 0.86);
+            background: rgba(244, 247, 246, 0.92);
+        }
+
+        :root[data-theme="light"] .footer {
+            background: #e8f0ed;
+            color: var(--muted);
         }
 
         * {
@@ -94,6 +122,7 @@
 
         .nav-links {
             display: flex;
+            align-items: center;
             gap: 8px;
         }
 
@@ -319,6 +348,15 @@
             <div class="nav-links">
                 <a href="index.html">Portfolio</a>
                 <a href="animator-pro.html">Case Study</a>
+                <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true" title="Switch to light theme" data-theme-toggle>
+                    <svg class="theme-toggle-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+                    </svg>
+                    <svg class="theme-toggle-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A8 8 0 1 1 11.21 3 6.2 6.2 0 0 0 21 12.79Z"></path>
+                    </svg>
+                </button>
             </div>
         </nav>
     </header>
